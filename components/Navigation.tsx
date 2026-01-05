@@ -50,6 +50,7 @@ const componentRoutes: Array<{ path: string; label: string; badge?: string }> = 
   { path: '/components/avatar', label: 'Avatar - Avatár' },
   { path: '/components/avatar-group', label: 'AvatarGroup - Avatar csoport' },
   { path: '/components/breadcrumb', label: 'Breadcrumb - Morzsaút' },
+  { path: '/components/checkbox', label: 'Checkbox - Jelölőnégyzet' },
 ];
 
 export default function Navigation() {
