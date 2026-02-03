@@ -5,6 +5,7 @@ import { ColorRegular } from '@fluentui/react-icons';
 import Navigation from '@/components/Navigation';
 import { useAppSelector, useAppDispatch } from '@/lib/redux/hooks';
 import { setTheme, themes, type ThemeName } from '@/lib/redux/slices/themeSlice';
+import { usePathname } from 'next/navigation';
 
 export default function ClientLayout({
   children,
@@ -14,10 +15,22 @@ export default function ClientLayout({
   const currentThemeName = useAppSelector((state) => state.theme.currentTheme);
   const dispatch = useAppDispatch();
   const currentTheme = themes[currentThemeName];
+  const pathname = usePathname();
 
   const handleThemeChange = (themeName: ThemeName) => {
     dispatch(setTheme(themeName));
   };
+
+  // Blank oldal esetén ne rendereljük a navigation-t és a témaváltót
+  const isBlankPage = pathname === '/blank';
+
+  if (isBlankPage) {
+    return (
+      <FluentProvider theme={currentTheme}>
+        {children}
+      </FluentProvider>
+    );
+  }
 
   return (
     <FluentProvider theme={currentTheme}>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Button, Badge, tokens } from '@fluentui/react-components';
 import { usePathname } from 'next/navigation';
 import { ChevronDownRegular, ChevronRightRegular } from '@fluentui/react-icons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const routes: Array<{ path: string; label: string; badge?: string }> = [
   { path: '/', label: 'Kezdj itt!' },
@@ -53,45 +53,63 @@ const componentRoutes: Array<{ path: string; label: string; badge?: string }> = 
   { path: '/components/checkbox', label: 'Checkbox - Jelölőnégyzet' },
 ];
 
-export default function Navigation() {
+const pageRoutes: Array<{ path: string; label: string; badge?: string }> = [
+  { path: '/blank', label: 'Blank oldal' },
+];
+
+interface NavigationProps {
+  inDrawer?: boolean;
+  onLinkClick?: () => void;
+}
+
+export default function Navigation({ inDrawer = false, onLinkClick }: NavigationProps) {
   const pathname = usePathname();
-  const [isDesignOpen, setIsDesignOpen] = useState(pathname.startsWith('/design'));
-  const [isComponentsOpen, setIsComponentsOpen] = useState(pathname.startsWith('/components'));
-  const [isButtonsOpen, setIsButtonsOpen] = useState(
-    pathname.startsWith('/components/button') || 
-    pathname.startsWith('/components/compound-button') || 
-    pathname.startsWith('/components/menu-button') || 
-    pathname.startsWith('/components/split-button') || 
-    pathname.startsWith('/components/toggle-button')
-  );
-  const [isBadgesOpen, setIsBadgesOpen] = useState(
-    pathname.startsWith('/components/badge') || 
-    pathname.startsWith('/components/counter-badge') || 
-    pathname.startsWith('/components/presence-badge')
-  );
-  const [isCardsOpen, setIsCardsOpen] = useState(
-    pathname.startsWith('/components/card')
-  );
-  const [isCarouselsOpen, setIsCarouselsOpen] = useState(
-    pathname.startsWith('/components/carousel')
-  );
+  const [isDesignOpen, setIsDesignOpen] = useState(false);
+  const [isComponentsOpen, setIsComponentsOpen] = useState(false);
+  const [isPagesOpen, setIsPagesOpen] = useState(false);
+  const [isButtonsOpen, setIsButtonsOpen] = useState(false);
+  const [isBadgesOpen, setIsBadgesOpen] = useState(false);
+  const [isCardsOpen, setIsCardsOpen] = useState(false);
+  const [isCarouselsOpen, setIsCarouselsOpen] = useState(false);
+
+  useEffect(() => {
+    setIsDesignOpen(pathname.startsWith('/design'));
+    setIsComponentsOpen(pathname.startsWith('/components'));
+    setIsPagesOpen(pathname === '/blank');
+    setIsButtonsOpen(
+      pathname.startsWith('/components/button') || 
+      pathname.startsWith('/components/compound-button') || 
+      pathname.startsWith('/components/menu-button') || 
+      pathname.startsWith('/components/split-button') || 
+      pathname.startsWith('/components/toggle-button')
+    );
+    setIsBadgesOpen(
+      pathname.startsWith('/components/badge') || 
+      pathname.startsWith('/components/counter-badge') || 
+      pathname.startsWith('/components/presence-badge')
+    );
+    setIsCardsOpen(pathname.startsWith('/components/card'));
+    setIsCarouselsOpen(pathname.startsWith('/components/carousel'));
+  }, [pathname]);
 
   return (
     <nav 
-      className="w-[280px] p-6 h-screen sticky top-0 overflow-y-auto"
-      style={{ 
+      className={inDrawer ? "p-6 overflow-y-auto" : "w-[280px] p-6 h-screen sticky top-0 overflow-y-auto"}
+      style={inDrawer ? {} : { 
         backgroundColor: tokens.colorNeutralBackground2,
         borderRight: `1px solid ${tokens.colorNeutralStroke2}`,
       }}
     >
-      <Link href="/" className="no-underline">
-        <div 
-          className="text-xs font-semibold mb-6 uppercase tracking-wider cursor-pointer hover:opacity-80 transition-opacity"
-          style={{ color: tokens.colorNeutralForeground3 }}
-        >
-          Fluent UI Design System
-        </div>
-      </Link>
+      {!inDrawer && (
+        <Link href="/" className="no-underline">
+          <div 
+            className="text-xs font-semibold mb-6 uppercase tracking-wider cursor-pointer hover:opacity-80 transition-opacity"
+            style={{ color: tokens.colorNeutralForeground3 }}
+          >
+            Fluent UI Design System
+          </div>
+        </Link>
+      )}
       
       <ul className="flex flex-col gap-1 list-none p-0 m-0">
         {routes.map((route) => {
@@ -100,6 +118,7 @@ export default function Navigation() {
             <li key={route.path}>
               <Link
                 href={route.path}
+                onClick={onLinkClick}
                 className="block px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                 style={{
                   backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
@@ -139,6 +158,7 @@ export default function Navigation() {
                   <Link
                     key={route.path}
                     href={route.path}
+                    onClick={onLinkClick}
                     className="px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                     style={{
                       backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
@@ -187,6 +207,7 @@ export default function Navigation() {
                   <Link
                     key={route.path}
                     href={route.path}
+                    onClick={onLinkClick}
                     className="block px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                     style={{
                       backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
@@ -225,6 +246,7 @@ export default function Navigation() {
                         <Link
                           key={route.path}
                           href={route.path}
+                          onClick={onLinkClick}
                           className="block px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                           style={{
                             backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
@@ -266,6 +288,7 @@ export default function Navigation() {
                         <Link
                           key={route.path}
                           href={route.path}
+                          onClick={onLinkClick}
                           className="block px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                           style={{
                             backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
@@ -307,6 +330,7 @@ export default function Navigation() {
                         <Link
                           key={route.path}
                           href={route.path}
+                          onClick={onLinkClick}
                           className="block px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                           style={{
                             backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
@@ -348,6 +372,7 @@ export default function Navigation() {
                         <Link
                           key={route.path}
                           href={route.path}
+                          onClick={onLinkClick}
                           className="block px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                           style={{
                             backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
@@ -362,6 +387,48 @@ export default function Navigation() {
                   </div>
                 )}
               </div>
+            </div>
+          )}
+        </li>
+
+        <li className="mb-2">
+          <div 
+            className="flex items-center justify-between px-3 py-2.5 cursor-pointer rounded-md transition-all"
+            onClick={() => setIsPagesOpen(!isPagesOpen)}
+          >
+            <span 
+              className="text-sm font-semibold"
+              style={{ color: tokens.colorNeutralForeground1 }}
+            >
+              Oldalak
+            </span>
+            <Button
+              appearance="transparent"
+              icon={isPagesOpen ? <ChevronDownRegular /> : <ChevronRightRegular />}
+              size="small"
+              style={{ minWidth: 0, padding: '4px', color: tokens.colorNeutralForeground3 }}
+            />
+          </div>
+          {isPagesOpen && (
+            <div className="pl-4 mt-1 flex flex-col gap-0.5">
+              {pageRoutes.map((route) => {
+                const isActive = pathname === route.path;
+                return (
+                  <Link
+                    key={route.path}
+                    href={route.path}
+                    onClick={onLinkClick}
+                    className="block px-3 py-2.5 rounded-md text-sm transition-all no-underline"
+                    style={{
+                      backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
+                      color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
+                      fontWeight: isActive ? tokens.fontWeightSemibold : tokens.fontWeightRegular,
+                    }}
+                  >
+                    {route.label}
+                  </Link>
+                );
+              })}
             </div>
           )}
         </li>
