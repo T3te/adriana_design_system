@@ -1,15 +1,20 @@
 'use client';
 
-import { Button, Divider } from '@fluentui/react-components';
+import { Button, Divider, tokens } from '@fluentui/react-components';
 import Link from 'next/link';
 import Image from 'next/image';
 import UserMenu from './UserMenu';
+import NotificationsMenu from './NotificationsMenu';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 interface NavbarConnectProps {
   userName?: string;
   userEmail?: string;
   menuItems?: string[];
   logoutLabel?: string;
+  unreadNotifications?: number;
+  isDarkMode?: boolean;
+  onThemeToggle?: () => void;
 }
 
 export default function NavbarConnect({
@@ -17,15 +22,24 @@ export default function NavbarConnect({
   userEmail = 'teszt.elek@adriana.hu',
   menuItems,
   logoutLabel,
+  unreadNotifications = 4,
+  isDarkMode = false,
+  onThemeToggle,
 }: NavbarConnectProps) {
   return (
-    <header className="flex items-center justify-between py-5 px-6 bg-white shadow-md">
+    <header 
+      className="flex items-center justify-between py-5 px-6"
+      style={{
+        backgroundColor: tokens.colorNeutralBackground1,
+        boxShadow: tokens.shadow4,
+      }}
+    >
       {/* Logo Section */}
-      <Link href="/" className="flex items-center space-x-4">
+      <Link href="/blank" className="flex items-center space-x-4">
         <div className="flex items-center">
           {/* Adriana Accounting Logo */}
           <Image
-            src="/img/adriana-logo.png"
+            src={isDarkMode ? "/img/adriana-logo-dk.png" : "/img/adriana-logo.png"}
             alt="Adriana Accounting logo"
             width={90}
             height={24}
@@ -39,7 +53,7 @@ export default function NavbarConnect({
           
           {/* Adriana Connect Logo */}
           <Image
-            src="/img/connect-logo.png"
+            src={isDarkMode ? "/img/connect-logo-dk.png" : "/img/connect-logo.png"}
             alt="Adriana Connect logo"
             width={130}
             height={24}
@@ -49,18 +63,24 @@ export default function NavbarConnect({
       </Link>
 
       {/* Center Text - Hidden on mobile */}
-      <div className="text-gray-600 font-semibold lg:font-normal lg:text-xl md:flex hidden">
+      <Link href="/profile" className="font-semibold lg:font-normal lg:text-xl md:flex hidden no-underline hover:opacity-80 transition-opacity" style={{ color: tokens.colorNeutralForeground2 }}>
         <span>Nincs cég kiválasztva</span>
-      </div>
+      </Link>
 
       {/* Right Side Actions */}
       <div className="flex items-center justify-between gap-2">
+        {/* Notifications Menu */}
+        <NotificationsMenu unreadCount={unreadNotifications} />
+
         {/* Charge Amount Button - Hidden on mobile */}
         <div className="md:flex hidden items-center">
           <Button appearance="outline">
             A terhelés összege: 0 Ft
           </Button>
         </div>
+
+        {/* Dark Mode Toggle */}
+        <ThemeToggle isDarkMode={isDarkMode} onToggle={onThemeToggle} />
 
         {/* User Menu */}
         <UserMenu

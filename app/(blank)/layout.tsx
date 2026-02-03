@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import { NavbarConnect } from '@/components/ui/NavbarConnect';
+import { useAppSelector, useAppDispatch } from '@/lib/redux/hooks';
+import { setTheme, themes, type ThemeName } from '@/lib/redux/slices/themeSlice';
 import "../globals.css";
 
 export default function PagesLayout({
@@ -14,10 +16,28 @@ export default function PagesLayout({
   children: React.ReactNode;
 }>) {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const currentThemeName = useAppSelector((state) => state.theme.currentTheme);
+  const dispatch = useAppDispatch();
+  const currentTheme = themes[currentThemeName];
+
+  const isDarkMode = currentThemeName.includes('Dark');
+
+  const handleThemeToggle = () => {
+    // Váltás Light <-> Dark ugyanazon theme családon belül
+    if (currentThemeName === 'Connect Light') {
+      dispatch(setTheme('Connect Dark'));
+    } else if (currentThemeName === 'Connect Dark') {
+      dispatch(setTheme('Connect Light'));
+    } else if (currentThemeName === 'Adriana Light') {
+      dispatch(setTheme('Adriana Dark'));
+    } else if (currentThemeName === 'Adriana Dark') {
+      dispatch(setTheme('Adriana Light'));
+    }
+  };
 
   return (
-    <FluentProvider theme={webLightTheme}>
-      <div className="flex min-h-screen bg-gray-50">
+    <FluentProvider theme={currentTheme}>
+      <div className="flex min-h-screen" style={{ backgroundColor: tokens.colorNeutralBackground3 }} suppressHydrationWarning>
         {/* Floating Settings Button - Shown when collapsed */}
         {isNavCollapsed && (
           <div
@@ -47,16 +67,8 @@ export default function PagesLayout({
               borderRight: `1px solid ${tokens.colorNeutralStroke2}`,
             }}
           >
-            {/* Header with title and close button */}
-            <div className="flex items-center justify-between p-4 pb-2">
-              <Link href="/" className="no-underline flex-1">
-                <div 
-                  className="text-xs font-semibold uppercase tracking-wider cursor-pointer hover:opacity-80 transition-opacity"
-                  style={{ color: tokens.colorNeutralForeground3 }}
-                >
-                  Fluent UI Design System
-                </div>
-              </Link>
+            {/* Header with close button */}
+            <div className="flex items-center justify-end p-4 pb-2">
               <Button
                 appearance="subtle"
                 icon={<ChevronLeft24Regular />}
@@ -66,14 +78,17 @@ export default function PagesLayout({
               />
             </div>
             <div className="overflow-y-auto" style={{ height: 'calc(100vh - 64px)' }}>
-              <Navigation inDrawer onLinkClick={() => setIsNavCollapsed(true)} />
+              <Navigation onLinkClick={() => setIsNavCollapsed(true)} />
             </div>
           </div>
         )}
 
         {/* Main Content with Navbar */}
         <div className="flex-1 flex flex-col">
-          <NavbarConnect />
+          <NavbarConnect 
+            isDarkMode={isDarkMode}
+            onThemeToggle={handleThemeToggle}
+          />
           
           {/* Page Content */}
           <main className="flex-1">

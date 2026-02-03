@@ -8,9 +8,11 @@ import {
   MenuItem,
   MenuDivider,
   Button, 
-  Avatar 
+  Avatar,
+  tokens,
 } from '@fluentui/react-components';
 import { PersonRegular, ChevronDownRegular } from '@fluentui/react-icons';
+import Link from 'next/link';
 
 interface UserMenuProps {
   userName?: string;
@@ -55,20 +57,31 @@ export default function UserMenu({
       
       <MenuPopover className="!p-2">
         {/* User Info Header */}
-        <div className="flex w-full p-2 mb-3">
-          <Avatar 
-            icon={<PersonRegular />}
-          />
-          <div className="flex flex-col ml-2">
-            <div className="text-sm mb-1">{userName}</div>
-            <div className="text-xs text-gray-500">{userEmail}</div>
+        <Link href="/profile" className="no-underline">
+          <div className="flex w-full p-2 mb-3 rounded hover:bg-opacity-80 transition-colors cursor-pointer" style={{ backgroundColor: 'transparent' }}>
+            <Avatar 
+              icon={<PersonRegular />}
+            />
+            <div className="flex flex-col ml-2">
+              <div className="text-sm mb-1" style={{ color: tokens.colorNeutralForeground1 }}>{userName}</div>
+              <div className="text-xs" style={{ color: tokens.colorNeutralForeground3 }}>{userEmail}</div>
+            </div>
           </div>
-        </div>
+        </Link>
 
         <MenuList>
-          {menuItems.map((item, index) => (
-            <MenuItem key={index}>{item}</MenuItem>
-          ))}
+          <Link href="/profile" className="no-underline">
+            <MenuItem>Profil beállítások</MenuItem>
+          </Link>
+          <MenuItem>Bankkártya beállítások</MenuItem>
+          <MenuItem>Előfizetéseim</MenuItem>
+          <Link href="/integrations" className="no-underline">
+            <MenuItem>Integrációk</MenuItem>
+          </Link>
+          <Link href="/bank-consents" className="no-underline">
+            <MenuItem>Banki hozzájárulások</MenuItem>
+          </Link>
+          <MenuItem>Hozzáférési kulcsok</MenuItem>
         </MenuList>
 
         <MenuDivider />

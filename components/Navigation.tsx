@@ -56,6 +56,9 @@ const componentRoutes: Array<{ path: string; label: string; badge?: string }> = 
 export const pageRoutes: Array<{ path: string; label: string; badge?: string }> = [
   { path: '/blank', label: 'Blank oldal' },
   { path: '/bank-consents', label: 'Banki hozzájárulások' },
+  { path: '/integrations', label: 'Integrációk' },
+  { path: '/notifications', label: 'Értesítések', badge: '4' },
+  { path: '/profile', label: 'Profil' },
 ];
 
 interface NavigationProps {
@@ -76,7 +79,7 @@ export default function Navigation({ inDrawer = false, onLinkClick }: Navigation
   useEffect(() => {
     setIsDesignOpen(pathname.startsWith('/design'));
     setIsComponentsOpen(pathname.startsWith('/components'));
-    setIsPagesOpen(pathname === '/blank' || pathname === '/bank-consents');
+    setIsPagesOpen(pathname === '/blank' || pathname === '/bank-consents' || pathname === '/integrations' || pathname === '/notifications');
     setIsButtonsOpen(
       pathname.startsWith('/components/button') || 
       pathname.startsWith('/components/compound-button') || 

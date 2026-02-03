@@ -22,7 +22,10 @@ export default function ClientLayout({
   };
 
   // (blank) route group oldalai esetén ne rendereljük a navigation-t és a témaváltót
-  const isBlankPage = pageRoutes.some(route => pathname === route.path);
+  // Ellenőrizzük a pontos egyezést ÉS a dinamikus route-okat is (pl. /notifications/1)
+  const isBlankPage = pageRoutes.some(route => 
+    pathname === route.path || pathname.startsWith(route.path + '/')
+  );
 
   if (isBlankPage) {
     return (
