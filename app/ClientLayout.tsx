@@ -2,7 +2,7 @@
 
 import { FluentProvider, Menu, MenuTrigger, MenuPopover, MenuList, MenuItem, Button } from '@fluentui/react-components';
 import { ColorRegular } from '@fluentui/react-icons';
-import Navigation from '@/components/Navigation';
+import Navigation, { pageRoutes } from '@/components/Navigation';
 import { useAppSelector, useAppDispatch } from '@/lib/redux/hooks';
 import { setTheme, themes, type ThemeName } from '@/lib/redux/slices/themeSlice';
 import { usePathname } from 'next/navigation';
@@ -21,8 +21,8 @@ export default function ClientLayout({
     dispatch(setTheme(themeName));
   };
 
-  // Blank oldal esetén ne rendereljük a navigation-t és a témaváltót
-  const isBlankPage = pathname === '/blank';
+  // (blank) route group oldalai esetén ne rendereljük a navigation-t és a témaváltót
+  const isBlankPage = pageRoutes.some(route => pathname === route.path);
 
   if (isBlankPage) {
     return (

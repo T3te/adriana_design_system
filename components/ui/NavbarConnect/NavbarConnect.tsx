@@ -5,7 +5,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import UserMenu from './UserMenu';
 
-export default function NavbarConnect() {
+interface NavbarConnectProps {
+  userName?: string;
+  userEmail?: string;
+  menuItems?: string[];
+  logoutLabel?: string;
+}
+
+export default function NavbarConnect({
+  userName = 'Teszt Elek',
+  userEmail = 'teszt.elek@adriana.hu',
+  menuItems,
+  logoutLabel,
+}: NavbarConnectProps) {
   return (
     <header className="flex items-center justify-between py-5 px-6 bg-white shadow-md">
       {/* Logo Section */}
@@ -51,7 +63,12 @@ export default function NavbarConnect() {
         </div>
 
         {/* User Menu */}
-        <UserMenu />
+        <UserMenu
+          userName={userName}
+          userEmail={userEmail}
+          menuItems={menuItems}
+          logoutLabel={logoutLabel}
+        />
       </div>
     </header>
   );
