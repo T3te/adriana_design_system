@@ -84,12 +84,14 @@ export default function Navigation() {
         borderRight: `1px solid ${tokens.colorNeutralStroke2}`,
       }}
     >
-      <div 
-        className="text-xs font-semibold mb-6 uppercase tracking-wider"
-        style={{ color: tokens.colorNeutralForeground3 }}
-      >
-        Fluent UI Design System
-      </div>
+      <Link href="/" className="no-underline">
+        <div 
+          className="text-xs font-semibold mb-6 uppercase tracking-wider cursor-pointer hover:opacity-80 transition-opacity"
+          style={{ color: tokens.colorNeutralForeground3 }}
+        >
+          Fluent UI Design System
+        </div>
+      </Link>
       
       <ul className="flex flex-col gap-1 list-none p-0 m-0">
         {routes.map((route) => {
@@ -100,8 +102,8 @@ export default function Navigation() {
                 href={route.path}
                 className="block px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                 style={{
-                  color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                   backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
+                  color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                   fontWeight: isActive ? tokens.fontWeightSemibold : tokens.fontWeightRegular,
                 }}
               >
@@ -139,8 +141,8 @@ export default function Navigation() {
                     href={route.path}
                     className="px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                     style={{
-                      color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                       backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
+                      color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                       fontWeight: isActive ? tokens.fontWeightSemibold : tokens.fontWeightRegular,
                     }}
                   >
@@ -187,8 +189,8 @@ export default function Navigation() {
                     href={route.path}
                     className="block px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                     style={{
-                      color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                       backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
+                      color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                       fontWeight: isActive ? tokens.fontWeightSemibold : tokens.fontWeightRegular,
                     }}
                   >
@@ -225,8 +227,8 @@ export default function Navigation() {
                           href={route.path}
                           className="block px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                           style={{
-                            color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                             backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
+                            color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                             fontWeight: isActive ? tokens.fontWeightSemibold : tokens.fontWeightRegular,
                           }}
                         >
@@ -266,8 +268,8 @@ export default function Navigation() {
                           href={route.path}
                           className="block px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                           style={{
-                            color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                             backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
+                            color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                             fontWeight: isActive ? tokens.fontWeightSemibold : tokens.fontWeightRegular,
                           }}
                         >
@@ -307,8 +309,8 @@ export default function Navigation() {
                           href={route.path}
                           className="block px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                           style={{
-                            color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                             backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
+                            color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                             fontWeight: isActive ? tokens.fontWeightSemibold : tokens.fontWeightRegular,
                           }}
                         >
@@ -348,8 +350,8 @@ export default function Navigation() {
                           href={route.path}
                           className="block px-3 py-2.5 rounded-md text-sm transition-all no-underline"
                           style={{
-                            color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                             backgroundColor: isActive ? tokens.colorBrandBackground : 'transparent',
+                            color: isActive ? tokens.colorNeutralForegroundOnBrand : tokens.colorNeutralForeground1,
                             fontWeight: isActive ? tokens.fontWeightSemibold : tokens.fontWeightRegular,
                           }}
                         >

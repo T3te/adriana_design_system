@@ -1,14 +1,16 @@
 # Adriana Design System
 
-Egy átfogó design system és komponens library, amely a **Fluent UI React Components** alapjaira épül. Ez a projekt egy Next.js alkalmazás, amely bemutatja és dokumentálja a design rendszer összes komponensét és design tokenját.
+Az Adriana Design System egy konzisztens, professzionális és hozzáférhető komponenskönyvtár az Adriana projektekhez. A rendszer a **[Fluent UI React v9](https://react.fluentui.dev/)** komponensekre és a **[Tailwind CSS](https://tailwindcss.com/)** utility osztályokra épül, lehetővé téve a gyors fejlesztést és a konzisztens felhasználói élményt minden alkalmazásban.
 
 ## ✨ Funkciók
 
 - 🎨 **Design Tokens**: Színek, tipográfia, árnyékok, border radius, spacing és egyéb design elemek
-- 🧩 **Komponens Library**: Újrafelhasználható UI komponensek kategóriákba rendezve
+- 🧩 **Komponens Library**: 20+ újrafelhasználható UI komponens
 - 🌗 **Téma támogatás**: Redux alapú témaváltás (világos/sötét mód)
 - 📱 **Reszponzív**: Minden komponens mobilra optimalizált
 - 💻 **Kód példák**: Élő példák és használati útmutatók minden komponenshez
+- ⚡ **Modern Stack**: Fluent UI + Tailwind CSS kombinációja
+- ♿ **Hozzáférhetőség**: WCAG 2.1 AA szabványnak megfelelő komponensek
 
 ## 🚀 Kezdés
 
@@ -43,8 +45,8 @@ npm start
 
 - **Framework**: Next.js 16.1 (App Router)
 - **UI Library**: Fluent UI React Components 9.72
-- **State Management**: Redux Toolkit 2.11
 - **Styling**: Tailwind CSS 4
+- **State Management**: Redux Toolkit 2.11
 - **Language**: TypeScript 5
 - **Icons**: Fluent UI React Icons 2.0
 
@@ -53,16 +55,27 @@ npm start
 ```
 adriana_design_system/
 ├── app/
-│   ├── components/          # Komponens demo oldalak (kategorizálva)
-│   │   ├── buttons/         # Button, Compound Button, Menu Button, Split Button, Toggle Button
-│   │   ├── cards/           # Card, Card Header, Card Footer, Card Preview
-│   │   ├── avatars/         # Avatar, Avatar Group
-│   │   ├── badges/          # Badge, Counter Badge, Presence Badge
-│   │   ├── carousels/       # Carousel, Carousel Navigation
-│   │   ├── forms/           # Checkbox és egyéb form elemek
+│   ├── components/          # Komponens demo oldalak
 │   │   ├── accordion/       # Accordion komponens
+│   │   ├── avatar/          # Avatar komponens
+│   │   ├── avatar-group/    # Avatar Group komponens
+│   │   ├── badge/           # Badge komponens
 │   │   ├── breadcrumb/      # Breadcrumb navigáció
-│   │   └── display/         # Display komponensek
+│   │   ├── button/          # Button komponens
+│   │   ├── card/            # Card komponens
+│   │   ├── card-footer/     # Card Footer komponens
+│   │   ├── card-header/     # Card Header komponens
+│   │   ├── card-preview/    # Card Preview komponens
+│   │   ├── carousel/        # Carousel komponens
+│   │   ├── carousel-nav/    # Carousel Navigation komponens
+│   │   ├── checkbox/        # Checkbox komponens
+│   │   ├── compound-button/ # Compound Button komponens
+│   │   ├── counter-badge/   # Counter Badge komponens
+│   │   ├── display/         # Display komponensek
+│   │   ├── menu-button/     # Menu Button komponens
+│   │   ├── presence-badge/  # Presence Badge komponens
+│   │   ├── split-button/    # Split Button komponens
+│   │   └── toggle-button/   # Toggle Button komponens
 │   ├── design/              # Design token demo oldalak
 │   │   ├── colors/          # Színpaletta
 │   │   ├── typography/      # Tipográfia
@@ -125,11 +138,28 @@ adriana_design_system/
 
 ## 🎨 Design Rendszer
 
-A design system a következő alapelvekre épül:
+Az Adriana Design System két bevált technológia kombinációjára épül:
+
+### Fluent UI React v9
+A [Fluent UI](https://react.fluentui.dev/) modern, hozzáférhető és teljesítményorientált React komponenseket biztosít:
+- Professzionális Microsoft design language
+- Beépített hozzáférhetőség (WCAG 2.1 AA)
+- Világos és sötét téma támogatás
+- TypeScript típusdefiníciók
+
+### Tailwind CSS
+A [Tailwind CSS](https://tailwindcss.com/) utility-first megközelítése gyors és rugalmas styling-ot tesz lehetővé:
+- Gyors prototípus készítés
+- Konzisztens spacing és színrendszer
+- Reszponzív design utility osztályok
+- Kis bundle méret production-ben
+
+### Design Alapelvek
 
 - **Konzisztencia**: Egységes design language minden komponensben
 - **Hozzáférhetőség**: WCAG 2.1 AA szabványnak megfelelő komponensek
-- **Rugalmasság**: Könnyen testreszabható és bővíthető
+- **Rugalmasság**: Könnyen testreszabható Tailwind osztályokkal
+- **Teljesítmény**: Optimalizált bundle méret és runtime teljesítmény
 - **Dokumentáció**: Minden komponens részletes dokumentációval és példákkal
 
 ### Design Tokens
