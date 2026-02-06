@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Dialog,
   DialogSurface,
@@ -28,7 +28,6 @@ export default function GlsSettingsDialog({ open, onOpenChange }: GlsSettingsDia
   });
 
   const handleSave = () => {
-    console.log('GLS beállítások mentve:', settings);
     onOpenChange(false);
   };
 

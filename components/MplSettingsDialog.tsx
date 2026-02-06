@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Dialog,
   DialogSurface,
@@ -29,7 +29,6 @@ export default function MplSettingsDialog({ open, onOpenChange }: MplSettingsDia
   });
 
   const handleSave = () => {
-    console.log('MPL beállítások mentve:', settings);
     onOpenChange(false);
   };
 

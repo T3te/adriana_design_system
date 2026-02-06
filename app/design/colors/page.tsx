@@ -18,8 +18,7 @@ import {
   MenuItemRadio,
   MenuGroup,
   Button,
-  tokens,
-  makeStyles,
+  tokens
 } from '@fluentui/react-components';
 import { SearchRegular, FilterRegular } from '@fluentui/react-icons';
 import { useState } from 'react';
@@ -33,6 +32,59 @@ interface ColorToken {
   dark: string;
   description?: string;
 }
+
+// Move ColorTable component outside of render
+const ColorTable = ({ colors, title, filterTokens }: { 
+  colors: ColorToken[], 
+  title: string,
+  filterTokens: (colors: ColorToken[]) => ColorToken[]
+}) => {
+  const filteredColors = filterTokens(colors);
+  if (filteredColors.length === 0) return null;
+
+  return (
+    <div className="mb-12">
+      <Title2>{title}</Title2>
+      <TableContainer>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHeaderCell>Token név</TableHeaderCell>
+            <TableHeaderCell>Aktuális érték</TableHeaderCell>
+            <TableHeaderCell>Leírás</TableHeaderCell>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {filteredColors.map((color) => {
+            const currentValue = tokens[color.name as keyof typeof tokens];
+            return (
+              <TableRow key={color.name}>
+                <TableCell>
+                  <div className="font-mono text-[13px]">{color.name}</div>
+                </TableCell>
+                <TableCell>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div 
+                      className="w-10 h-10 rounded-md border" 
+                      style={{ backgroundColor: currentValue, borderColor: tokens.colorNeutralStroke2 }}
+                    />
+                    <Caption1 className="font-mono text-xs" style={{ color: tokens.colorNeutralForeground3 }}>
+                      {typeof currentValue === 'string' ? currentValue : 'complex'}
+                    </Caption1>
+                  </div>
+                </TableCell>
+                <TableCell>
+                  <Caption1>{color.description || '-'}</Caption1>
+                </TableCell>
+              </TableRow>
+            );
+          })}
+        </TableBody>
+      </Table>
+      </TableContainer>
+    </div>
+  );
+};
 
 const foregroundColors: ColorToken[] = [
   { name: 'colorNeutralForeground1', light: '#242424', dark: '#ffffff', description: 'Elsődleges szöveg' },
@@ -388,54 +440,6 @@ export default function ColorsPage() {
     return filtered;
   };
 
-  const ColorTable = ({ colors, title }: { colors: ColorToken[], title: string }) => {
-    const filteredColors = filterTokens(colors);
-    if (filteredColors.length === 0) return null;
-
-    return (
-      <div className="mb-12">
-        <Title2>{title}</Title2>
-        <TableContainer>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHeaderCell>Token név</TableHeaderCell>
-              <TableHeaderCell>Aktuális érték</TableHeaderCell>
-              <TableHeaderCell>Leírás</TableHeaderCell>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {filteredColors.map((color) => {
-              const currentValue = tokens[color.name as keyof typeof tokens];
-              return (
-                <TableRow key={color.name}>
-                  <TableCell>
-                    <div className="font-mono text-[13px]">{color.name}</div>
-                  </TableCell>
-                  <TableCell>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <div 
-                        className="w-10 h-10 rounded-md border" 
-                        style={{ backgroundColor: currentValue, borderColor: tokens.colorNeutralStroke2 }}
-                      />
-                      <Caption1 className="font-mono text-xs" style={{ color: tokens.colorNeutralForeground3 }}>
-                        {typeof currentValue === 'string' ? currentValue : 'complex'}
-                      </Caption1>
-                    </div>
-                  </TableCell>
-                  <TableCell>
-                    <Caption1>{color.description || '-'}</Caption1>
-                  </TableCell>
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-        </TableContainer>
-      </div>
-    );
-  };
-
   return (
     <div className="max-w-7xl mx-auto">
       <div className="mb-8">
@@ -447,28 +451,28 @@ export default function ColorsPage() {
           <Title2 className="mb-3">Custom Theme létrehozása</Title2>
           <CodeBlock>
             <div>
-              <CodeComment>// 1. Brand színek definiálása (lib/themes.ts)</CodeComment>
+              <CodeComment>{'// 1. Brand színek definiálása (lib/themes.ts)'}</CodeComment>
               <div className="pl-4 space-y-1">
                 <div>export const adriana: BrandVariants = &#123;</div>
-                <div className="pl-4">10: "#060200",</div>
-                <div className="pl-4">20: "#241400",</div>
-                <div className="pl-4">// ... további árnyalatok</div>
-                <div className="pl-4">130: "#FF8C00",  // Elsődleges brand szín</div>
-                <div className="pl-4">140: "#FFA451",</div>
-                <div className="pl-4">150: "#FFBA7F",</div>
-                <div className="pl-4">160: "#FFCFA8",</div>
+                <div className="pl-4">10: &quot;#060200&quot;,</div>
+                <div className="pl-4">20: &quot;#241400&quot;,</div>
+                <div className="pl-4">{'// ... további árnyalatok'}</div>
+                <div className="pl-4">130: &quot;#FF8C00&quot;,  {'// Elsődleges brand szín'}</div>
+                <div className="pl-4">140: &quot;#FFA451&quot;,</div>
+                <div className="pl-4">150: &quot;#FFBA7F&quot;,</div>
+                <div className="pl-4">160: &quot;#FFCFA8&quot;,</div>
                 <div>&#125;;</div>
               </div>
             </div>
             
             <div className="mt-4">
-              <CodeComment>// 2. Téma létrehozása felülírásokkal</CodeComment>
+              <CodeComment>{'// 2. Téma létrehozása felülírásokkal'}</CodeComment>
               <div className="pl-4 space-y-1">
                 <div>function applyBrandOverrides(theme: Theme, brand: BrandVariants) &#123;</div>
                 <div className="pl-4">theme.colorBrandBackground = brand[130];</div>
                 <div className="pl-4">theme.colorBrandForeground1 = brand[130];</div>
                 <div className="pl-4">theme.colorStrokeFocus2 = brand[130];</div>
-                <div className="pl-4">// ... további overrides</div>
+                <div className="pl-4">{'// ... további overrides'}</div>
                 <div className="pl-4">return theme;</div>
                 <div>&#125;</div>
                 <div className="mt-2"></div>
@@ -479,10 +483,10 @@ export default function ColorsPage() {
             </div>
             
             <div className="mt-4">
-              <CodeComment>// 3. Téma alkalmazása (app/ClientLayout.tsx)</CodeComment>
+              <CodeComment>{'// 3. Téma alkalmazása (app/ClientLayout.tsx)'}</CodeComment>
               <div className="pl-4 space-y-1">
-                <div>import &#123; FluentProvider &#125; from '@fluentui/react-components';</div>
-                <div>import &#123; adrianaLightTheme &#125; from '@/lib/themes';</div>
+                <div>import &#123; FluentProvider &#125; from &apos;@fluentui/react-components&apos;;</div>
+                <div>import &#123; adrianaLightTheme &#125; from &apos;@/lib/themes&apos;;</div>
                 <div className="mt-2"></div>
                 <div>&lt;FluentProvider theme=&#123;adrianaLightTheme&#125;&gt;</div>
                 <div className="pl-4">&#123;children&#125;</div>
@@ -496,12 +500,12 @@ export default function ColorsPage() {
           <Title2 className="mb-3">Color Tokens használata</Title2>
           <CodeBlock>
             <div>
-              <CodeComment>// Import</CodeComment>
-              <div className="pl-4">import &#123; tokens &#125; from '@fluentui/react-components';</div>
+              <CodeComment>{'// Import'}</CodeComment>
+              <div className="pl-4">import &#123; tokens &#125; from &apos;@fluentui/react-components&apos;;</div>
             </div>
             
             <div className="mt-4">
-              <CodeComment>// Inline style használat</CodeComment>
+              <CodeComment>{'// Inline style használat'}</CodeComment>
               <div className="pl-4 space-y-1">
                 <div>&lt;div style=&#123;&#123; color: tokens.colorBrandForeground1 &#125;&#125;&gt;</div>
                 <div>&lt;div style=&#123;&#123; backgroundColor: tokens.colorNeutralBackground1 &#125;&#125;&gt;</div>
@@ -510,13 +514,13 @@ export default function ColorsPage() {
             </div>
             
             <div className="mt-4">
-              <CodeComment>// CSS változókkal (makeStyles vagy CSS-ben)</CodeComment>
+              <CodeComment>{'// CSS változókkal (makeStyles vagy CSS-ben)'}</CodeComment>
               <div className="pl-4 space-y-1">
                 <div>const useStyles = makeStyles(&#123;</div>
                 <div className="pl-4">container: &#123;</div>
                 <div className="pl-8">color: tokens.colorBrandForeground1,</div>
                 <div className="pl-8">backgroundColor: tokens.colorNeutralBackground1,</div>
-                <div className="pl-8">'&:hover': &#123;</div>
+                <div className="pl-8">&apos;&:hover&apos;: &#123;</div>
                 <div className="pl-12">backgroundColor: tokens.colorNeutralBackground1Hover,</div>
                 <div className="pl-8">&#125;,</div>
                 <div className="pl-4">&#125;,</div>
@@ -756,12 +760,12 @@ export default function ColorsPage() {
         </Menu>
       </div>
 
-      <ColorTable colors={foregroundColors} title="Szövegszínek (Foreground)" />
-      <ColorTable colors={backgroundColors} title="Háttérszínek (Background)" />
-      <ColorTable colors={strokeColors} title="Keretszínek (Stroke/Border)" />
-      <ColorTable colors={statusColors} title="Státusz színek" />
-      <ColorTable colors={paletteColors} title="Színpaletta" />
-      <ColorTable colors={shadowColors} title="Árnyékszínek (Shadow)" />
+      <ColorTable colors={foregroundColors} title="Szövegszínek (Foreground)" filterTokens={filterTokens} />
+      <ColorTable colors={backgroundColors} title="Háttérszínek (Background)" filterTokens={filterTokens} />
+      <ColorTable colors={strokeColors} title="Keretszínek (Stroke/Border)" filterTokens={filterTokens} />
+      <ColorTable colors={statusColors} title="Státusz színek" filterTokens={filterTokens} />
+      <ColorTable colors={paletteColors} title="Színpaletta" filterTokens={filterTokens} />
+      <ColorTable colors={shadowColors} title="Árnyékszínek (Shadow)" filterTokens={filterTokens} />
     </div>
   );
 }

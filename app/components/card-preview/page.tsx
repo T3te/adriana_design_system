@@ -32,11 +32,11 @@ export default function CardPreviewPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import { CardPreview } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<CardPreview logo={<img src="..." alt="Logo" />}>
   <img src="..." alt="Preview" />
 </CardPreview>`}

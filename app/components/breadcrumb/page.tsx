@@ -35,7 +35,7 @@ export default function BreadcrumbPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import { 
   Breadcrumb, 
   BreadcrumbItem, 
@@ -44,7 +44,7 @@ export default function BreadcrumbPage() {
 } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<Breadcrumb>
   <BreadcrumbItem>
     <BreadcrumbButton href="/">Elem 1</BreadcrumbButton>
@@ -167,9 +167,9 @@ export default function BreadcrumbPage() {
         <div className="mb-4">
           <Caption1 style={{ color: tokens.colorNeutralForeground3 }}>
             A focusMode tulajdonság beállítja a fókusz viselkedést a Breadcrumb komponensben.
-            A "tab" mód a Tab billentyűvel ciklikusan végighalad az elemeken.
-            Az "arrow" mód a nyíl billentyűkkel navigál az elemek között.
-            Az alapértelmezett a "tab".
+            A &quot;tab&quot; mód a Tab billentyűvel ciklikusan végighalad az elemeken.
+            Az &quot;arrow&quot; mód a nyíl billentyűkkel navigál az elemek között.
+            Az alapértelmezett a &quot;tab&quot;.
           </Caption1>
         </div>
         <div className="flex flex-col gap-6">

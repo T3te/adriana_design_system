@@ -35,14 +35,14 @@ export default function TypographyPage() {
         </div>
         <CodeBlock>
           <div>
-            <CodeComment>// Import komponens</CodeComment>
-            <div className="pl-4">import &#123; Title1 &#125; from '@fluentui/react-components';</div>
+            <CodeComment>{'// Import komponens'}</CodeComment>
+            <div className="pl-4">import &#123; Title1 &#125; from &apos;@fluentui/react-components&apos;;</div>
             <div className="pl-4">&lt;Title1&gt;Címsor szöveg&lt;/Title1&gt;</div>
           </div>
           
           <div className="mt-4">
-            <CodeComment>// Import token</CodeComment>
-            <div className="pl-4">import &#123; tokens &#125; from '@fluentui/react-components';</div>
+            <CodeComment>{'// Import token'}</CodeComment>
+            <div className="pl-4">import &#123; tokens &#125; from &apos;@fluentui/react-components&apos;;</div>
             <div className="pl-4">&lt;div style=&#123;&#123; fontSize: tokens.fontSizeBase400 &#125;&#125;&gt;</div>
           </div>
         </CodeBlock>
@@ -303,15 +303,15 @@ export default function TypographyPage() {
             <TableBody>
               <TableRow>
                 <TableCell><div className="font-mono text-sm">fontFamilyBase</div></TableCell>
-                <TableCell><Caption1 className="text-xs" style={{ color: tokens.colorNeutralForeground3 }}>-apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif</Caption1></TableCell>
+                <TableCell><Caption1 className="text-xs" style={{ color: tokens.colorNeutralForeground3 }}>-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, system-ui, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, sans-serif</Caption1></TableCell>
               </TableRow>
               <TableRow>
                 <TableCell><div className="font-mono text-sm">fontFamilyMonospace</div></TableCell>
-                <TableCell><Caption1 className="text-xs" style={{ color: tokens.colorNeutralForeground3 }}>Consolas, 'Courier New', Courier, monospace</Caption1></TableCell>
+                <TableCell><Caption1 className="text-xs" style={{ color: tokens.colorNeutralForeground3 }}>Consolas, &apos;Courier New&apos;, Courier, monospace</Caption1></TableCell>
               </TableRow>
               <TableRow>
                 <TableCell><div className="font-mono text-sm">fontFamilyNumeric</div></TableCell>
-                <TableCell><Caption1 className="text-xs" style={{ color: tokens.colorNeutralForeground3 }}>Bahnschrift, 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif</Caption1></TableCell>
+                <TableCell><Caption1 className="text-xs" style={{ color: tokens.colorNeutralForeground3 }}>Bahnschrift, &apos;Segoe UI&apos;, &apos;Segoe UI Web (West European)&apos;, -apple-system, BlinkMacSystemFont, Roboto, &apos;Helvetica Neue&apos;, sans-serif</Caption1></TableCell>
               </TableRow>
             </TableBody>
           </Table>

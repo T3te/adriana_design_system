@@ -22,7 +22,6 @@ import {
 } from '@fluentui/react-icons';
 import Link from 'next/link';
 import { type Notification, mockNotifications as MOCK_NOTIFICATIONS } from '@/lib/mockNotifications';
-import { getTypeIcon, formatTimestamp } from '@/components/ui/NotificationHelpers';
 
 interface NotificationsMenuProps {
   notifications?: Notification[];

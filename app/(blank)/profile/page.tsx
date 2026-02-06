@@ -89,7 +89,6 @@ export default function ProfilePage() {
   };
 
   const handleSave = () => {
-    console.log('Profil mentve:', profileData);
     // Itt történne az API hívás
   };
 

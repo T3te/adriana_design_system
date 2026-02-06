@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Dialog,
   DialogSurface,
@@ -28,7 +28,6 @@ export default function FoxpostSettingsDialog({ open, onOpenChange }: FoxpostSet
   });
 
   const handleSave = () => {
-    console.log('Foxpost beállítások mentve:', settings);
     onOpenChange(false);
   };
 
@@ -79,7 +78,7 @@ export default function FoxpostSettingsDialog({ open, onOpenChange }: FoxpostSet
                   placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
                 />
                 <Caption1 style={{ marginTop: '0.5rem', display: 'block' }}>
-                  Amennyiben nincs még ecomm api kulcs generálva, úgy a kulcs generálása az "Új generálása" gombra kattintással történik a foxpost.hu oldalon.
+                  Amennyiben nincs még ecomm api kulcs generálva, úgy a kulcs generálása az &quot;Új generálása&quot; gombra kattintással történik a foxpost.hu oldalon.
                 </Caption1>
               </Field>
             </div>

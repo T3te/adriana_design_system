@@ -101,7 +101,7 @@ export default function CardPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import {
   Card,
   CardHeader,
@@ -110,7 +110,7 @@ export default function CardPage() {
 } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<Card>
   <CardHeader
     image={<img src="..." alt="..." />}
@@ -438,7 +438,7 @@ export default function CardPage() {
         <Card
           className={styles.card}
           disabled
-          onSelectionChange={() => console.log("This should not fire")}
+          onSelectionChange={() => {}}
         >
           <CardHeader
             image={

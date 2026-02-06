@@ -1,9 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Card,
-  Body1Strong,
   Body1,
   Caption1,
   Title3,
@@ -13,15 +12,11 @@ import {
 } from '@fluentui/react-components';
 import {
   ArrowLeft24Regular,
-  Info20Regular,
-  Warning20Filled,
-  AlertOn20Filled,
-  CheckmarkCircle20Regular,
   Checkmark24Regular,
 } from '@fluentui/react-icons';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { type Notification, mockNotifications } from '@/lib/mockNotifications';
+import { mockNotifications } from '@/lib/mockNotifications';
 import { getTypeIcon, getTypeBadgeColor, getTypeBadgeLabel, formatTimestamp } from '@/components/ui/NotificationHelpers';
 
 export default function NotificationDetailPage() {

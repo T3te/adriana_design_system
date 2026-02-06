@@ -10,7 +10,6 @@ import { ThemeToggle } from '@/components/ui/ThemeToggle';
 interface NavbarConnectProps {
   userName?: string;
   userEmail?: string;
-  menuItems?: string[];
   logoutLabel?: string;
   unreadNotifications?: number;
   isDarkMode?: boolean;
@@ -20,7 +19,6 @@ interface NavbarConnectProps {
 export default function NavbarConnect({
   userName = 'Teszt Elek',
   userEmail = 'teszt.elek@adriana.hu',
-  menuItems,
   logoutLabel,
   unreadNotifications = 4,
   isDarkMode = false,
@@ -86,7 +84,6 @@ export default function NavbarConnect({
         <UserMenu
           userName={userName}
           userEmail={userEmail}
-          menuItems={menuItems}
           logoutLabel={logoutLabel}
         />
       </div>

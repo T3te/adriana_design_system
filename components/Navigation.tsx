@@ -75,8 +75,10 @@ export default function Navigation({ inDrawer = false, onLinkClick }: Navigation
   const [isBadgesOpen, setIsBadgesOpen] = useState(false);
   const [isCardsOpen, setIsCardsOpen] = useState(false);
   const [isCarouselsOpen, setIsCarouselsOpen] = useState(false);
-
+  
+  // Sync state with URL on pathname change
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsDesignOpen(pathname.startsWith('/design'));
     setIsComponentsOpen(pathname.startsWith('/components'));
     setIsPagesOpen(pathname === '/blank' || pathname === '/bank-consents' || pathname === '/integrations' || pathname === '/notifications');

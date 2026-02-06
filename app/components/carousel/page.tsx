@@ -79,7 +79,7 @@ const BannerCard: React.FC<{
       aria-label={`${index + 1} of ${total}`}
       id={`card-${index}`}
     >
-      <Image fit="cover" src={imageSrc} role="presentation" />
+      <Image fit="cover" src={imageSrc} alt="" />
 
       <div className={classes.cardContainer}>
         <div className={classes.title}>{children}</div>
@@ -99,8 +99,7 @@ const BannerCard: React.FC<{
 
 const getAnnouncement: CarouselAnnouncerFunction = (
   index: number,
-  totalSlides: number,
-  slideGroupList: number[][]
+  totalSlides: number
 ) => {
   return `Carousel slide ${index + 1} of ${totalSlides}`;
 };
@@ -126,7 +125,7 @@ export default function CarouselPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import {
   Carousel,
   CarouselCard,
@@ -138,7 +137,7 @@ export default function CarouselPage() {
 } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<Carousel groupSize={1} circular>
   <CarouselViewport>
     <CarouselSlider>
@@ -264,7 +263,7 @@ export default function CarouselPage() {
         <Carousel
           groupSize={1}
           activeIndex={activeIndex}
-          onActiveIndexChange={(e, data) => setActiveIndex(data.index)}
+          onActiveIndexChange={(_e, data) => setActiveIndex(data.index)}
         >
           <CarouselViewport>
             <CarouselSlider>

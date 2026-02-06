@@ -5,7 +5,6 @@ import {
   Title2,
   Caption1,
   Avatar,
-  PresenceBadge,
   tokens,
 } from '@fluentui/react-components';
 import {
@@ -31,11 +30,11 @@ export default function AvatarPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import { Avatar } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<Avatar name="John Doe" />
 <Avatar name="Jane Smith" image={{ src: 'https://...' }} />
 <Avatar icon={<PersonRegular />} />`}

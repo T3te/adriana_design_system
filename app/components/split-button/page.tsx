@@ -32,7 +32,7 @@ export default function SplitButtonPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import {
   Menu,
   MenuItem,
@@ -44,7 +44,7 @@ export default function SplitButtonPage() {
 import type { MenuButtonProps } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<Menu positioning="below-end">
   <MenuTrigger disableButtonEnhancement>
     {(triggerProps: MenuButtonProps) => (

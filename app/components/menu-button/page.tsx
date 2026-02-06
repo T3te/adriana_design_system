@@ -31,7 +31,7 @@ export default function MenuButtonPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import {
   Menu,
   MenuButton,
@@ -42,7 +42,7 @@ export default function MenuButtonPage() {
 } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<Menu>
   <MenuTrigger disableButtonEnhancement>
     <MenuButton>Példa</MenuButton>

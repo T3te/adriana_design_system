@@ -29,11 +29,11 @@ export default function BadgePage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import { Badge } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<Badge>Új</Badge>
 <Badge appearance="outline" color="danger">999+</Badge>
 <Badge icon={<CalendarMonthRegular />}>Esemény</Badge>`}

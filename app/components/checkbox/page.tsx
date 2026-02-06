@@ -36,11 +36,11 @@ export default function CheckboxPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import { Checkbox } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<Checkbox label="Elfogadom a feltételeket" />
 <Checkbox checked={checked} onChange={(ev, data) => setChecked(data.checked)} />
 <Checkbox defaultChecked label="Alapból bejelölt" />`}
@@ -68,7 +68,7 @@ export default function CheckboxPage() {
           <Checkbox defaultChecked label="Alapból bejelölt (uncontrolled)" />
           <Checkbox
             checked={checked}
-            onChange={(ev, data) => setChecked(data.checked === true)}
+            onChange={(_ev, data) => setChecked(data.checked === true)}
             label={`Vezérelt (${checked ? 'bejelölt' : 'nincs bejelölve'})`}
           />
         </div>
@@ -80,15 +80,15 @@ export default function CheckboxPage() {
           <Title2>Vegyes (Mixed/Indeterminate)</Title2>
         </div>
         <Caption1 style={{ color: tokens.colorNeutralForeground3 }} className="mb-4 block">
-          A checkbox kezdetben vegyes állapotú lehet a defaultChecked="mixed"
-          használatával, vagy vezérelhető a checked="mixed" segítségével. Ebben
+          A checkbox kezdetben vegyes állapotú lehet a defaultChecked=&quot;mixed&quot;
+          használatával, vagy vezérelhető a checked=&quot;mixed&quot; segítségével. Ebben
           a példában a vegyes állapotot akkor használjuk, amikor az opciók
           csoportja eltérő értékekkel rendelkezik.
         </Caption1>
         <div className="flex flex-col gap-2">
           <Checkbox
             checked={allChecked ? true : someChecked ? 'mixed' : false}
-            onChange={(ev, data) => {
+            onChange={(_ev, data) => {
               const newChecked = data.checked === true;
               setOption1(newChecked);
               setOption2(newChecked);
@@ -99,17 +99,17 @@ export default function CheckboxPage() {
           <div className="ml-6 flex flex-col gap-2">
             <Checkbox
               checked={option1}
-              onChange={(ev, data) => setOption1(data.checked === true)}
+              onChange={(_ev, data) => setOption1(data.checked === true)}
               label="Opció 1"
             />
             <Checkbox
               checked={option2}
-              onChange={(ev, data) => setOption2(data.checked === true)}
+              onChange={(_ev, data) => setOption2(data.checked === true)}
               label="Opció 2"
             />
             <Checkbox
               checked={option3}
-              onChange={(ev, data) => setOption3(data.checked === true)}
+              onChange={(_ev, data) => setOption3(data.checked === true)}
               label="Opció 3"
             />
           </div>

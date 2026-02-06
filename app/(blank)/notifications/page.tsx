@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Card,
   Body1Strong,
@@ -33,10 +33,6 @@ export default function NotificationsPage() {
 
   const handleMarkAllAsRead = () => {
     setNotifications((prev) => prev.map((n) => ({ ...n, isRead: true })));
-  };
-
-  const handleDismiss = (id: string) => {
-    setNotifications((prev) => prev.filter((n) => n.id !== id));
   };
 
   const filteredNotifications =
@@ -140,7 +136,7 @@ export default function NotificationsPage() {
                         </Caption1>
                         <Badge
                           appearance="outline"
-                          color={getTypeBadgeColor(notification.type) as any}
+                          color={getTypeBadgeColor(notification.type)}
                           size="small"
                         >
                           {getTypeBadgeLabel(notification.type)}

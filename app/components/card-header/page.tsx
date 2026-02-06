@@ -37,11 +37,11 @@ export default function CardHeaderPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import { CardHeader, Body1, Caption1 } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<CardHeader
   image={<img src="..." alt="..." />}
   header={<Body1><b>Cím</b></Body1>}

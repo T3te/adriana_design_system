@@ -32,7 +32,7 @@ export default function AccordionPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import {
   Accordion,
   AccordionHeader,
@@ -41,7 +41,7 @@ export default function AccordionPage() {
 } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<Accordion>
   <AccordionItem value="1">
     <AccordionHeader>Fejléc 1</AccordionHeader>
@@ -126,7 +126,7 @@ export default function AccordionPage() {
         </Caption1>
         <Accordion 
           openItems={openItems}
-          onToggle={(event, data) => setOpenItems(data.openItems as string[])}
+          onToggle={(_event, data) => setOpenItems(data.openItems as string[])}
           multiple
           collapsible
         >

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Dialog,
   DialogSurface,
@@ -22,7 +22,7 @@ interface SzamlazzSettingsDialogProps {
 }
 
 export default function SzamlazzSettingsDialog({ open, onOpenChange }: SzamlazzSettingsDialogProps) {
-  const [settings, setSettings] = useState({
+  const [settings] = useState({
     identificationKey: 'yDXJqRKChksPjQKXgwmnfV2bZzItepFMVicf39rKaSJtzuKgDe9qipVN2BmrHi0L-atmtk',
   });
 
@@ -32,7 +32,6 @@ export default function SzamlazzSettingsDialog({ open, onOpenChange }: SzamlazzS
   };
 
   const handleSave = () => {
-    console.log('Számlázz.hu beállítások mentve:', settings);
     onOpenChange(false);
   };
 
@@ -59,7 +58,7 @@ export default function SzamlazzSettingsDialog({ open, onOpenChange }: SzamlazzS
                 A lenti mezőben látható Számlázz.hu azonosító kulcsot másold be a céged Számlázz.hu fiókjába a Könyvelői adatkapcsolatok beállításainál.
               </Caption1>
               <Caption1 style={{ color: tokens.colorNeutralForeground2, display: 'block', marginTop: '0.5rem' }}>
-                <strong>Fontos:</strong> A kulcs végén az "-atmtk" szöveg is beletartozik!
+                <strong>Fontos:</strong> A kulcs végén az &quot;-atmtk&quot; szöveg is beletartozik!
               </Caption1>
               
               <Field label="Azonosító kulcs" required>
@@ -86,7 +85,7 @@ export default function SzamlazzSettingsDialog({ open, onOpenChange }: SzamlazzS
                   <li>Beállítások → Fiók beállításai → Könyvelői adatkapcsolatok</li>
                   <li>Új adatkapcsolat → Fogadó rendszer: <strong>Adriana (automatik.hu)</strong></li>
                   <li>Másold be az Azonosító kulcsot</li>
-                  <li>Pipáld be: "Küldd át a banki tranzakciókat is"</li>
+                  <li>Pipáld be: &quot;Küldd át a banki tranzakciókat is&quot;</li>
                   <li>Állítsd be a Tranzakciók küldésének kezdetét</li>
                 </ol>
                 <Caption1 style={{ marginTop: '12px', display: 'block' }}>

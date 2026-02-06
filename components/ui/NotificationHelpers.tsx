@@ -18,7 +18,7 @@ export const getTypeIcon = (type: string) => {
   }
 };
 
-export const getTypeBadgeColor = (type: string): any => {
+export const getTypeBadgeColor = (type: string): 'warning' | 'danger' | 'success' | 'informative' => {
   switch (type) {
     case 'warning':
       return 'warning';

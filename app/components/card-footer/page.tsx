@@ -33,11 +33,11 @@ export default function CardFooterPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import { CardFooter, Button } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<CardFooter>
   <Button icon={<ArrowReplyRegular />}>Válasz</Button>
   <Button icon={<ShareRegular />}>Megosztás</Button>

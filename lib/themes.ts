@@ -83,8 +83,11 @@ function applyBrandOverrides(
 
   // Néhány theme token nincs hivatalosan a Theme típusban, de runtime-ban működik.
   // Ezek “brand subtle layers” jellegűek.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (theme as any).colorBrandBackground3 = brand[subtleBgKey];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (theme as any).colorBrandBackground3Hover = brand[(30 as keyof BrandVariants)];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (theme as any).colorBrandBackground3Pressed = brand[(40 as keyof BrandVariants)];
 
   return theme;

@@ -81,7 +81,7 @@ export default function CarouselNavPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import {
   CarouselNav,
   CarouselNavButton,
@@ -89,7 +89,7 @@ export default function CarouselNavPage() {
 } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<CarouselNav>
   {(index) => (
     <CarouselNavButton aria-label={\`Carousel Nav Button \${index}\`} />

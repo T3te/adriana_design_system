@@ -9,7 +9,6 @@ import {
   AvatarGroupPopover,
   partitionAvatarGroupItems,
   tokens,
-  Tooltip,
 } from '@fluentui/react-components';
 import CodeBlock, { CodeComment } from '@/components/CodeBlock';
 
@@ -45,7 +44,7 @@ export default function AvatarGroupPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import { 
   AvatarGroup, 
   AvatarGroupItem, 
@@ -54,7 +53,7 @@ export default function AvatarGroupPage() {
 } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`const names = ['Kovács János', 'Nagy Eszter', ...];
 const { inlineItems, overflowItems } = partitionAvatarGroupItems({
   items: names,
@@ -223,7 +222,7 @@ const { inlineItems, overflowItems } = partitionAvatarGroupItems({
               <div style={{ width: '80px' }}>
                 <Caption1 style={{ color: tokens.colorNeutralForeground3 }}>{size}</Caption1>
               </div>
-              <AvatarGroup layout="spread" size={size as any}>
+              <AvatarGroup layout="spread" size={size as 16 | 20 | 24 | 28 | 32 | 36 | 40 | 48 | 56 | 64 | 72 | 96 | 120 | 128}>
                 {partitionAvatarGroupItems({ items: names }).inlineItems.map((name) => (
                   <AvatarGroupItem name={name} key={name} />
                 ))}
@@ -257,7 +256,7 @@ const { inlineItems, overflowItems } = partitionAvatarGroupItems({
               <div style={{ width: '80px' }}>
                 <Caption1 style={{ color: tokens.colorNeutralForeground3 }}>{size}</Caption1>
               </div>
-              <AvatarGroup layout="stack" size={size as any}>
+              <AvatarGroup layout="stack" size={size as 16 | 20 | 24 | 28 | 32 | 36 | 40 | 48 | 56 | 64 | 72 | 96 | 120 | 128}>
                 {partitionAvatarGroupItems({ items: names }).inlineItems.map((name) => (
                   <AvatarGroupItem name={name} key={name} />
                 ))}
@@ -291,7 +290,7 @@ const { inlineItems, overflowItems } = partitionAvatarGroupItems({
               <div style={{ width: '80px' }}>
                 <Caption1 style={{ color: tokens.colorNeutralForeground3 }}>{size}</Caption1>
               </div>
-              <AvatarGroup layout="pie" size={size as any}>
+              <AvatarGroup layout="pie" size={size as 16 | 20 | 24 | 28 | 32 | 36 | 40 | 48 | 56 | 64 | 72 | 96 | 120 | 128}>
                 <AvatarGroupPopover>
                   {names.slice(0, 3).map((name) => (
                     <AvatarGroupItem name={name} key={name} />

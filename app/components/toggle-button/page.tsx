@@ -28,11 +28,11 @@ export default function ToggleButtonPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import { ToggleButton } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<ToggleButton>Példa</ToggleButton>`}
         </CodeBlock>
       </div>

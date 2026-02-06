@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import {
   Dialog,
   DialogSurface,
@@ -36,7 +36,6 @@ export default function VivaWalletSettingsDialog({ open, onOpenChange }: VivaWal
   });
 
   const handleSave = () => {
-    console.log('Viva Wallet beállítások mentve:', settings);
     onOpenChange(false);
   };
 

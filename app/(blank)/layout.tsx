@@ -1,13 +1,12 @@
 'use client';
 
-import { Button, FluentProvider, webLightTheme, tokens } from '@fluentui/react-components';
+import { Button, FluentProvider, tokens } from '@fluentui/react-components';
 import { Settings24Regular, ChevronLeft24Regular } from '@fluentui/react-icons';
-import Link from 'next/link';
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import { NavbarConnect } from '@/components/ui/NavbarConnect';
 import { useAppSelector, useAppDispatch } from '@/lib/redux/hooks';
-import { setTheme, themes, type ThemeName } from '@/lib/redux/slices/themeSlice';
+import { setTheme, themes } from '@/lib/redux/slices/themeSlice';
 import "../globals.css";
 
 export default function PagesLayout({

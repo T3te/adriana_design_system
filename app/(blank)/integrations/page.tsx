@@ -96,18 +96,13 @@ export default function IntegrationsPage() {
   };
 
   const handleOpenDocumentation = (url: string, integrationId?: string) => {
-    console.log('handleOpenDocumentation called:', { url, integrationId });
     if (integrationId === 'foxpost') {
-      console.log('Opening Foxpost modal');
       setFoxpostInfoOpen(true);
     } else if (integrationId === 'mpl') {
-      console.log('Opening MPL modal');
       setMplInfoOpen(true);
     } else if (integrationId === 'szamlazz') {
-      console.log('Opening Számlázz modal');
       setSzamlazzInfoOpen(true);
     } else if (integrationId === 'viva-wallet') {
-      console.log('Opening Viva Wallet modal');
       setVivaWalletInfoOpen(true);
     } else {
       window.open(url, '_blank');

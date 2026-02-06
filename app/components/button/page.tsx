@@ -33,11 +33,11 @@ export default function ButtonPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import { Button } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<Button appearance="primary">Mentés</Button>
 <Button appearance="secondary">Mégse</Button>
 <Button icon={<CalendarMonthRegular />}>Naptár</Button>`}

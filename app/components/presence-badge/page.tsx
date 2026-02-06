@@ -25,11 +25,11 @@ export default function PresenceBadgePage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import { PresenceBadge } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<PresenceBadge status="available" />
 <PresenceBadge status="busy" />
 <PresenceBadge status="away" outOfOffice />`}

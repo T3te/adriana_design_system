@@ -25,11 +25,11 @@ export default function CounterBadgePage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import { CounterBadge } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<CounterBadge count={5} />
 <CounterBadge count={100} overflowCount={99} />
 <CounterBadge dot />`}
@@ -178,7 +178,7 @@ export default function CounterBadgePage() {
         <div className="mb-4">
           <Caption1 style={{ color: tokens.colorNeutralForeground3 }}>
             Az overflowCount tulajdonsággal beállítható a maximum megjelenítendő szám. Az alapértelmezett 99.
-            Ha a count meghaladja ezt az értéket, akkor "99+" formátumban jelenik meg.
+            Ha a count meghaladja ezt az értéket, akkor &quot;99+&quot; formátumban jelenik meg.
           </Caption1>
         </div>
         <div className="flex gap-4 items-center flex-wrap">

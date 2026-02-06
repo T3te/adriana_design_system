@@ -20,7 +20,7 @@ export default function IconsPage() {
       })
       .map(([name, Component]) => ({
         name,
-        Component: Component as React.ComponentType<any>
+        Component: Component as React.ComponentType<React.SVGProps<SVGSVGElement>>
       }))
       .sort((a, b) => a.name.localeCompare(b.name));
   }, []);
@@ -44,7 +44,7 @@ export default function IconsPage() {
   const totalPages = Math.ceil(filteredIcons.length / ICONS_PER_PAGE);
 
   // Reset to page 1 when search changes
-  const handleSearchChange = (_: any, data: { value: string }) => {
+  const handleSearchChange = (_e: unknown, data: { value: string }) => {
     setSearchTerm(data.value);
     setCurrentPage(1);
   };
@@ -181,7 +181,7 @@ export const MyIcon = bundleIcon(MyFilledIcon, MyOutlineIcon);`}
         </div>
         <Body1 style={{ marginBottom: '16px', color: tokens.colorNeutralForeground2 }}>
           A <code>bundleIcon()</code> az ikonok Regular és Filled verzióinak kombinálására szolgál, és használható a közöttük való váltásra hover esetén. 
-          Néhány Fluent UI React komponens beépítetten rendelkezik "fill-on-hover" viselkedéssel, például a Button és MenuItem.
+          Néhány Fluent UI React komponens beépítetten rendelkezik &quot;fill-on-hover&quot; viselkedéssel, például a Button és MenuItem.
         </Body1>
         <CodeBlock>
           {`import { bundleIcon, SendFilled, SendRegular } from '@fluentui/react-icons';
@@ -319,7 +319,7 @@ const Send = bundleIcon(SendFilled, SendRegular);
             style={{ color: tokens.colorNeutralForeground3 }}
           >
             
-            <Body1>Nincs találat a "{searchTerm}" kifejezésre</Body1>
+            <Body1>Nincs találat a &quot;{searchTerm}&quot; kifejezésre</Body1>
           </div>
         )}
       </div>

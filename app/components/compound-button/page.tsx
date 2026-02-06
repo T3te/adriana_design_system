@@ -25,11 +25,11 @@ export default function CompoundButtonPage() {
           <Title2>Használat</Title2>
         </div>
         <CodeBlock>
-          <CodeComment>// Import</CodeComment>
+          <CodeComment>{'// Import'}</CodeComment>
           {`import { CompoundButton } from '@fluentui/react-components';
 
 `}
-          <CodeComment>// Használat</CodeComment>
+          <CodeComment>{'// Használat'}</CodeComment>
           {`<CompoundButton secondaryContent="Másodlagos tartalom">
   Példa
 </CompoundButton>`}

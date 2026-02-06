@@ -28,11 +28,11 @@ export default function BorderRadiusPage() {
         </div>
         <CodeBlock>
           <div>
-            <CodeComment>// Import</CodeComment>
-            <div className="pl-4">import &#123; tokens &#125; from '@fluentui/react-components';</div>
+            <CodeComment>{'// Import'}</CodeComment>
+            <div className="pl-4">import &#123; tokens &#125; from &apos;@fluentui/react-components&apos;;</div>
           </div>
           <div className="mt-4">
-            <CodeComment>// Használat</CodeComment>
+            <CodeComment>{'// Használat'}</CodeComment>
             <div className="pl-4">&lt;div style=&#123;&#123; borderRadius: tokens.borderRadiusSmall &#125;&#125;&gt;</div>
           </div>
         </CodeBlock>

@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import {
   Dialog,
   DialogSurface,
@@ -118,7 +117,7 @@ export default function SzamlazzInfoDialog({ open, onOpenChange }: SzamlazzInfoD
               <div>
                 <h3 className="text-lg font-semibold mb-3">Fontos tudnivalók</h3>
                 <Body1>
-                  Az azonosító kulcs végén az <strong>"-atmtk"</strong> szöveg beletartozik a kulcsba, ezt is másold be!
+                  Az azonosító kulcs végén az <strong>&quot;-atmtk&quot;</strong> szöveg beletartozik a kulcsba, ezt is másold be!
                 </Body1>
                 <Body1 style={{ marginTop: '0.5rem' }}>
                   Az azonosító kulcsot a rendszer <strong>Beállítások</strong> menüpontjában találod meg.
