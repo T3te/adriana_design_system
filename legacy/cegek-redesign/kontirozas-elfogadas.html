@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="hu"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>adriana.automatik.hu</title>
+
+    <link href="bundles/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bundles/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/bifrost.css" rel="stylesheet">
+    <link href="css/fluent.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="60x60" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="72x72" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="114x114" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="144x144" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="A-favicon.svg">
+    <link rel="icon" type="image/x-icon" href="A-favicon.svg">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+                        <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async="" src="https://scripts.clarity.ms/0.8.57/clarity.js"></script><script async="" src="https://www.clarity.ms/tag/kgmpgsfe0i"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RT4FS9FQ9W"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-RT4FS9FQ9W');
+            </script>
+                <script src="bundles/fosjsrouting/js/router.min.js"></script>
+    <script src="js/routing?callback=fos.Router.setData"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "kgmpgsfe0i");
+    </script>
+</head>
+<body cz-shortcut-listen="true">
+<div class="page-container">
+                
+            <nav class="navbar navbar-default  hidden-print">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                            <a class="navbar-brand navbar-logo" href="/" style="padding: 4px; margin: 0 15px 0 0">
+                    <img src="img/logo.svg" alt="Adriana logo" style="width: 110px">
+                </a>
+                                        <a href="/" class="navbar-brand" style="font-size: 14px">Cégek</a>
+                                    <a href="/ceg/show" class="navbar-brand accounted-company">kinézet</a>
+                                    </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                                                                                    <li class=""><a href="/szabaly/list">Szabályok</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Listák <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ceg/partner-ceg/list">
+                                        <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                                        partner lista
+                                    </a></li>
+                                <li><a href="/ceg/partner-ceg/adoszam-list">
+                                        <i class="fa fa-address-card-o" aria-hidden="true"></i>
+                                        partnerek adószámai
+                                    </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/ceg/tranzakcio/list/filter">
+                                        <i class="fa fa-bank" aria-hidden="true"></i>
+                                        banki tranzakciók
+                                    </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/ceg/szamla/list">
+                                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        számlák
+                                    </a></li>
+                                <li><a href="/kontirozas/ures/show">
+                                        <i class="fa fa-file-o" aria-hidden="true"></i>
+                                        hiányos kontírozású számlák mutatása
+                                    </a></li>
+                                <li><a href="/kontirozas/check/extract">
+                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                        hiányos kontírozású vevő számla tételek letöltése
+                                    </a></li>
+                            </ul>
+                        </li>
+                                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Beállítások <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                                                            <li><a href="/ceg/bankszamla/list">
+                                        <i class="fa fa-bank" aria-hidden="true"></i>
+                                        bankszámlák
+                                    </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/ceg/konyvelt-ceg-settings">
+                                        <i class="fa fa-cog" aria-hidden="true"></i>
+                                        könyvelt cég beállítások
+                                    </a></li>
+                                                        <li><a href="/iroda/konyvelt-ceg-default-settings">
+                                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                                    alapértelmezett beállítások
+                                </a></li>
+                        </ul>
+                    </li>
+                            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                                                                            <li><a href="/ujdonsagok">
+                            <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+                            Új
+                        </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                            Segítség
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a id="zendesk_sso" href="/zendesk/sso" data-path="/zendesk/sso" target="_blank">
+                                    <i class="fa fa-desktop" aria-hidden="true"></i>
+                                    Adriana Tudásbázis
+                                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://automatik.zendesk.com/hc/hu/categories/8058344942993-Sz%C3%A1mlat%C3%B6rt%C3%A9net-lek%C3%A9rdez%C3%A9si-seg%C3%A9dlet" target="_blank">
+                                    <i class="fa fa-bank" aria-hidden="true"></i>
+                                    Számlatörténet lekérdezési segédlet
+                                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="/teaching-videos-start">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    Online oktató anyag
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" id="navbar_help_icon" onclick="return false;">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    Használati segédlet
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="https://adriana.hu/kompatibilitas" target="_blank">
+                                    <i class="glyphicon glyphicon-list" aria-hidden="true"></i>
+                                    Feltölthető fájl formátumok listája
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/profile#badges" id="navbar_diamond_count">
+                            <i class="fa fa-diamond" aria-hidden="true"></i>
+                            56
+                        </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            Zoltán                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/dashboard">
+                                    <i class="fa fa-dashboard" aria-hidden="true"></i>
+                                    Előfizetésem
+                                </a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/profile">
+                                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                    Profilom
+                                </a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/task/filter">
+                                    <i class="fa fa-tasks" aria-hidden="true"></i>
+                                    Műveletek
+                                </a></li>
+                                                            <li role="separator" class="divider"></li>
+                                                                    <li><a href="/admin/konyvelo-iroda-valtas">
+                                            <i class="fa fa-building" aria-hidden="true"></i>
+                                            Iroda váltás
+                                        </a></li>
+                                                                                                    <li><a href="/admin/office/list">
+                                            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                                            Irodák listája
+                                        </a>
+                                    </li><li><a href="/consultant/user/list">
+                                    <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                                    Userek listája
+                                </a>
+                                                                                                    </li><li><a href="/admin/modules/">
+                                    <span class="fa fa-th" aria-hidden="true"></span>
+                                    Modulok
+                                </a>
+                                                                                                    </li><li><a href="/admin/office/stats">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    Irodák statisztikája
+                                </a>
+                                    </li><li><a href="/admin/office/currency">
+                                    <i class="fa fa-usd" aria-hidden="true"></i>
+                                    Devizás statisztika
+                                </a>
+                                                                                                                                    </li><li><a href="/admin/permissions/list">
+                                            <i class="fa fa-ban" aria-hidden="true"></i>
+                                            Jogosultságok
+                                        </a>
+                                    </li><li><a href="/reszletes-statisztika/2026-03">
+                                            <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                            Statisztika
+                                        </a></li>
+                                                                                                    <li><a href="/admin/kiserleti-modulok">
+                                            <i class="fa fa-flask" aria-hidden="true"></i>
+                                            Kísérleti modulok
+                                        </a></li>
+                                                                                                    <li><a href="/admin/importer-statistics">
+                                            <i class="fa fa-gear" aria-hidden="true"></i>
+                                            Importer felhasználás statisztika
+                                        </a></li>
+                                    <li><a href="/admin/technikai">
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Technikai
+                                        </a></li>
+                                                                                                    <li><a href="/consultant/servers">
+                                            <i class="fa fa-server" aria-hidden="true"></i>
+                                            Konzulens szerverek
+                                        </a></li>
+                                                                                                    <li>
+                                        <a href="/upload-file-group-list">
+                                            <i class="fa fa-file" aria-hidden="true"></i>
+                                            Ügyfelek feldolgozási időszakai
+                                        </a>
+                                    </li>
+                                                                                                                                                                                <li role="separator" class="divider"></li>
+                                        <li><a href="/admin/download-serialized-export">
+                                                <i class="fa fa-download" aria-hidden="true"></i>
+                                                ExporterInput letöltés
+                                            </a></li>
+                                                                                                                            <li role="separator" class="divider"></li>
+                            <li><a href="/logout">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    Kijelentkezés
+                                </a></li>
+                        </ul>
+                    </li>
+                            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+    
+                                    
+        
+    
+            <div class="container margin-top hidden-print session-flash-container">
+            <div class="row">
+                <div class="col-xs-12" id="flash-message">
+                                                                                                    <div class="alert alert-success alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                Az ajánlott szabályt bemásoltuk ebbe a könyvelt cégbe.<br>
+<br>
+ Az lent listázott a Tranzakciókat találtuk ennek a szabálynak megfelelően. Kérjük nézze át őket!<br>
+<br>
+ Ha szeretne az ajánlott szabályon módosítani, azt az oldal alján látható [módosítom] gombra kattintás után teheti meg.
+                            </div>
+                                                            </div>
+            </div>
+        </div>
+    
+                        
+            
+    <div class="container">
+    <div class="row border-bottom">
+        <div class="col-xs-12">
+            <h1>
+                Felismert banki tranzakciók listája                <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_szabaly_elonezet_description" data-help="szabaly_elonezet"></span></small>
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>
+                Szabály: Bank költség
+                            <small>(5 db)</small>
+                                                    <small><a href="/szabaly/2436526/show">módosítás</a></small>
+                        </h2>
+            <div class="pull-right">
+                <button class="btn btn-xs btn-danger ajax-button ajax-button-to-confirm" data-button-to-confirm-message="Ez törli az ehhez a szabályhoz (Bank költség)
+                    tartozó összes felismert tranzakció                    kontírozását, és le is választja róluk ezt a szabályt.&lt;br /&gt;
+                    &lt;br /&gt;
+                    A szabály ettől még megmarad.&lt;br /&gt;
+                    &lt;br /&gt;
+                    Ön pedig ezután létre tud hozni ezekhez a tranzakciókhoz egy másik szabályt.
+                    Ehhez menjen majd át a [Feldolgozási időszakok] menüpontba, és ott nyomja meg a zöld [kontírozás] gombot.
+                    Vagy ha most éppen a kontírozásokat csinálja, akkor később magától meg fognak majd jelenni ezek a tranzakciók." data-remove-on-success="[self]" data-url="/kontirozas/szabaly-levalasztas-osszes-bizonylatrol/2436526" type="button">
+                    <i class="fa fa-times" aria-hidden="true"></i> szabály leválasztás az összes találatról
+                </button>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-xs-12">
+            <table class="table">
+                                                            <tbody><tr class="info">
+                    <th>saját számla</th>
+                    <th>terhelés dátuma</th>
+                    <th>partner</th>
+                    <th>partner számla</th>
+                    <th class="text-right">összeg</th>
+                    <th>deviza</th>
+                    <th>típus</th>
+                    <th>közlemény</th>
+                    <th class="text-right">kontírozás</th>
+                    <th>műveletek</th>
+                </tr>
+                                <tr class="success">
+                    <td>
+                                                    1000000022222222
+                                            </td>
+                    <td>2020.01.04.</td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-right">-35.000,00</td>
+                    <td>HUF</td>
+                    <td>VEGYES SZÁMLAKÖLTSÉGEK</td>
+                    <td></td>
+                    <td class="text-right">
+                        T532
+                    </td>
+                    <td>
+                        <button class="btn btn-xs btn-danger ajax-button ajax-button-to-confirm" data-button-to-confirm-message="Ez törli a kijelölt tranzakcióhoz
+    tartozó kontírozást, és leválasztja erről a tranzakcióról a szabályt.&lt;br /&gt;
+    &lt;br /&gt;
+    A szabály ettől még megmarad.&lt;br /&gt;
+    &lt;br /&gt;
+    Ön pedig ez után létre tud hozni ehhez a tranzakcióhoz egy másik szabályt.
+    Ehhez menjen majd át a [Feldolgozási időszakok] menüpontba, és ott nyomja meg a zöld [kontírozás] gombot.
+    Vagy ha most éppen a kontírozásokat csinálja, akkor később magától meg fog majd jelenni ez a tranzakció." data-remove-on-success="[self]" data-url="/kontirozas/szabaly-levalasztas/715635408" type="button">
+    <i class="fa fa-refresh" aria-hidden="true"></i> újra kontírozás
+</button>
+                    </td>
+                </tr>
+                                            <tr class="success">
+                    <td>
+                                                    1000000022222222
+                                            </td>
+                    <td>2020.02.04.</td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-right">-35.000,00</td>
+                    <td>HUF</td>
+                    <td>VEGYES SZÁMLAKÖLTSÉGEK</td>
+                    <td></td>
+                    <td class="text-right">
+                        T532
+                    </td>
+                    <td>
+                        <button class="btn btn-xs btn-danger ajax-button ajax-button-to-confirm" data-button-to-confirm-message="Ez törli a kijelölt tranzakcióhoz
+    tartozó kontírozást, és leválasztja erről a tranzakcióról a szabályt.&lt;br /&gt;
+    &lt;br /&gt;
+    A szabály ettől még megmarad.&lt;br /&gt;
+    &lt;br /&gt;
+    Ön pedig ez után létre tud hozni ehhez a tranzakcióhoz egy másik szabályt.
+    Ehhez menjen majd át a [Feldolgozási időszakok] menüpontba, és ott nyomja meg a zöld [kontírozás] gombot.
+    Vagy ha most éppen a kontírozásokat csinálja, akkor később magától meg fog majd jelenni ez a tranzakció." data-remove-on-success="[self]" data-url="/kontirozas/szabaly-levalasztas/715635409" type="button">
+    <i class="fa fa-refresh" aria-hidden="true"></i> újra kontírozás
+</button>
+                    </td>
+                </tr>
+                                            <tr class="success">
+                    <td>
+                                                    1000000022222222
+                                            </td>
+                    <td>2020.03.04.</td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-right">-35.000,00</td>
+                    <td>HUF</td>
+                    <td>VEGYES SZÁMLAKÖLTSÉGEK</td>
+                    <td></td>
+                    <td class="text-right">
+                        T532
+                    </td>
+                    <td>
+                        <button class="btn btn-xs btn-danger ajax-button ajax-button-to-confirm" data-button-to-confirm-message="Ez törli a kijelölt tranzakcióhoz
+    tartozó kontírozást, és leválasztja erről a tranzakcióról a szabályt.&lt;br /&gt;
+    &lt;br /&gt;
+    A szabály ettől még megmarad.&lt;br /&gt;
+    &lt;br /&gt;
+    Ön pedig ez után létre tud hozni ehhez a tranzakcióhoz egy másik szabályt.
+    Ehhez menjen majd át a [Feldolgozási időszakok] menüpontba, és ott nyomja meg a zöld [kontírozás] gombot.
+    Vagy ha most éppen a kontírozásokat csinálja, akkor később magától meg fog majd jelenni ez a tranzakció." data-remove-on-success="[self]" data-url="/kontirozas/szabaly-levalasztas/715635410" type="button">
+    <i class="fa fa-refresh" aria-hidden="true"></i> újra kontírozás
+</button>
+                    </td>
+                </tr>
+                                            <tr class="success">
+                    <td>
+                                                    1000000022222222
+                                            </td>
+                    <td>2020.04.04.</td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-right">-35.000,00</td>
+                    <td>HUF</td>
+                    <td>VEGYES SZÁMLAKÖLTSÉGEK</td>
+                    <td></td>
+                    <td class="text-right">
+                        T532
+                    </td>
+                    <td>
+                        <button class="btn btn-xs btn-danger ajax-button ajax-button-to-confirm" data-button-to-confirm-message="Ez törli a kijelölt tranzakcióhoz
+    tartozó kontírozást, és leválasztja erről a tranzakcióról a szabályt.&lt;br /&gt;
+    &lt;br /&gt;
+    A szabály ettől még megmarad.&lt;br /&gt;
+    &lt;br /&gt;
+    Ön pedig ez után létre tud hozni ehhez a tranzakcióhoz egy másik szabályt.
+    Ehhez menjen majd át a [Feldolgozási időszakok] menüpontba, és ott nyomja meg a zöld [kontírozás] gombot.
+    Vagy ha most éppen a kontírozásokat csinálja, akkor később magától meg fog majd jelenni ez a tranzakció." data-remove-on-success="[self]" data-url="/kontirozas/szabaly-levalasztas/715635411" type="button">
+    <i class="fa fa-refresh" aria-hidden="true"></i> újra kontírozás
+</button>
+                    </td>
+                </tr>
+                                            <tr class="success">
+                    <td>
+                                                    1000000022222222
+                                            </td>
+                    <td>2020.05.04.</td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-right">-35.000,00</td>
+                    <td>HUF</td>
+                    <td>VEGYES SZÁMLAKÖLTSÉGEK</td>
+                    <td></td>
+                    <td class="text-right">
+                        T532
+                    </td>
+                    <td>
+                        <button class="btn btn-xs btn-danger ajax-button ajax-button-to-confirm" data-button-to-confirm-message="Ez törli a kijelölt tranzakcióhoz
+    tartozó kontírozást, és leválasztja erről a tranzakcióról a szabályt.&lt;br /&gt;
+    &lt;br /&gt;
+    A szabály ettől még megmarad.&lt;br /&gt;
+    &lt;br /&gt;
+    Ön pedig ez után létre tud hozni ehhez a tranzakcióhoz egy másik szabályt.
+    Ehhez menjen majd át a [Feldolgozási időszakok] menüpontba, és ott nyomja meg a zöld [kontírozás] gombot.
+    Vagy ha most éppen a kontírozásokat csinálja, akkor később magától meg fog majd jelenni ez a tranzakció." data-remove-on-success="[self]" data-url="/kontirozas/szabaly-levalasztas/715635412" type="button">
+    <i class="fa fa-refresh" aria-hidden="true"></i> újra kontírozás
+</button>
+                    </td>
+                </tr>
+                        </tbody></table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <h3>Következő lépés</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 text-center border-bottom">
+            <a href="/kontirozas/show" class="btn btn-lg btn-success submit-button button-page-cover">
+                rendben van
+            </a>
+            <p>
+                Akkor nyomja meg ezt a gombot,
+                ha a zöld sorok kontírozása megfelelő.<br>
+                Ha van még üres vagy hiányos bizonylat, az nem baj,
+                ezeket a következő lépésekben fogjuk kontírozni.
+            </p>
+            <p>
+                Véglegesíti a szabályt,
+                és a szabály által felismert bizonylatok kontírozását.
+                Utána a következő bizonylat kontírozására ugrik.
+            </p>
+        </div>
+        <div class="col-sm-4 text-center border-bottom">
+            <a href="/ceg/szabaly/2436526/modify" class="btn btn-lg btn-warning submit-button button-page-cover">
+                módosítom
+            </a>
+            <p>
+                Akkor nyomja meg ezt a gombot,
+                ha módosítani szeretne a zöld sorok kontírozásán.
+            </p>
+            <p>
+                Visszamegy az előző oldalra, ahol módosíthatja a szabályt.
+                Utána a módosított szabály alapján az összes bizonylatot
+                újra fogja kontírozni a rendszer.
+            </p>
+        </div>
+        <div class="col-sm-4 text-center border-bottom">
+            <a href="/ceg/szabaly/2436526/revert" class="btn btn-lg btn-danger submit-button button-page-cover">
+                törlöm és újra csinálom
+            </a>
+            <p>
+                Akkor nyomja meg ezt a gombot,
+                ha törölni szeretné az egész szabályt,
+                és a szabály által felismert bizonylatok
+                kontírozását is.
+            </p>
+            <p>
+                <strong>VIGYÁZAT! Törli a teljes szabályt.<br>
+                Ha több számla tétel kontírozás van benne,
+                akkor mindegyiket törölni fogja,
+                nem csak azt az egyet, amit utoljára adott hozzá.</strong><br>
+                Utána visszamegy ahhoz a bizonylathoz,
+                amivel ezt a szabályt létrehozta,
+                és újra tudja kezdeni a kontírozást.
+            </p>
+        </div>
+    </div>
+</div>
+
+            <!-- footer begin -->
+        <div class="container-outer footer margin-top hidden-print">
+            <div class="container">
+
+                <div class="row text-center margin-top">
+                    <br>
+                    <div class="col-sm-12 margin-bottom">
+                        E-mail cím: <a href="mailto:ugyfelszolgalat@automatik.hu">ugyfelszolgalat@automatik.hu</a>
+                    </div>
+                    <div class="col-sm-12 margin-bottom">
+                        Telefonszám: +36 1/850-6006 (hétfő-csütörtök: 9:00-16:00, péntek: 9:00-13:00 óráig)
+                    </div>
+                    <br>
+                    <div class="col-sm-12 margin-bottom">
+                                                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fadriana.accounting%2F&amp;width=122&amp;layout=button&amp;action=like&amp;size=large&amp;show_faces=true&amp;share=true&amp;height=65&amp;appId=2000137966893861" width="167" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+                                                                                                    </div>
+                </div>
+
+                <div class="row text-center margin-bottom">
+                    <div class="col-xs-12">
+                        Az Adriana Accounting és az automatik.hu szolgáltatója a Petne 7 Kft és az Adriana Automatik
+                        Kft.<br>
+                        2016. január óta a könyvelők szolgálatában
+                    </div>
+                </div>
+
+                <div class="row text-center margin-bottom">
+                    <div class="col-xs-12">
+                        Adatvédelmi nyilvántartásba vételi határozat száma: NAIH-135936
+                    </div>
+                </div>
+
+                <div class="row text-center margin-bottom">
+                    <div class="col-xs-12">
+                        <a href="https://adriana.hu/adatkezelesi-tajekoztato" target="_blank">Adatkezelési tájékoztató</a>
+                    </div>
+                    <div class="col-xs-12">
+                        © 2026, Minden jog fenntartva: Adriana Automatik Kft.<br>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- footer end -->
+    </div>
+        <div class="page-overlay-bottom-left bg-warning">
+            </div>
+
+
+                    <div id="help-box-container" class="help-box-container">
+    <div class="help_box_close_button_div">
+        <a href="#" onclick="return false;" id="help_all" class="help_all">Összes tartalom megjelenítése</a>
+        <button id="help_box_close_button" type="button" class="close" aria-label="Close">
+            bezár <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="help-box">
+
+        <div class="border-bottom">
+            <h1>Használati segédlet</h1>
+            <p>
+            <strong>A [használati segédlet] tartalmának sorrendje megegyezik az Adriana-ban való
+            könyvelési folyamat egyes lépéseinek sorrendjével.</strong>
+            </p>
+            <p>
+            A bal oldali [kezelő felületen] lévő
+            <b><span class="glyphicon glyphicon-info-sign"></span> ikonokra kattintva</b>
+            ennek a [használati segédletnek] az oda kapcsolódó,
+            <b>részletesebb leírása</b> nyílik meg.
+            </p>
+            <p>
+            Itt a [használati segédletben], a
+            <span class="glyphicon glyphicon-triangle-top"></span>
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
+            ikonok melletti címekre kattintva az alatta lévő rész kinyílik/összecsukódik.
+            </p>
+            <p>
+            Ezt a [használati segédletet] <b>bezárni</b> a jobb felső sarokban lévő
+            bezár gombra kattintva tudja.
+            </p>
+            <h3><span class="glyphicon glyphicon-education"></span> Először használom a rendszert</h3>
+            <p>
+            Ha most használja először ezt a rendszert,
+            akkor a [kezelő felületen] kövesse a
+            <span class="bg-danger">
+            <span class="glyphicon glyphicon-education"></span>
+            piros hátterű szövegek</span> utasításait.
+            A [használati segédletben] pedig kövesse az
+            <span class="avoidwrap">[<span class="glyphicon glyphicon-education">
+            </span> Először használom a rendszert]</span>
+            címek utasításait.<br>
+            A többi leírás a rendszer mélyebb megértésére szolgál,
+            azokat akkor érdemes megnéznie, amikor elakad valamivel,
+            vagy amikor szeretné tudni, hogy mi történik a háttérben.
+            </p>
+            <p>
+            <strong>
+            A [kezelő felület] egyes oldalain felülről lefelé haladjon végig,
+            majd ha végzett az adott lépéssel, az oldal alján a 'Következő lépés' cím alatt
+            található gombbal tud továbblépni.<br>
+            A főcím melletti <span class="glyphicon glyphicon-info-sign"></span>
+            ikonra kattintva kaphat bővebb információt az adott oldalon elvégzendő feladatról.
+            </strong>
+            </p>
+        </div>
+
+        <div id="help_box_konyvelt_cegek_listaja" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_konyvelt_cegek_listaja_description">
+                Könyvelt cégek listája
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_konyvelt_cegek_listaja_description">
+            </div>
+        </div>
+
+        <div id="help_box_feldolgozasi_idoszakok" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_feldolgozasi_idoszakok_description">
+                Feldolgozási időszakok
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_feldolgozasi_idoszakok_description">
+            </div>
+        </div>
+
+        <div id="help_box_beallitasok" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_beallitasok_description">
+                Beállítások
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_beallitasok_description">
+            </div>
+        </div>
+
+        <div id="help_box_feltoltes" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_feltoltes_description">
+                Fájlok feltöltése
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_feltoltes_description">
+            </div>
+        </div>
+
+        <div id="help_box_feltoltes_konyveloprogram" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_feltoltes_konyveloprogram_description">
+                Könyvelőprogramokból beolvasható adatok
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_feltoltes_konyveloprogram_description">
+            </div>
+        </div>
+
+        <div id="help_box_vevo_szallito" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_vevo_szallito_description">
+                Előválogatás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_vevo_szallito_description">
+            </div>
+        </div>
+
+        <div id="help_box_kontirozas_egyesevel" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_kontirozas_egyesevel_description">
+                Kontírozás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_kontirozas_egyesevel_description">
+            </div>
+        </div>
+
+        <div id="help_box_szabaly_beallitas" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_szabaly_beallitas_description">
+                Szabály beállítás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_szabaly_beallitas_description">
+            </div>
+        </div>
+
+        <div id="help_box_szabaly_elonezet" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_szabaly_elonezet_description">
+                Szabály előnézet
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_szabaly_elonezet_description">
+            </div>
+        </div>
+
+        <div id="help_box_szabalyok_menu" class="border-bottom collapse-detail-container">
+          <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_szabalyok_menu_description">
+              Szabályok menü
+              <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+          </h3>
+          <div class="collapse collapse-detail" id="help_box_szabalyok_menu_description">
+          </div>
+        </div>
+
+        <div id="help_box_parositas" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_parositas_description">
+                Párosítás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_parositas_description">
+            </div>
+        </div>
+
+        <div id="help_box_betoltes_partner" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_betoltes_partner_description">
+                Partner adószámok és címek listája
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_betoltes_partner_description">
+            </div>
+        </div>
+
+        <div id="help_box_betoltes" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_betoltes_description">
+                Betöltés a könyvelőprogramba
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_betoltes_description">
+            </div>
+        </div>
+
+        <div id="help_box_torles" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_torles_description">
+                Adatok törlése a szerverről
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_torles_description">
+            </div>
+        </div>
+
+        <div id="help_box_kesz" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_kesz_description">
+                Kész
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_kesz_description">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <div class="modal" id="generic_modal" tabindex="-1" role="dialog">
+        <div id="modal_dialog" class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button id="generic_modal_dialog_close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 id="generic_modal_title" class="modal-title"></h4>
+                </div>
+                <div id="generic_modal_body" class="modal-body">
+                </div>
+                <div id="generic_modal_footer" class="modal-footer">
+                    <button id="generic_modal_footer_cancel" type="button" class="btn hidden" data-dismiss="modal">
+                        Mégsem
+                    </button>
+                    <button id="generic_modal_footer_ok" type="button" class="btn btn-danger hidden" data-dismiss="modal">OK
+                    </button>
+                    <button id="generic_modal_footer_close" type="button" class="btn btn-primary" data-dismiss="modal">
+                        Bezár
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="button-page-cover">
+        <div class="button-page-cover-outer">
+            <div class="button-page-cover-middle">
+                <div class="button-page-cover-inner text-center">
+                    <div class="loading-robot-gif"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script type="text/javascript">
+        zESettings = {
+            webWidget: {
+                launcher: {
+                    label: {
+                        '*': 'Kérdésed van?',
+                    }
+                },
+                contactForm: {
+                    ticketForms: [
+                        {id: 360003686777,
+                            title:false,
+                            subject: false,
+                            fields: [
+                                { id: 'description', hint: { '*' : 'Kérjük, hogy minél több részletet írjon le, és fájl probléma esetén csatolja a fájlt is! Emailben fogunk válaszolni.' }},
+                            ]
+                        }
+                    ],
+                    fields: [
+                        { id: 'name', prefill: { '*': 'Törös Zoltán' }},
+                        { id: 'email', prefill: { '*': 'zoltan.toros@automatik.hu' }},
+                    ]
+                }
+            }
+        };
+    </script>
+    <script>
+        window?.clarity("identify", '1884-2360')
+    </script>
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=4b03f2cf-8b1a-4190-902a-8143fee9d687"> </script>
+        <script src="build/runtime.ced75ccf.js"></script><script src="build/232.4ef9dc40.js"></script><script src="build/app.83a71656.js"></script>
+    <script src="js/base.js"></script>
+    <script async="" src="js/zendesk.js"></script>
+    <script src="bundles/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        const assets = '/img';
+        const windowContext = this;
+    </script>
+    <script type="text/javascript">
+
+        const urlGenerator = {
+            parositas_csoport_show: function(parositasCsoportId, tipus) {
+                if ('kontirozas-egyesevel' === tipus) {
+                    return urlGenerator.parositas_csoport_show_for_kontirozas_egyesevel(parositasCsoportId);
+                }
+
+                return `/parositas/get-parositas-csoport/${tipus}`;
+            },
+            parositas_csoport_show_for_kontirozas_egyesevel: function(parositasCsoportId) {
+                return `/parositas/get-parositas-csoport-for-kontirozas-egyesevel/${parositasCsoportId}`;
+            },
+        };
+
+        const apiFormats = [
+            'TEN-SOFT egyszeres xml',
+            'TEN-SOFT kettős xml',
+            'RLB Pénztárkönyv API',
+            'RLB Naplófőkönyv API',
+            'DimSQL API',
+            'RLB Hálózatos API'
+        ]
+
+        $(function () {
+            locationHashChanged();
+            window.onhashchange = locationHashChanged;
+
+            $('.submit-button').on('click', function (event) {
+                submitButton(event, $(this));
+            });
+
+	        $(document).on('click', '.ajax-button', function (event) {
+		        ajaxButton(event, $(this));
+	        });
+
+            $('#teaching_video_show').on('click', function () {
+                $('#teaching_video_icons').addClass('hidden');
+            $('#teaching_video_container').removeClass('hidden').show();
+            });
+
+            $('#teaching_video_container .close').on('click', function () {
+            $('#teaching_video_container').addClass('hidden');
+                $('#teaching_video_icons').removeClass('hidden');
+            });
+
+            $('#navbar_help_icon').on('click', showHelpBox)
+            $('#help_box_close_button').on('click', function () {
+                hideHelpBox();
+                history.replaceState(null, null, ' ');
+            });
+
+            // forgatom a lenyitást jelző ikont
+            $('.help-box-container .collapse-detail')
+                .on('show.bs.collapse', function () {
+                    $(this).closest('.collapse-detail-container')
+                        .find('.glyphicon-triangle-bottom')
+                        .removeClass('glyphicon-triangle-bottom')
+                        .addClass('glyphicon-triangle-top');
+
+                    if ($.trim($(this).html()) === '') {
+                        loadSegedletContent($(this), $(this).attr('id').substring(9, $(this).attr('id').length - 12));
+                    }
+                })
+                .on('hide.bs.collapse', function () {
+                    $(this).closest('.collapse-detail-container')
+                        .find('.glyphicon-triangle-top')
+                        .removeClass('glyphicon-triangle-top')
+                        .addClass('glyphicon-triangle-bottom');
+                });
+
+            // Modal-on focus az OK-gomra és a Bezárás-gombra
+            $('#generic_modal').on('shown.bs.modal', function () {
+                let closeButton = $('#generic_modal_footer_close');
+                let okButton = $('#generic_modal_footer_ok');
+
+                if (okButton.is(':visible')) {
+                    okButton.focus();
+                } else if (closeButton.is(':visible')) {
+                    closeButton.focus();
+                }
+            });
+
+                        $('#register_link').on('click', () => gtag('event', 'register'));
+                    });
+    </script>
+
+                        
+    <script type="text/javascript">
+        var get_kontirozas_show_url = '/kontirozas/show';
+        var get_szabalyok_show_url = '/szabaly/szabalyok';
+        let downloadedFileFormatCssId = 'rlb'
+        let konyveloIroda = 'Teszt Törös Zoltán'
+    </script>
+        <script src="js/preprocessing-szabalyok.js"></script>
+
+
+
+</body></html>

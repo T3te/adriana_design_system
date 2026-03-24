@@ -1,0 +1,2374 @@
+<html lang="hu"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>adriana.automatik.hu</title>
+
+    <link href="/bundles/bootstrap/css/bootstrap.min.css?v=7634251983721" rel="stylesheet">
+    <link href="/bundles/font-awesome/css/font-awesome.min.css?v=7634251983721" rel="stylesheet">
+    <link href="/css/common.css?v=7634251983721" rel="stylesheet">
+    <link href="/css/main.css?v=7634251983721" rel="stylesheet">
+    <link href="/css/bifrost.css?v=7634251983721" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="60x60" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="72x72" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="114x114" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="144x144" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="/A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="/A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/A-favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/A-favicon.svg">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+                        <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async="" src="https://scripts.clarity.ms/0.8.57/clarity.js"></script><script async="" src="https://www.clarity.ms/tag/kgmpgsfe0i"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RT4FS9FQ9W"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-RT4FS9FQ9W');
+            </script>
+                <script src="/bundles/fosjsrouting/js/router.min.js"></script>
+    <script src="/js/routing?callback=fos.Router.setData"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "kgmpgsfe0i");
+    </script>
+</head>
+<body cz-shortcut-listen="true">
+<div class="page-container">
+                
+            <nav class="navbar navbar-default  hidden-print">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                            <a class="navbar-brand navbar-logo" href="/" style="padding: 4px; margin: 0 15px 0 0">
+                    <img src="/img/logo.svg" alt="Adriana logo" style="width: 110px">
+                </a>
+                                        <a href="/" class="navbar-brand" style="font-size: 14px">Cégek</a>
+                                    <a href="/ceg/show" class="navbar-brand accounted-company">kinézet</a>
+                                    </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                                                                                    <li class=""><a href="/szabaly/list">Szabályok</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Listák <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ceg/partner-ceg/list">
+                                        <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                                        partner lista
+                                    </a></li>
+                                <li><a href="/ceg/partner-ceg/adoszam-list">
+                                        <i class="fa fa-address-card-o" aria-hidden="true"></i>
+                                        partnerek adószámai
+                                    </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/ceg/tranzakcio/list/filter">
+                                        <i class="fa fa-bank" aria-hidden="true"></i>
+                                        banki tranzakciók
+                                    </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/ceg/szamla/list">
+                                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        számlák
+                                    </a></li>
+                                <li><a href="/kontirozas/ures/show">
+                                        <i class="fa fa-file-o" aria-hidden="true"></i>
+                                        hiányos kontírozású számlák mutatása
+                                    </a></li>
+                                <li><a href="/kontirozas/check/extract">
+                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                        hiányos kontírozású vevő számla tételek letöltése
+                                    </a></li>
+                            </ul>
+                        </li>
+                                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Beállítások <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                                                            <li><a href="/ceg/bankszamla/list">
+                                        <i class="fa fa-bank" aria-hidden="true"></i>
+                                        bankszámlák
+                                    </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/ceg/konyvelt-ceg-settings">
+                                        <i class="fa fa-cog" aria-hidden="true"></i>
+                                        könyvelt cég beállítások
+                                    </a></li>
+                                                        <li><a href="/iroda/konyvelt-ceg-default-settings">
+                                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                                    alapértelmezett beállítások
+                                </a></li>
+                        </ul>
+                    </li>
+                            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                                                                            <li><a href="/ujdonsagok">
+                            <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+                            Új
+                        </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                            Segítség
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a id="zendesk_sso" href="/zendesk/sso" data-path="/zendesk/sso" target="_blank">
+                                    <i class="fa fa-desktop" aria-hidden="true"></i>
+                                    Adriana Tudásbázis
+                                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://automatik.zendesk.com/hc/hu/categories/8058344942993-Sz%C3%A1mlat%C3%B6rt%C3%A9net-lek%C3%A9rdez%C3%A9si-seg%C3%A9dlet" target="_blank">
+                                    <i class="fa fa-bank" aria-hidden="true"></i>
+                                    Számlatörténet lekérdezési segédlet
+                                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="/teaching-videos-start">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    Online oktató anyag
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" id="navbar_help_icon" onclick="return false;">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    Használati segédlet
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="https://adriana.hu/kompatibilitas" target="_blank">
+                                    <i class="glyphicon glyphicon-list" aria-hidden="true"></i>
+                                    Feltölthető fájl formátumok listája
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/profile#badges" id="navbar_diamond_count">
+                            <i class="fa fa-diamond" aria-hidden="true"></i>
+                            56
+                        </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            Zoltán                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/dashboard">
+                                    <i class="fa fa-dashboard" aria-hidden="true"></i>
+                                    Előfizetésem
+                                </a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/profile">
+                                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                    Profilom
+                                </a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/task/filter">
+                                    <i class="fa fa-tasks" aria-hidden="true"></i>
+                                    Műveletek
+                                </a></li>
+                                                            <li role="separator" class="divider"></li>
+                                                                    <li><a href="/admin/konyvelo-iroda-valtas">
+                                            <i class="fa fa-building" aria-hidden="true"></i>
+                                            Iroda váltás
+                                        </a></li>
+                                                                                                    <li><a href="/admin/office/list">
+                                            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                                            Irodák listája
+                                        </a>
+                                    </li><li><a href="/consultant/user/list">
+                                    <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                                    Userek listája
+                                </a>
+                                                                                                    </li><li><a href="/admin/modules/">
+                                    <span class="fa fa-th" aria-hidden="true"></span>
+                                    Modulok
+                                </a>
+                                                                                                    </li><li><a href="/admin/office/stats">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    Irodák statisztikája
+                                </a>
+                                    </li><li><a href="/admin/office/currency">
+                                    <i class="fa fa-usd" aria-hidden="true"></i>
+                                    Devizás statisztika
+                                </a>
+                                                                                                                                    </li><li><a href="/admin/permissions/list">
+                                            <i class="fa fa-ban" aria-hidden="true"></i>
+                                            Jogosultságok
+                                        </a>
+                                    </li><li><a href="/reszletes-statisztika/2026-03">
+                                            <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                            Statisztika
+                                        </a></li>
+                                                                                                    <li><a href="/admin/kiserleti-modulok">
+                                            <i class="fa fa-flask" aria-hidden="true"></i>
+                                            Kísérleti modulok
+                                        </a></li>
+                                                                                                    <li><a href="/admin/importer-statistics">
+                                            <i class="fa fa-gear" aria-hidden="true"></i>
+                                            Importer felhasználás statisztika
+                                        </a></li>
+                                    <li><a href="/admin/technikai">
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Technikai
+                                        </a></li>
+                                                                                                    <li><a href="/consultant/servers">
+                                            <i class="fa fa-server" aria-hidden="true"></i>
+                                            Konzulens szerverek
+                                        </a></li>
+                                                                                                    <li>
+                                        <a href="/upload-file-group-list">
+                                            <i class="fa fa-file" aria-hidden="true"></i>
+                                            Ügyfelek feldolgozási időszakai
+                                        </a>
+                                    </li>
+                                                                                                                                                                                <li role="separator" class="divider"></li>
+                                        <li><a href="/admin/download-serialized-export">
+                                                <i class="fa fa-download" aria-hidden="true"></i>
+                                                ExporterInput letöltés
+                                            </a></li>
+                                                                                                                            <li role="separator" class="divider"></li>
+                            <li><a href="/logout">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    Kijelentkezés
+                                </a></li>
+                        </ul>
+                    </li>
+                            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+    
+                                    
+        
+    
+            <div class="container margin-top hidden-print session-flash-container">
+            <div class="row">
+                <div class="col-xs-12" id="flash-message">
+                                    </div>
+            </div>
+        </div>
+    
+                        <div class="container-fluid above-page-title">
+    <div class="row">
+        <div id="teaching_video_container" class="col-xs-12 col-sm-10 col-md-8 col-lg-6 pull-right hidden">
+            <div class="teaching-video-header margin-top text-right text-danger">
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h3><i class="fa fa-youtube-play" aria-hidden="true"></i> oktató videó&nbsp;</h3>
+            </div>
+            <div class="teaching-video-body text-right">
+                            <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oyTOv6pjF9w?rel=0&amp;modestbranding=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+                    </iframe>
+                </div>
+                        </div>
+                    <div class="col-xs-12 margin-top">
+                            <div class="text-center inline padding pull-right">
+                    <a href="https://automatik.zendesk.com/hc/hu/sections/8878637398801-Előválogatás" target="_blank">
+                        <span class="glyphicon glyphicon-question-sign fa-3x"></span><br>
+                        GYIK
+                    </a>                    
+                </div>
+                                        <div class="text-center inline padding pull-right">
+                    <a href="https://automatik.zendesk.com/hc/hu/articles/9407669558417-Egyszer%C5%B1s%C3%ADtett-k%C3%A9zik%C3%B6nyv-Adriana-folyamatok" target="_blank">
+                        <span class="glyphicon glyphicon-book fa-3x"></span><br>
+                        kézikönyv
+                    </a>
+                </div>
+                        </div>
+                </div>
+    </div>
+</div>
+<div class="container-fluid above-page-title relative">
+    <div id="teaching_video_row" class="row">
+        <div id="teaching_video_icons" class="col-xs-12">
+                    <div id="teaching_video_show" class="text-center inline padding text-danger">
+                <i class="fa fa-youtube-play fa-3x" aria-hidden="true"></i><br>
+                oktató videó
+            </div>
+                            <div class="text-center inline padding">
+                <a href="https://automatik.zendesk.com/hc/hu/articles/9407669558417-Egyszer%C5%B1s%C3%ADtett-k%C3%A9zik%C3%B6nyv-Adriana-folyamatok" target="_blank">
+                    <span class="glyphicon glyphicon-book fa-3x"></span><br>
+                    kézikönyv
+                </a>
+            </div>
+                            <div class="text-center inline padding">
+                <a href="https://automatik.zendesk.com/hc/hu/sections/8878637398801-Előválogatás" target="_blank">
+                    <span class="glyphicon glyphicon-question-sign fa-3x"></span><br>
+                    GYIK
+                </a>                    
+            </div>
+                </div>
+    </div>
+</div>
+
+            
+    
+                                
+    <script type="text/javascript">
+        // globális mutat/elrejt gomb működése
+        var collapseAll = false;
+    </script>
+
+    <div class="container">
+                <div class="row hidden-print">
+            <div class="col-xs-12">
+                <h1>
+                    Előválogatás
+                    <small>
+                        <span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo-szallito_altalanos" data-help="vevo_szallito"></span>
+                        (korábban: Vevő és szállító kiegyenlítések megjelölése)
+                    </small>
+                </h1>
+                <p>
+                    Most azokat a banki tranzakciókat látja,
+                    amiről az Adriana nem tudta eldönteni,
+                    hogy számlához kell párosítani, vagy főkönyvre kell kontírozni.<br>
+                    Kérjük segítsen ezt eldönteni!
+                </p>
+                <p class="lead">
+                <span class="bg-danger">
+                    <span class="glyphicon glyphicon-education"></span>
+                     Minden egyes lent felsorolt tranzakción nyomja meg
+                     vagy a [vevő/szállító], vagy a [kontírozom] gombot!
+                </span>
+                </p>
+            </div>
+            <div class="col-xs-12">
+                Gyorsgombokról információk:
+                <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_gyorsgombok" data-help="vevo_szallito"></span></small>
+            </div>
+        </div>
+                </div>
+    </div>
+
+    <section class="on-scroll-fixed-top">
+        <div class="container border-bottom">
+            <div class="row" id="szures_container">
+                <div class="col-xs-12">
+                    <h3>Szűrés
+                        <small>
+                                                            <span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_szures" data-help="vevo_szallito"></span>
+                                                        betöltött/összes:
+                            <span id="betoltott_parositas_csoportok_szama">20</span>/<span data-without-biztos="20" data-all-parositas="20" id="osszes_parositas_csoportok_szama">20</span>
+                            <button type="button" class="btn btn-xs btn-danger stop-loading">stop</button>
+                            <button type="button" class="btn btn-xs btn-success continue-loading" style="display: none;">folytatás</button>
+                            <button data-target="pcs-details" class="collapse-button btn btn-xs btn-info">összes részlet elrejtése</button>
+                        </small>
+                    </h3>
+                    <div class="row">
+                        <div class="szures-form form-inline col-xs-8">
+                                                                                                                    <div class="form-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="szures-checkbox" data-change-class="vevo-or-szallito" checked="checked">
+                                        vevő/szállító
+                                        (<span id="vevo_or_szallito_szama">8</span>)
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="szures-checkbox" data-change-class="not-vevo-or-szallito" checked="checked">
+                                        kontírozom
+                                        (<span id="not_vevo_or_szallito_szama">12</span>)
+                                    </label>
+                                </div>
+                                                                                                            </div>
+
+                                            </div>
+                </div>
+            </div>
+            <div class="row hidden" id="parositas_container">
+                <div class="col-xs-12">
+                    <h3>
+                        Párosítás
+                        <small>
+                        <span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_parositas_parositas_egyesevel" data-help="parositas"></span>
+                            <button class="btn btn-sm btn-success save-parositas-button submit-button" data-url="/parositas/submit-parositas" type="button">
+                                mentés
+                            </button>
+                            tranzakciók összege: <span id="parositas_tranzakcio_sum">0</span>
+                            számlák összege: <span id="parositas_szamla_sum">0</span>
+                            eltérés: <span id="parositas_diff">0</span>
+                        </small>
+                    </h3>
+                    <p>
+                        Ugrás vissza a kerettel kijelölt tételre: <kbd><span class="glyphicon glyphicon-arrow-right"></span></kbd>
+                        Keresés az oldalon: <kbd>Ctrl + f</kbd>
+                        Következő találat: <kbd>Ctrl + g</kbd>
+                    </p>
+                    <div id="parositasok_div">
+                        <table class="table table-striped table-bordered table-hover table-condensed">
+                            <thead>
+                            <tr>
+                                <th>típus</th>
+                                <th>név</th>
+                                <th>összeg</th>
+                                <th>dátum</th>
+                                <th>sorszám / közlemény</th>
+                                <th>műveletek</th>
+                            </tr>
+                            </thead>
+                            <tbody id="parositasok_table_body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>
+                                            Banki tranzakciók
+                                    </h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+                    <div id="parositas_csoport_289568370" class="parositas-csoport" data-parositas-csoport-id="289568370" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva vevo-or-szallito parositas-nincs-jovahagyva focus-parositas-csoport" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555726" data-data-type-name="tranzakció" data-data-identifier="1162">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Balázsháza Játszóház Kft.
+                                        <br>
+                [Balázsháza Játszóház Kft.
+                    <a href="/ceg/partner-ceg/85049909/edit" target="_blank">
+                        5 <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </a>
+                ]
+                    </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555726_osszeg_container">
+            96.200,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.05.03.
+             [értéknap: 2020.06.01.]        </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>1998</dd>
+    <div class="collapse in pcs-details pcs-details-289568370">
+        <dt>tranzakció #</dt>
+        <dd>1162</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333441</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555726" data-tranzakcio-ellen-partner="Balázsháza Játszóház Kft." data-url="/kontirozas/submit-is-vevo-or-szallito/155555726/1">
+            <input type="radio" name="vevo_szallito_155555726" id="vevo_szallito_155555726_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555726" data-tranzakcio-ellen-partner="Balázsháza Játszóház Kft." data-url="/kontirozas/submit-is-vevo-or-szallito/155555726/0">
+            <input type="radio" name="vevo_szallito_155555726" id="vevo_szallito_155555726_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568370">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568370">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568371" class="parositas-csoport" data-parositas-csoport-id="289568371" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555687" data-data-type-name="tranzakció" data-data-identifier="1123">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Barna Réka
+                                        <br>
+                [Barna Réka
+                    <a href="/ceg/partner-ceg/85049676/edit" target="_blank">
+                        74 <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </a>
+                ]
+                    </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555687_osszeg_container">
+            50.000,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.04.29.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>SZLA-2020-1047</dd>
+    <div class="collapse in pcs-details pcs-details-289568371">
+        <dt>tranzakció #</dt>
+        <dd>1123</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333403</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555687" data-tranzakcio-ellen-partner="Barna Réka" data-url="/kontirozas/submit-is-vevo-or-szallito/155555687/1">
+            <input type="radio" name="vevo_szallito_155555687" id="vevo_szallito_155555687_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555687" data-tranzakcio-ellen-partner="Barna Réka" data-url="/kontirozas/submit-is-vevo-or-szallito/155555687/0">
+            <input type="radio" name="vevo_szallito_155555687" id="vevo_szallito_155555687_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568371">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568371">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568372" class="parositas-csoport" data-parositas-csoport-id="289568372" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva not-vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555762" data-data-type-name="tranzakció" data-data-identifier="1198">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Ciszterci Pál
+                                </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555762_osszeg_container">
+            86.900,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.06.04.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>Megrendelésszám: 3411</dd>
+    <div class="collapse in pcs-details pcs-details-289568372">
+        <dt>tranzakció #</dt>
+        <dd>1198</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333472</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555762" data-tranzakcio-ellen-partner="Ciszterci Pál" data-url="/kontirozas/submit-is-vevo-or-szallito/155555762/1">
+            <input type="radio" name="vevo_szallito_155555762" id="vevo_szallito_155555762_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555762" data-tranzakcio-ellen-partner="Ciszterci Pál" data-url="/kontirozas/submit-is-vevo-or-szallito/155555762/0">
+            <input type="radio" name="vevo_szallito_155555762" id="vevo_szallito_155555762_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568372">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568372">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568373" class="parositas-csoport" data-parositas-csoport-id="289568373" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva not-vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555635" data-data-type-name="tranzakció" data-data-identifier="1071">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Faragó János
+                                </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555635_osszeg_container">
+            48.900,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.03.20.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>Faragó Noel</dd>
+    <div class="collapse in pcs-details pcs-details-289568373">
+        <dt>tranzakció #</dt>
+        <dd>1071</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333369</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555635" data-tranzakcio-ellen-partner="Faragó János" data-url="/kontirozas/submit-is-vevo-or-szallito/155555635/1">
+            <input type="radio" name="vevo_szallito_155555635" id="vevo_szallito_155555635_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555635" data-tranzakcio-ellen-partner="Faragó János" data-url="/kontirozas/submit-is-vevo-or-szallito/155555635/0">
+            <input type="radio" name="vevo_szallito_155555635" id="vevo_szallito_155555635_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568373">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568373">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568374" class="parositas-csoport" data-parositas-csoport-id="289568374" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555665" data-data-type-name="tranzakció" data-data-identifier="1101">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Farkas Botond
+                                        <br>
+                [Farkas Botond
+                    <a href="/ceg/partner-ceg/85049656/edit" target="_blank">
+                        55 <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </a>
+                ]
+                    </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555665_osszeg_container">
+            78.500,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.04.26.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd></dd>
+    <div class="collapse in pcs-details pcs-details-289568374">
+        <dt>tranzakció #</dt>
+        <dd>1101</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333379</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555665" data-tranzakcio-ellen-partner="Farkas Botond" data-url="/kontirozas/submit-is-vevo-or-szallito/155555665/1">
+            <input type="radio" name="vevo_szallito_155555665" id="vevo_szallito_155555665_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555665" data-tranzakcio-ellen-partner="Farkas Botond" data-url="/kontirozas/submit-is-vevo-or-szallito/155555665/0">
+            <input type="radio" name="vevo_szallito_155555665" id="vevo_szallito_155555665_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568374">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568374">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568375" class="parositas-csoport" data-parositas-csoport-id="289568375" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555748" data-data-type-name="tranzakció" data-data-identifier="1184">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Fülöp Mária
+                                        <br>
+                [Fülöp Mária
+                    <a href="/ceg/partner-ceg/85049728/edit" target="_blank">
+                        126 <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </a>
+                ]
+                    </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555748_osszeg_container">
+            49.300,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.06.02.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>Számla utalás</dd>
+    <div class="collapse in pcs-details pcs-details-289568375">
+        <dt>tranzakció #</dt>
+        <dd>1184</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333459</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555748" data-tranzakcio-ellen-partner="Fülöp Mária" data-url="/kontirozas/submit-is-vevo-or-szallito/155555748/1">
+            <input type="radio" name="vevo_szallito_155555748" id="vevo_szallito_155555748_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555748" data-tranzakcio-ellen-partner="Fülöp Mária" data-url="/kontirozas/submit-is-vevo-or-szallito/155555748/0">
+            <input type="radio" name="vevo_szallito_155555748" id="vevo_szallito_155555748_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568375">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568375">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568376" class="parositas-csoport" data-parositas-csoport-id="289568376" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva not-vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555593" data-data-type-name="tranzakció" data-data-identifier="1029">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            GLS GENERAL LOG.SYSTEMS HUNG.CSOMAG
+                                </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555593_osszeg_container">
+            277.493,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.01.15.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd></dd>
+    <div class="collapse in pcs-details pcs-details-289568376">
+        <dt>tranzakció #</dt>
+        <dd>1029</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>109180010000000256360099</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555593" data-tranzakcio-ellen-partner="GLS GENERAL LOG.SYSTEMS HUNG.CSOMAG" data-url="/kontirozas/submit-is-vevo-or-szallito/155555593/1">
+            <input type="radio" name="vevo_szallito_155555593" id="vevo_szallito_155555593_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555593" data-tranzakcio-ellen-partner="GLS GENERAL LOG.SYSTEMS HUNG.CSOMAG" data-url="/kontirozas/submit-is-vevo-or-szallito/155555593/0">
+            <input type="radio" name="vevo_szallito_155555593" id="vevo_szallito_155555593_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568376">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568376">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568377" class="parositas-csoport" data-parositas-csoport-id="289568377" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva not-vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555800" data-data-type-name="tranzakció" data-data-identifier="1236">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Galántai János
+                                </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555800_osszeg_container">
+            112.000,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.06.30.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>Rendelés</dd>
+    <div class="collapse in pcs-details pcs-details-289568377">
+        <dt>tranzakció #</dt>
+        <dd>1236</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333514</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555800" data-tranzakcio-ellen-partner="Galántai János" data-url="/kontirozas/submit-is-vevo-or-szallito/155555800/1">
+            <input type="radio" name="vevo_szallito_155555800" id="vevo_szallito_155555800_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555800" data-tranzakcio-ellen-partner="Galántai János" data-url="/kontirozas/submit-is-vevo-or-szallito/155555800/0">
+            <input type="radio" name="vevo_szallito_155555800" id="vevo_szallito_155555800_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568377">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568377">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568378" class="parositas-csoport" data-parositas-csoport-id="289568378" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva not-vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555591" data-data-type-name="tranzakció" data-data-identifier="1027">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Kezdő Oktató 2020 Kft.
+                                </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555591_osszeg_container">
+            500.000,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.01.09.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd></dd>
+    <div class="collapse in pcs-details pcs-details-289568378">
+        <dt>tranzakció #</dt>
+        <dd>1027</dd>
+            <dt>típus</dt>
+        <dd>Bankon belüli átutalás</dd>
+        <dt>ellen számla</dt>
+        <dd>1000000011111111</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555591" data-tranzakcio-ellen-partner="Kezdő Oktató 2020 Kft." data-url="/kontirozas/submit-is-vevo-or-szallito/155555591/1">
+            <input type="radio" name="vevo_szallito_155555591" id="vevo_szallito_155555591_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555591" data-tranzakcio-ellen-partner="Kezdő Oktató 2020 Kft." data-url="/kontirozas/submit-is-vevo-or-szallito/155555591/0">
+            <input type="radio" name="vevo_szallito_155555591" id="vevo_szallito_155555591_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568378">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568378">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568379" class="parositas-csoport" data-parositas-csoport-id="289568379" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva not-vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555756" data-data-type-name="tranzakció" data-data-identifier="1192">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Megyerfői Csaba
+                                </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555756_osszeg_container">
+            59.200,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.06.03.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>Megrendelésszám: 2555</dd>
+    <div class="collapse in pcs-details pcs-details-289568379">
+        <dt>tranzakció #</dt>
+        <dd>1192</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333466</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555756" data-tranzakcio-ellen-partner="Megyerfői Csaba" data-url="/kontirozas/submit-is-vevo-or-szallito/155555756/1">
+            <input type="radio" name="vevo_szallito_155555756" id="vevo_szallito_155555756_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555756" data-tranzakcio-ellen-partner="Megyerfői Csaba" data-url="/kontirozas/submit-is-vevo-or-szallito/155555756/0">
+            <input type="radio" name="vevo_szallito_155555756" id="vevo_szallito_155555756_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568379">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568379">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568380" class="parositas-csoport" data-parositas-csoport-id="289568380" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva not-vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555594" data-data-type-name="tranzakció" data-data-identifier="1030">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Minta Máté
+                                </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555594_osszeg_container">
+            -89.400,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.01.21.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>KOKT,002 nincs szla</dd>
+    <div class="collapse in pcs-details pcs-details-289568380">
+        <dt>tranzakció #</dt>
+        <dd>1030</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>1230005696300000</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555594" data-tranzakcio-ellen-partner="Minta Máté" data-url="/kontirozas/submit-is-vevo-or-szallito/155555594/1">
+            <input type="radio" name="vevo_szallito_155555594" id="vevo_szallito_155555594_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555594" data-tranzakcio-ellen-partner="Minta Máté" data-url="/kontirozas/submit-is-vevo-or-szallito/155555594/0">
+            <input type="radio" name="vevo_szallito_155555594" id="vevo_szallito_155555594_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568380">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568380">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568381" class="parositas-csoport" data-parositas-csoport-id="289568381" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva not-vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555586" data-data-type-name="tranzakció" data-data-identifier="1022">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Orgona Virágáruház
+                                </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555586_osszeg_container">
+            -50.000,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2019.12.29.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>RGN-2019-12548</dd>
+    <div class="collapse in pcs-details pcs-details-289568381">
+        <dt>tranzakció #</dt>
+        <dd>1022</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>125454516589656312546987</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555586" data-tranzakcio-ellen-partner="Orgona Virágáruház" data-url="/kontirozas/submit-is-vevo-or-szallito/155555586/1">
+            <input type="radio" name="vevo_szallito_155555586" id="vevo_szallito_155555586_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555586" data-tranzakcio-ellen-partner="Orgona Virágáruház" data-url="/kontirozas/submit-is-vevo-or-szallito/155555586/0">
+            <input type="radio" name="vevo_szallito_155555586" id="vevo_szallito_155555586_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568381">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568381">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568382" class="parositas-csoport" data-parositas-csoport-id="289568382" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555639" data-data-type-name="tranzakció" data-data-identifier="1075">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Papp Katalin
+                                        <br>
+                [Papp Katalin
+                    <a href="/ceg/partner-ceg/85049636/edit" target="_blank">
+                        35 <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </a>
+                ]
+                    </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555639_osszeg_container">
+            42.500,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.03.29.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>SZLA-2020-1029, 1566</dd>
+    <div class="collapse in pcs-details pcs-details-289568382">
+        <dt>tranzakció #</dt>
+        <dd>1075</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333358</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555639" data-tranzakcio-ellen-partner="Papp Katalin" data-url="/kontirozas/submit-is-vevo-or-szallito/155555639/1">
+            <input type="radio" name="vevo_szallito_155555639" id="vevo_szallito_155555639_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555639" data-tranzakcio-ellen-partner="Papp Katalin" data-url="/kontirozas/submit-is-vevo-or-szallito/155555639/0">
+            <input type="radio" name="vevo_szallito_155555639" id="vevo_szallito_155555639_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568382">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568382">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568383" class="parositas-csoport" data-parositas-csoport-id="289568383" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva not-vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555615" data-data-type-name="tranzakció" data-data-identifier="1051">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Pillinger Zsolt
+                                </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555615_osszeg_container">
+            48.900,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.02.26.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>SZLA-2020-1011</dd>
+    <div class="collapse in pcs-details pcs-details-289568383">
+        <dt>tranzakció #</dt>
+        <dd>1051</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333340</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555615" data-tranzakcio-ellen-partner="Pillinger Zsolt" data-url="/kontirozas/submit-is-vevo-or-szallito/155555615/1">
+            <input type="radio" name="vevo_szallito_155555615" id="vevo_szallito_155555615_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555615" data-tranzakcio-ellen-partner="Pillinger Zsolt" data-url="/kontirozas/submit-is-vevo-or-szallito/155555615/0">
+            <input type="radio" name="vevo_szallito_155555615" id="vevo_szallito_155555615_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568383">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568383">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568384" class="parositas-csoport" data-parositas-csoport-id="289568384" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva not-vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555596" data-data-type-name="tranzakció" data-data-identifier="1032">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Piros Karolina
+                                </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555596_osszeg_container">
+            50.400,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.01.22.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>.003 nincs szla</dd>
+    <div class="collapse in pcs-details pcs-details-289568384">
+        <dt>tranzakció #</dt>
+        <dd>1032</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>3366999922448855</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555596" data-tranzakcio-ellen-partner="Piros Karolina" data-url="/kontirozas/submit-is-vevo-or-szallito/155555596/1">
+            <input type="radio" name="vevo_szallito_155555596" id="vevo_szallito_155555596_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555596" data-tranzakcio-ellen-partner="Piros Karolina" data-url="/kontirozas/submit-is-vevo-or-szallito/155555596/0">
+            <input type="radio" name="vevo_szallito_155555596" id="vevo_szallito_155555596_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568384">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568384">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568385" class="parositas-csoport" data-parositas-csoport-id="289568385" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555651" data-data-type-name="tranzakció" data-data-identifier="1087">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Szabó Norbert
+                                        <br>
+                [Szabó Norbert
+                    <a href="/ceg/partner-ceg/85049639/edit" target="_blank">
+                        38 <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </a>
+                ]
+                    </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555651_osszeg_container">
+            31.700,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.04.01.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd></dd>
+    <div class="collapse in pcs-details pcs-details-289568385">
+        <dt>tranzakció #</dt>
+        <dd>1087</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333361</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555651" data-tranzakcio-ellen-partner="Szabó Norbert" data-url="/kontirozas/submit-is-vevo-or-szallito/155555651/1">
+            <input type="radio" name="vevo_szallito_155555651" id="vevo_szallito_155555651_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555651" data-tranzakcio-ellen-partner="Szabó Norbert" data-url="/kontirozas/submit-is-vevo-or-szallito/155555651/0">
+            <input type="radio" name="vevo_szallito_155555651" id="vevo_szallito_155555651_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568385">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568385">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568386" class="parositas-csoport" data-parositas-csoport-id="289568386" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva not-vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555801" data-data-type-name="tranzakció" data-data-identifier="1237">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Szalmabála kft.
+                                </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555801_osszeg_container">
+            48.900,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.06.30.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>SZLA kiegy.</dd>
+    <div class="collapse in pcs-details pcs-details-289568386">
+        <dt>tranzakció #</dt>
+        <dd>1237</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333515</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555801" data-tranzakcio-ellen-partner="Szalmabála kft." data-url="/kontirozas/submit-is-vevo-or-szallito/155555801/1">
+            <input type="radio" name="vevo_szallito_155555801" id="vevo_szallito_155555801_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555801" data-tranzakcio-ellen-partner="Szalmabála kft." data-url="/kontirozas/submit-is-vevo-or-szallito/155555801/0">
+            <input type="radio" name="vevo_szallito_155555801" id="vevo_szallito_155555801_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568386">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568386">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568387" class="parositas-csoport" data-parositas-csoport-id="289568387" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555742" data-data-type-name="tranzakció" data-data-identifier="1178">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Sípos Dominik
+                                        <br>
+                [Sípos Dominik
+                    <a href="/ceg/partner-ceg/85049723/edit" target="_blank">
+                        121 <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </a>
+                ]
+                    </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555742_osszeg_container">
+            45.100,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.06.01.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd></dd>
+    <div class="collapse in pcs-details pcs-details-289568387">
+        <dt>tranzakció #</dt>
+        <dd>1178</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333454</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555742" data-tranzakcio-ellen-partner="Sípos Dominik" data-url="/kontirozas/submit-is-vevo-or-szallito/155555742/1">
+            <input type="radio" name="vevo_szallito_155555742" id="vevo_szallito_155555742_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555742" data-tranzakcio-ellen-partner="Sípos Dominik" data-url="/kontirozas/submit-is-vevo-or-szallito/155555742/0">
+            <input type="radio" name="vevo_szallito_155555742" id="vevo_szallito_155555742_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568387">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568387">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568388" class="parositas-csoport" data-parositas-csoport-id="289568388" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva not-vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555621" data-data-type-name="tranzakció" data-data-identifier="1057">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Takács Gábor
+                                </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555621_osszeg_container">
+            48.900,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.02.29.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>SZLA-2020-1013</dd>
+    <div class="collapse in pcs-details pcs-details-289568388">
+        <dt>tranzakció #</dt>
+        <dd>1057</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333342</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555621" data-tranzakcio-ellen-partner="Takács Gábor" data-url="/kontirozas/submit-is-vevo-or-szallito/155555621/1">
+            <input type="radio" name="vevo_szallito_155555621" id="vevo_szallito_155555621_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555621" data-tranzakcio-ellen-partner="Takács Gábor" data-url="/kontirozas/submit-is-vevo-or-szallito/155555621/0">
+            <input type="radio" name="vevo_szallito_155555621" id="vevo_szallito_155555621_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568388">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568388">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+                    <div id="parositas_csoport_289568389" class="parositas-csoport" data-parositas-csoport-id="289568389" data-tipus="vevo-szallito" data-loaded="false" data-kipontozva="" data-egyezes="" data-state="initialized">
+
+        
+
+<div class="row border-bottom szures-class tranzakcio-and-szamla-count alert alert-info csak-tranzakciok nincs-ures-bizonylat-tetel kontirozas-nincs-jovahagyva vevo-or-szallito parositas-nincs-jovahagyva" data-tranzakcio-count="1" data-szamla-count="0">
+                <div class="col-xs-6">
+        <h3 class="margin-top-no">
+            <i class="fa fa-bank" aria-hidden="true"></i>
+            Banki tranzakciók                    </h3>
+                    <div class="tranzakcio-or-szamla tranzakcio_155555666" data-data-type-name="tranzakció" data-data-identifier="1102">
+    <h4 class="border-top">
+        Banki tranzakció
+                            </h4>
+    <dl class="dl-horizontal">
+        <dt>név</dt>
+        <dd>
+            Varga Béla
+                                        <br>
+                [Varga Béla
+                    <a href="/ceg/partner-ceg/85049658/edit" target="_blank">
+                        57 <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </a>
+                ]
+                    </dd>
+        <dt>összeg</dt>
+        <dd id="tranzakcio_155555666_osszeg_container">
+            185.500,00 HUF
+                    </dd>
+        <dt>dátum</dt>
+        <dd>
+            2020.04.26.
+                    </dd>
+        <dt>saját számla</dt>
+        <dd>
+                            OTP 10000000-22222222 (HUF)
+                    </dd>
+        <dt>közlemény</dt>
+        <dd>52/53/54</dd>
+    <div class="collapse in pcs-details pcs-details-289568389">
+        <dt>tranzakció #</dt>
+        <dd>1102</dd>
+            <dt>típus</dt>
+        <dd>NAPKÖZBENI ÁTUTALÁS</dd>
+        <dt>ellen számla</dt>
+        <dd>10000000033333383</dd>
+            </div>
+    </dl>
+
+        <div>
+                                                                <button class="btn btn-sm btn-warning jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-legyen" type="button" data-is-vevo-or-szallito="1" data-tranzakcio-id="155555666" data-tranzakcio-ellen-partner="Varga Béla" data-url="/kontirozas/submit-is-vevo-or-szallito/155555666/1">
+            <input type="radio" name="vevo_szallito_155555666" id="vevo_szallito_155555666_vsz" value="1" class="vevo-szallito-radio">
+            vevő/szállító <kbd>v</kbd>
+        </button>
+        <button class="btn btn-sm btn-success jovahagyas-button partner-ceg-is-vevo-or-szallito partner-ceg-is-vevo-or-szallito-ne-legyen" type="button" data-is-vevo-or-szallito="0" data-tranzakcio-id="155555666" data-tranzakcio-ellen-partner="Varga Béla" data-url="/kontirozas/submit-is-vevo-or-szallito/155555666/0">
+            <input type="radio" name="vevo_szallito_155555666" id="vevo_szallito_155555666_nem_vsz" value="0" class="vevo-szallito-radio">
+            kontírozom <kbd>k</kbd>
+        </button>
+    </div>
+    </div>
+        </div>
+                <div class="col-xs-6">
+            <h3 class="margin-top-no">
+            <span class="glyphicon glyphicon-education"></span>
+            Segítség! Mit csináljak?
+        </h3>
+        <div class="border-top">
+            <p>
+                További információ <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_vevo_szallito_megjeloles"></span></small>
+            </p>
+        </div>
+                </div>
+    <div class="col-xs-12 text-center">
+                            <button class="btn btn-sm jump-to-next-button btn-info" type="button" data-pcs-id="289568389">ugrás a következőre <kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd></button>
+        <button class="btn btn-sm jump-to-prev-button btn-default" type="button" data-pcs-id="289568389">ugrás az előzőre <kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd></button>
+            </div>
+</div>
+</div>
+        
+        <div class="row margin-top hidden-print" id="parositas_csoport_insert_before">
+            <div class="col-xs-12 text-center">
+                                                    <h3>Következő lépés</h3>
+                    <button data-path="/kontirozas/check" class="btn btn-lg btn-success" id="kontirozas-ellenorzese">
+                        kontírozás
+                    </button>
+                    <p>Ha minden vevő/szállítót megjelölt, akkor menjen tovább.</p>
+                    <h4>Előző lépés</h4>
+                    <a href="/ceg/upload" class="btn btn-sm btn-primary submit-button">fájlok feltöltése</a>
+                    <h4>Haladó opció</h4>
+                    <a href="#" data-href="/parositas/ujra-futtatas/vevo-szallito" data-href-http-method="POST" class="btn btn-sm btn-danger submit-button submit-button-to-confirm" alt="vevők/szállítók megjelölésének újrafuttatása" type="button" data-button-to-confirm-message="Ez a művelet újra futtatja a párosítási algoritmust, ami sok tranzakció és sok számla esetén akár órákig is eltarthat. Biztosan ezt akarja?">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                        előválogatás újrafuttatása
+                    </a>
+                            </div>
+        </div>
+    </div>
+
+            <!-- footer begin -->
+        <div class="container-outer footer margin-top hidden-print">
+            <div class="container">
+
+                <div class="row text-center margin-top">
+                    <br>
+                    <div class="col-sm-12 margin-bottom">
+                        E-mail cím: <a href="mailto:ugyfelszolgalat@automatik.hu">ugyfelszolgalat@automatik.hu</a>
+                    </div>
+                    <div class="col-sm-12 margin-bottom">
+                        Telefonszám: +36 1/850-6006 (hétfő-csütörtök: 9:00-16:00, péntek: 9:00-13:00 óráig)
+                    </div>
+                    <br>
+                    <div class="col-sm-12 margin-bottom">
+                                                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fadriana.accounting%2F&amp;width=122&amp;layout=button&amp;action=like&amp;size=large&amp;show_faces=true&amp;share=true&amp;height=65&amp;appId=2000137966893861" width="167" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+                                                                                                    </div>
+                </div>
+
+                <div class="row text-center margin-bottom">
+                    <div class="col-xs-12">
+                        Az Adriana Accounting és az automatik.hu szolgáltatója a Petne 7 Kft és az Adriana Automatik
+                        Kft.<br>
+                        2016. január óta a könyvelők szolgálatában
+                    </div>
+                </div>
+
+                <div class="row text-center margin-bottom">
+                    <div class="col-xs-12">
+                        Adatvédelmi nyilvántartásba vételi határozat száma: NAIH-135936
+                    </div>
+                </div>
+
+                <div class="row text-center margin-bottom">
+                    <div class="col-xs-12">
+                        <a href="https://adriana.hu/adatkezelesi-tajekoztato" target="_blank">Adatkezelési tájékoztató</a>
+                    </div>
+                    <div class="col-xs-12">
+                        © 2026, Minden jog fenntartva: Adriana Automatik Kft.<br>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- footer end -->
+    
+        <div class="page-overlay-bottom-left bg-warning">
+            </div>
+
+                        
+                    <div id="help-box-container" class="help-box-container">
+    <div class="help_box_close_button_div">
+        <a href="#" onclick="return false;" id="help_all" class="help_all">Összes tartalom megjelenítése</a>
+        <button id="help_box_close_button" type="button" class="close" aria-label="Close">
+            bezár <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="help-box">
+
+        <div class="border-bottom">
+            <h1>Használati segédlet</h1>
+            <p>
+            <strong>A [használati segédlet] tartalmának sorrendje megegyezik az Adriana-ban való
+            könyvelési folyamat egyes lépéseinek sorrendjével.</strong>
+            </p>
+            <p>
+            A bal oldali [kezelő felületen] lévő
+            <b><span class="glyphicon glyphicon-info-sign"></span> ikonokra kattintva</b>
+            ennek a [használati segédletnek] az oda kapcsolódó,
+            <b>részletesebb leírása</b> nyílik meg.
+            </p>
+            <p>
+            Itt a [használati segédletben], a
+            <span class="glyphicon glyphicon-triangle-top"></span>
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
+            ikonok melletti címekre kattintva az alatta lévő rész kinyílik/összecsukódik.
+            </p>
+            <p>
+            Ezt a [használati segédletet] <b>bezárni</b> a jobb felső sarokban lévő
+            bezár gombra kattintva tudja.
+            </p>
+            <h3><span class="glyphicon glyphicon-education"></span> Először használom a rendszert</h3>
+            <p>
+            Ha most használja először ezt a rendszert,
+            akkor a [kezelő felületen] kövesse a
+            <span class="bg-danger">
+            <span class="glyphicon glyphicon-education"></span>
+            piros hátterű szövegek</span> utasításait.
+            A [használati segédletben] pedig kövesse az
+            <span class="avoidwrap">[<span class="glyphicon glyphicon-education">
+            </span> Először használom a rendszert]</span>
+            címek utasításait.<br>
+            A többi leírás a rendszer mélyebb megértésére szolgál,
+            azokat akkor érdemes megnéznie, amikor elakad valamivel,
+            vagy amikor szeretné tudni, hogy mi történik a háttérben.
+            </p>
+            <p>
+            <strong>
+            A [kezelő felület] egyes oldalain felülről lefelé haladjon végig,
+            majd ha végzett az adott lépéssel, az oldal alján a 'Következő lépés' cím alatt
+            található gombbal tud továbblépni.<br>
+            A főcím melletti <span class="glyphicon glyphicon-info-sign"></span>
+            ikonra kattintva kaphat bővebb információt az adott oldalon elvégzendő feladatról.
+            </strong>
+            </p>
+        </div>
+
+        <div id="help_box_konyvelt_cegek_listaja" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_konyvelt_cegek_listaja_description">
+                Könyvelt cégek listája
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_konyvelt_cegek_listaja_description">
+            </div>
+        </div>
+
+        <div id="help_box_feldolgozasi_idoszakok" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_feldolgozasi_idoszakok_description">
+                Feldolgozási időszakok
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_feldolgozasi_idoszakok_description">
+            </div>
+        </div>
+
+        <div id="help_box_beallitasok" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_beallitasok_description">
+                Beállítások
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_beallitasok_description">
+            </div>
+        </div>
+
+        <div id="help_box_feltoltes" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_feltoltes_description">
+                Fájlok feltöltése
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_feltoltes_description">
+            </div>
+        </div>
+
+        <div id="help_box_feltoltes_konyveloprogram" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_feltoltes_konyveloprogram_description">
+                Könyvelőprogramokból beolvasható adatok
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_feltoltes_konyveloprogram_description">
+            </div>
+        </div>
+
+        <div id="help_box_vevo_szallito" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_vevo_szallito_description">
+                Előválogatás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_vevo_szallito_description">
+            </div>
+        </div>
+
+        <div id="help_box_kontirozas_egyesevel" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_kontirozas_egyesevel_description">
+                Kontírozás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_kontirozas_egyesevel_description">
+            </div>
+        </div>
+
+        <div id="help_box_szabaly_beallitas" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_szabaly_beallitas_description">
+                Szabály beállítás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_szabaly_beallitas_description">
+            </div>
+        </div>
+
+        <div id="help_box_szabaly_elonezet" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_szabaly_elonezet_description">
+                Szabály előnézet
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_szabaly_elonezet_description">
+            </div>
+        </div>
+
+        <div id="help_box_szabalyok_menu" class="border-bottom collapse-detail-container">
+          <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_szabalyok_menu_description">
+              Szabályok menü
+              <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+          </h3>
+          <div class="collapse collapse-detail" id="help_box_szabalyok_menu_description">
+          </div>
+        </div>
+
+        <div id="help_box_parositas" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_parositas_description">
+                Párosítás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_parositas_description">
+            </div>
+        </div>
+
+        <div id="help_box_betoltes_partner" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_betoltes_partner_description">
+                Partner adószámok és címek listája
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_betoltes_partner_description">
+            </div>
+        </div>
+
+        <div id="help_box_betoltes" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_betoltes_description">
+                Betöltés a könyvelőprogramba
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_betoltes_description">
+            </div>
+        </div>
+
+        <div id="help_box_torles" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_torles_description">
+                Adatok törlése a szerverről
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_torles_description">
+            </div>
+        </div>
+
+        <div id="help_box_kesz" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_kesz_description">
+                Kész
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_kesz_description">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <div class="modal" id="generic_modal" tabindex="-1" role="dialog">
+        <div id="modal_dialog" class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button id="generic_modal_dialog_close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 id="generic_modal_title" class="modal-title"></h4>
+                </div>
+                <div id="generic_modal_body" class="modal-body">
+                </div>
+                <div id="generic_modal_footer" class="modal-footer">
+                    <button id="generic_modal_footer_cancel" type="button" class="btn hidden" data-dismiss="modal">
+                        Mégsem
+                    </button>
+                    <button id="generic_modal_footer_ok" type="button" class="btn btn-danger hidden" data-dismiss="modal">OK
+                    </button>
+                    <button id="generic_modal_footer_close" type="button" class="btn btn-primary" data-dismiss="modal">
+                        Bezár
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="button-page-cover">
+        <div class="button-page-cover-outer">
+            <div class="button-page-cover-middle">
+                <div class="button-page-cover-inner text-center">
+                    <div class="loading-robot-gif"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script type="text/javascript">
+        zESettings = {
+            webWidget: {
+                launcher: {
+                    label: {
+                        '*': 'Kérdésed van?',
+                    }
+                },
+                contactForm: {
+                    ticketForms: [
+                        {id: 360003686777,
+                            title:false,
+                            subject: false,
+                            fields: [
+                                { id: 'description', hint: { '*' : 'Kérjük, hogy minél több részletet írjon le, és fájl probléma esetén csatolja a fájlt is! Emailben fogunk válaszolni.' }},
+                            ]
+                        }
+                    ],
+                    fields: [
+                        { id: 'name', prefill: { '*': 'Törös Zoltán' }},
+                        { id: 'email', prefill: { '*': 'zoltan.toros@automatik.hu' }},
+                    ]
+                }
+            }
+        };
+    </script>
+    <script>
+        window?.clarity("identify", '1884-2360')
+    </script>
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=4b03f2cf-8b1a-4190-902a-8143fee9d687"> </script>
+        <script src="/build/runtime.ced75ccf.js"></script><script src="/build/232.4ef9dc40.js"></script><script src="/build/app.83a71656.js"></script>
+    <script src="/js/base.js?v=7634251983721"></script>
+    <script async="" src="/js/zendesk.js?v=7634251983721"></script>
+    <script src="/bundles/bootstrap/js/bootstrap.min.js?v=7634251983721"></script>
+    <script>
+        const assets = '/img';
+        const windowContext = this;
+    </script>
+    <script type="text/javascript">
+
+        const urlGenerator = {
+            parositas_csoport_show: function(parositasCsoportId, tipus) {
+                if ('kontirozas-egyesevel' === tipus) {
+                    return urlGenerator.parositas_csoport_show_for_kontirozas_egyesevel(parositasCsoportId);
+                }
+
+                return `/parositas/get-parositas-csoport/${tipus}`;
+            },
+            parositas_csoport_show_for_kontirozas_egyesevel: function(parositasCsoportId) {
+                return `/parositas/get-parositas-csoport-for-kontirozas-egyesevel/${parositasCsoportId}`;
+            },
+        };
+
+        const apiFormats = [
+            'TEN-SOFT egyszeres xml',
+            'TEN-SOFT kettős xml',
+            'RLB Pénztárkönyv API',
+            'RLB Naplófőkönyv API',
+            'DimSQL API',
+            'RLB Hálózatos API'
+        ]
+
+        $(function () {
+            locationHashChanged();
+            window.onhashchange = locationHashChanged;
+
+            $('.submit-button').on('click', function (event) {
+                submitButton(event, $(this));
+            });
+
+	        $(document).on('click', '.ajax-button', function (event) {
+		        ajaxButton(event, $(this));
+	        });
+
+            $('#teaching_video_show').on('click', function () {
+                $('#teaching_video_icons').addClass('hidden');
+            $('#teaching_video_container').removeClass('hidden').show();
+            });
+
+            $('#teaching_video_container .close').on('click', function () {
+            $('#teaching_video_container').addClass('hidden');
+                $('#teaching_video_icons').removeClass('hidden');
+            });
+
+            $('#navbar_help_icon').on('click', showHelpBox)
+            $('#help_box_close_button').on('click', function () {
+                hideHelpBox();
+                history.replaceState(null, null, ' ');
+            });
+
+            // forgatom a lenyitást jelző ikont
+            $('.help-box-container .collapse-detail')
+                .on('show.bs.collapse', function () {
+                    $(this).closest('.collapse-detail-container')
+                        .find('.glyphicon-triangle-bottom')
+                        .removeClass('glyphicon-triangle-bottom')
+                        .addClass('glyphicon-triangle-top');
+
+                    if ($.trim($(this).html()) === '') {
+                        loadSegedletContent($(this), $(this).attr('id').substring(9, $(this).attr('id').length - 12));
+                    }
+                })
+                .on('hide.bs.collapse', function () {
+                    $(this).closest('.collapse-detail-container')
+                        .find('.glyphicon-triangle-top')
+                        .removeClass('glyphicon-triangle-top')
+                        .addClass('glyphicon-triangle-bottom');
+                });
+
+            // Modal-on focus az OK-gomra és a Bezárás-gombra
+            $('#generic_modal').on('shown.bs.modal', function () {
+                let closeButton = $('#generic_modal_footer_close');
+                let okButton = $('#generic_modal_footer_ok');
+
+                if (okButton.is(':visible')) {
+                    okButton.focus();
+                } else if (closeButton.is(':visible')) {
+                    closeButton.focus();
+                }
+            });
+
+                        $('#register_link').on('click', () => gtag('event', 'register'));
+                    });
+    </script>
+
+                        
+    <script type="text/javascript">
+        $('#parositasInfoBtn').on('click',function(){
+            $('.parositas-warning-or-danger').hide();
+            $('.parositas-long-info').removeClass('hide')
+                .addClass('show');
+        })
+        
+    </script>
+
+    <script src="/js/elovalogatas.js?v=7634251983721"></script>
+    <script src="/js/manual-parositas.js?v=7634251983721"></script>
+    <script src="/js/preprocessing-results.js?v=7634251983721"></script>
+    <script src="/js/toggle-biztos-egyezes.js?v=7634251983721"></script>
+
+    
+    <script src="/js/transaction-helper.js?v=7634251983721"></script>
+
+
+
+<iframe data-product="web_widget" title="No content" role="presentation" tabindex="-1" allow="microphone *" aria-hidden="true" src="about:blank" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe><div><iframe title="Opens a widget where you can find more information" id="launcher" tabindex="0" style="color-scheme: light; width: 181px; height: 50px; padding: 0px; margin: 10px 20px; position: fixed; bottom: 0px; overflow: visible; opacity: 1; border: 0px; z-index: 999998; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; right: 0px;"></iframe></div></body></html>

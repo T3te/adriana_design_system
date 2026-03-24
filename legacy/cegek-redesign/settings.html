@@ -1,0 +1,1279 @@
+﻿<!DOCTYPE html>
+<html lang="hu"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>adriana.automatik.hu</title>
+
+    <link href="bundles/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bundles/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/bifrost.css" rel="stylesheet">
+    <link href="css/fluent.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="60x60" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="72x72" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="114x114" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="144x144" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="A-favicon.svg">
+    <link rel="icon" type="image/x-icon" href="A-favicon.svg">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+            
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "kgmpgsfe0i");
+    </script>
+</head>
+<body cz-shortcut-listen="true">
+<div class="page-container">
+                
+            <nav class="navbar navbar-default  hidden-print">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                            <a class="navbar-brand navbar-logo" href="/" style="padding: 4px; margin: 0 15px 0 0">
+                    <img src="img/logo.svg" alt="Adriana logo" style="width: 110px">
+                </a>
+                                        <a href="/" class="navbar-brand" style="font-size: 14px">Cégek</a>
+                                    <a href="/ceg/show" class="navbar-brand accounted-company">kinézet</a>
+                                    </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                                                                                    <li class=""><a href="/szabaly/list">Szabályok</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Listák <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ceg/partner-ceg/list">
+                                        <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                                        partner lista
+                                    </a></li>
+                                <li><a href="/ceg/partner-ceg/adoszam-list">
+                                        <i class="fa fa-address-card-o" aria-hidden="true"></i>
+                                        partnerek adószámai
+                                    </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/ceg/tranzakcio/list/filter">
+                                        <i class="fa fa-bank" aria-hidden="true"></i>
+                                        banki tranzakciók
+                                    </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/ceg/szamla/list">
+                                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        számlák
+                                    </a></li>
+                                <li><a href="/kontirozas/ures/show">
+                                        <i class="fa fa-file-o" aria-hidden="true"></i>
+                                        hiányos kontírozású számlák mutatása
+                                    </a></li>
+                                <li><a href="/kontirozas/check/extract">
+                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                        hiányos kontírozású vevő számla tételek letöltése
+                                    </a></li>
+                            </ul>
+                        </li>
+                                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Beállítások <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                                                            <li><a href="/ceg/bankszamla/list">
+                                        <i class="fa fa-bank" aria-hidden="true"></i>
+                                        bankszámlák
+                                    </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/ceg/konyvelt-ceg-settings">
+                                        <i class="fa fa-cog" aria-hidden="true"></i>
+                                        könyvelt cég beállítások
+                                    </a></li>
+                                                        <li><a href="/iroda/konyvelt-ceg-default-settings">
+                                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                                    alapértelmezett beállítások
+                                </a></li>
+                        </ul>
+                    </li>
+                            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                                                                            <li><a href="/ujdonsagok">
+                            <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+                            Új
+                        </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                            Segítség
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a id="zendesk_sso" href="/zendesk/sso" data-path="/zendesk/sso" target="_blank">
+                                    <i class="fa fa-desktop" aria-hidden="true"></i>
+                                    Adriana Tudásbázis
+                                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://automatik.zendesk.com/hc/hu/categories/8058344942993-Sz%C3%A1mlat%C3%B6rt%C3%A9net-lek%C3%A9rdez%C3%A9si-seg%C3%A9dlet" target="_blank">
+                                    <i class="fa fa-bank" aria-hidden="true"></i>
+                                    Számlatörténet lekérdezési segédlet
+                                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="/teaching-videos-start">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    Online oktató anyag
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" id="navbar_help_icon" onclick="return false;">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    Használati segédlet
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="https://adriana.hu/kompatibilitas" target="_blank">
+                                    <i class="glyphicon glyphicon-list" aria-hidden="true"></i>
+                                    Feltölthető fájl formátumok listája
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/profile#badges" id="navbar_diamond_count">
+                            <i class="fa fa-diamond" aria-hidden="true"></i>
+                            56
+                        </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            Zoltán                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/dashboard">
+                                    <i class="fa fa-dashboard" aria-hidden="true"></i>
+                                    Előfizetésem
+                                </a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/profile">
+                                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                    Profilom
+                                </a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/task/filter">
+                                    <i class="fa fa-tasks" aria-hidden="true"></i>
+                                    Műveletek
+                                </a></li>
+                                                            <li role="separator" class="divider"></li>
+                                                                    <li><a href="/admin/konyvelo-iroda-valtas">
+                                            <i class="fa fa-building" aria-hidden="true"></i>
+                                            Iroda váltás
+                                        </a></li>
+                                                                                                    <li><a href="/admin/office/list">
+                                            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                                            Irodák listája
+                                        </a>
+                                    </li><li><a href="/consultant/user/list">
+                                    <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                                    Userek listája
+                                </a>
+                                                                                                    </li><li><a href="/admin/modules/">
+                                    <span class="fa fa-th" aria-hidden="true"></span>
+                                    Modulok
+                                </a>
+                                                                                                    </li><li><a href="/admin/office/stats">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    Irodák statisztikája
+                                </a>
+                                    </li><li><a href="/admin/office/currency">
+                                    <i class="fa fa-usd" aria-hidden="true"></i>
+                                    Devizás statisztika
+                                </a>
+                                                                                                                                    </li><li><a href="/admin/permissions/list">
+                                            <i class="fa fa-ban" aria-hidden="true"></i>
+                                            Jogosultságok
+                                        </a>
+                                    </li><li><a href="/reszletes-statisztika/2026-03">
+                                            <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                            Statisztika
+                                        </a></li>
+                                                                                                    <li><a href="/admin/kiserleti-modulok">
+                                            <i class="fa fa-flask" aria-hidden="true"></i>
+                                            Kísérleti modulok
+                                        </a></li>
+                                                                                                    <li><a href="/admin/importer-statistics">
+                                            <i class="fa fa-gear" aria-hidden="true"></i>
+                                            Importer felhasználás statisztika
+                                        </a></li>
+                                    <li><a href="/admin/technikai">
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Technikai
+                                        </a></li>
+                                                                                                    <li><a href="/consultant/servers">
+                                            <i class="fa fa-server" aria-hidden="true"></i>
+                                            Konzulens szerverek
+                                        </a></li>
+                                                                                                    <li>
+                                        <a href="/upload-file-group-list">
+                                            <i class="fa fa-file" aria-hidden="true"></i>
+                                            Ügyfelek feldolgozási időszakai
+                                        </a>
+                                    </li>
+                                                                                                                                                                                <li role="separator" class="divider"></li>
+                                        <li><a href="/admin/download-serialized-export">
+                                                <i class="fa fa-download" aria-hidden="true"></i>
+                                                ExporterInput letöltés
+                                            </a></li>
+                                                                                                                            <li role="separator" class="divider"></li>
+                            <li><a href="/logout">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    Kijelentkezés
+                                </a></li>
+                        </ul>
+                    </li>
+                            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+    
+                                    
+        
+    
+            <div class="container margin-top hidden-print session-flash-container">
+            <div class="row">
+                <div class="col-xs-12" id="flash-message">
+                                                                                                    <div class="alert alert-warning alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                Mielőtt tovább tudnánk menni a kontírozásra, kérjük állítsa be (vagy csak hagyja jóvá a "mentés" gombbal) a könyvelt cég beállításait.
+                            </div>
+                                                            </div>
+            </div>
+        </div>
+    
+                        <div class="container-fluid above-page-title">
+    <div class="row">
+        <div id="teaching_video_container" class="col-xs-12 col-sm-10 col-md-8 col-lg-6 pull-right hidden">
+            <div class="teaching-video-header margin-top text-right text-danger">
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h3><i class="fa fa-youtube-play" aria-hidden="true"></i> oktató videó&nbsp;</h3>
+            </div>
+            <div class="teaching-video-body text-right">
+                            <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DBWchEl2xks?rel=0&amp;modestbranding=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+                    </iframe>
+                </div>
+                        </div>
+                </div>
+    </div>
+</div>
+<div class="container-fluid above-page-title relative">
+    <div id="teaching_video_row" class="row">
+        <div id="teaching_video_icons" class="col-xs-12">
+                    <div id="teaching_video_show" class="text-center inline padding text-danger">
+                <i class="fa fa-youtube-play fa-3x" aria-hidden="true"></i><br>
+                oktató videó
+            </div>
+                                </div>
+    </div>
+</div>
+
+            
+        <div id="ledger-modal" data-backdrop="static" data-keyboard="false" class=" modal">
+ <div class="modal-dialog">
+     <div class="modal-content ">
+         <div class="modal-header alert-warning">
+             <h3>Függő főkönyvi szám módosítás</h3>
+         </div>
+         <div class="modal-body  alert-warning ">
+             A meglévő szabályokra ez a módosítás nem érvényesül,
+             azok a létrehozásuk pillantában érvényben lévő függő főkönyvi számot használják.
+             Biztos hogy kívánja módosítani?
+         </div>
+         <div class="modal-footer  alert-warning">
+             <button type="button" class="btn btn-danger" id="ledgerCancelBtn" data-dismiss="modal">Mégse</button>
+             <button type="button" class="btn btn-success" id="ledgerOkBtn" data-dismiss="modal">Értettem</button>
+         </div>
+     </div>
+ </div>
+</div>
+
+    <div class="container konyvelt-ceg-settings">
+        <div class="row">
+            <div class="col-xs-12">
+                                    <h1>Könyvelt cég beállítások:
+                        <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_beallitasok_konyvelt_ceg" data-help="beallitasok"></span></small><br>
+                        kinézet
+                    </h1>
+                                            <a href="/ceg/konyvelt-ceg-settings/export" class="btn btn-sm btn-primary" download="">Beállítások exportálása</a>
+                                        <p class="lead">
+                        Ezek a beállítások csak <strong>erre a könyvelt cégre</strong> érvényesek.
+                    </p>
+                    <p>
+                        Ha egy másik könyvelt cég beállításait szeretné módosítani,<br>
+                        akkor válassza ki a főoldalon a másik könyvelt céget.
+                    </p>
+                                </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <form name="konyvelt_ceg_settings" method="post">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Alap beállítások (kötelező kitölteni)</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_downloadedFileFormat">Könyvelőprogram</label> <select id="konyvelt_ceg_settings_downloadedFileFormat" name="konyvelt_ceg_settings[downloadedFileFormat]" class="form-control"><option value="10">Adriana csv</option><option value="44">Adriana deviza csv</option><option value="13">Apolló csv</option><option value="37">Armada csv</option><option value="40">ARONIC csv</option><option value="14">CashMan xls</option><option value="7">ComboSoft xls</option><option value="24">DimSQL API</option><option value="23">DimSQL csv</option><option value="15">DRD csv</option><option value="16">FokaWIN csv</option><option value="2">FORINT-Soft dbf</option><option value="3">IMA ERP</option><option value="4">Kontír FB txt</option><option value="1">Kontír.NET xml</option><option value="39">Könyvelness csv</option><option value="28">Kulcs-Soft csv</option><option value="45">Makrodigit egyszeres csv</option><option value="42">Makrodigit kettős csv</option><option value="41">Nagy Machinátor csv</option><option value="9">Navision csv</option><option value="17">Niara csv</option><option value="8">Novitax csv</option><option value="18">NTAX txt</option><option value="12">Regram csv</option><option value="25">RemekSoft csv</option><option value="5">RLB csv</option><option value="22" selected="selected">RLB Kettős API</option><option value="26">RLB Naplófőkönyv API</option><option value="27">RLB Pénztárkönyv API</option><option value="43">SAP xls</option><option value="38">Servantes csv</option><option value="46">SMARTBooks API</option><option value="6">SUP xml</option><option value="47">Számlázz.hu számla kiegyenlítés API</option><option value="19">TEN-SOFT egyszeres xml</option><option value="20">TEN-SOFT kettős xml</option><option value="21">Twinflex csv</option></select>  </div> 
+                    </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title">Függő tételek</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Ide kerülnek azok a banki tételek, amikhez nem párosított számlát.
+                        </p>
+                        <div class="row">
+                            <div class="col-xs-3"><div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_fuggoFokonyviSzam">Függő főkönyvi szám</label> <input type="text" id="konyvelt_ceg_settings_fuggoFokonyviSzam" name="konyvelt_ceg_settings[fuggoFokonyviSzam]" required="required" size="20" class="form-control" value="3899">  </div> </div>
+                            <div class="col-xs-3"><div class="hidden form-group"><label class="control-label" for="konyvelt_ceg_settings_kiadasiFuggoFokonyviSzam">Függő rovatszám kiadás</label> <input type="text" id="konyvelt_ceg_settings_kiadasiFuggoFokonyviSzam" name="konyvelt_ceg_settings[kiadasiFuggoFokonyviSzam]" size="20" class="form-control" value="389">  </div> </div>
+                        </div>
+                        <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_fuggoPartner">Függő tételek esetén a partner mezőbe mit írjunk?</label> <select id="konyvelt_ceg_settings_fuggoPartner" name="konyvelt_ceg_settings[fuggoPartner]" class="form-control"><option value="megjegyzesMezoElejere">semmit (legyen üres)</option><option value="adrianaFuggoPartner" selected="selected">fixen [Adriana függő] legyen</option><option value="partnerMezobe">a bankon lévő partnert</option></select>  </div> 
+                        <ul>
+                            <li>
+                                A [semmit (legyen üres)] opció esetén a függő tétel nem kerül partnerre.
+                                Ilyenkor a banki partner neve a megjegyzés mező elejére kerül.
+                                <b>TEN-SOFT, FORINT-Soft és RemekSoft esetén ezt ajánljuk.</b>
+                            </li>
+                            <li>
+                                A [fixen [Adriana függő] legyen] opció esetén a függő tétel egy fix [Adriana függő] nevű partnerre kerül.
+                                Ilyenkor a banki partner neve a megjegyzés mező elejére kerül.
+                                <b>RLB és DimSQL esetén ezt ajánljuk.</b>
+                            </li>
+                            <li>
+                                A [a bankon lévő partnert] opció esetén a függő tétel partnerre kerül.
+                                A partner neve a bankon lévő partner neve lesz, ami eltérhet a számlán szereplő partner névtől.
+                                Ennek a veszélye, hogy új partnereket fog létrehozni a könyvelő programban.
+                            </li>
+                        </ul>
+                        <div class="form-group"><div class="checkbox"><label for="konyvelt_ceg_settings_partnerreValoKonyveles"><input type="checkbox" id="konyvelt_ceg_settings_partnerreValoKonyveles" name="konyvelt_ceg_settings[partnerreValoKonyveles]" value="1"> Partnerre való könyvelés engedélyezése</label></div></div>
+                        <p>
+                            Ha engedélyezve van, akkor manuális rendezésnél a nem párosított tranzakcióhoz
+                            partner céget lehet rendelni és ezeknél a tranzakcióknál speciális export logika érvényesül.
+                            A funkció kizárólag akkor elérhető, <b>ha Adriana Turbót használunk és a könyvelőprogram Navision</b>.
+                        </p>
+                    </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title  title-rovatszam">Kerekítési különbözet főkönyvi számok</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Ide kerülnek számla kiegyenlítéskor keletkező néhány forint eltérések.<br>
+                            A határt letebb a haladó beállításokban a [Határ összeg] alatt tudja módosítani.<br>
+                            Alap esetben csak a -/+2 HUF eltéréseket tesszük az itt beállított kerekítési különbözetre.
+                        </p>
+                        <div class="row">
+                            <div class="col-sm-4 col-md-3">
+                                <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_kerekitesiKulonbozetBevetelFokonyviSzam">bevétel</label> <input type="text" id="konyvelt_ceg_settings_kerekitesiKulonbozetBevetelFokonyviSzam" name="konyvelt_ceg_settings[kerekitesiKulonbozetBevetelFokonyviSzam]" required="required" size="20" class="form-control" value="9696">  </div> 
+                            </div>
+                            <div class="col-sm-4 col-md-3">
+                                <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_kerekitesiKulonbozetRaforditasFokonyviSzam">ráfordítás</label> <input type="text" id="konyvelt_ceg_settings_kerekitesiKulonbozetRaforditasFokonyviSzam" name="konyvelt_ceg_settings[kerekitesiKulonbozetRaforditasFokonyviSzam]" required="required" size="20" class="form-control" value="8696">  </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary arfolyam-kulonbozet-section hide">
+                        <div class="panel-separator">
+                            <h3 class="panel-title">Árfolyam különbözet főkönyvi számok</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-4 col-md-3">
+                                    <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_arfolyamKulonbozetBevetelFokonyviSzam">bevétel</label> <input type="text" id="konyvelt_ceg_settings_arfolyamKulonbozetBevetelFokonyviSzam" name="konyvelt_ceg_settings[arfolyamKulonbozetBevetelFokonyviSzam]" required="required" size="20" class="form-control" value="969">  </div> 
+                                </div>
+                                <div class="col-sm-4 col-md-3">
+                                    <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_arfolyamKulonbozetRaforditasFokonyviSzam">ráfordítás</label> <input type="text" id="konyvelt_ceg_settings_arfolyamKulonbozetRaforditasFokonyviSzam" name="konyvelt_ceg_settings[arfolyamKulonbozetRaforditasFokonyviSzam]" required="required" size="20" class="form-control" value="869">  </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="penztar-section show">
+                        <div class="panel-separator">
+                            <h3 class="panel-title">Automatikus Pénztár/Bank átvezetés</h3>
+                        </div>
+                        <div class="panel-body rlb-penztar">
+                            <p>
+                                Ha szeretné, hogy a KP felvétek és KP befizetések pénztári lába is automatikusan könyvelésre kerüljön,
+                                akkor adja meg, hogy az adott Átvezetési főkönyvi számhoz melyik Pénztár főkönyvi szám tartozik.
+                                Ha Ön több pénztárat is kezel, akkor minden pénztárhoz külön átvezetési főkönyvi szám megadása szükséges.
+                                Amelyik átezetési főkönyvi számot adod meg a kontírozási szabályoknál, az ahhoz kapcsolódó pénztárba fog a tétel automatikusan könyvelődni.
+                            </p>
+                            <div class="bank-penztar-rlb">
+
+                            <div class="row">
+    <div class="col-sm-3 col-md-3">
+        <p><b>Átvezetési főkönyvi szám</b></p>
+    </div>
+    <div class="col-sm-3 col-md-3">
+        <p><b>Pénztár főkönyvi szám</b></p>
+    </div>
+</div>
+<div class="atvezetesek">
+            <div class="row form-group new-penztar">
+            <div class="col-sm-4 col-md-3 atvezetesiDiv">
+                <input type="text" class="atvezetesi form-control">
+                <div style="position:absolute"><i class="fa fa-arrow-right" style="position:relative; left: 240px; bottom: 30px"></i></div>
+            </div>
+            <div class="col-sm-4 col-md-3 penztariDiv">
+                <input type="text" class="penztari form-control">
+            </div>
+        </div>
+    </div>
+<div>
+    <a href="javascript:void(0);" onclick="addNewBankPenztar()">+ További mező hozzáadása</a>
+</div>
+
+<script>
+    function refreshPenztarAtvezetes() {
+        $('.bank-penztar-rlb').empty();
+        $.post('konyvelt-ceg-settings-penztar')
+            .then((data) => {
+                $('.btn').attr('disabled', false)
+                $('.bank-penztar-rlb').append(data);
+            })
+            .fail((result) => {
+                console.error('Hiba történt', result);
+                $('.btn').attr('disabled', false)
+            })
+    }
+
+    $('.delete-btn').on('click', function () {
+        let atvezetesi = $(this).siblings('.atvezetesiDiv').children('input').val();
+        let penztari =  $(this).siblings('.penztariDiv').children('input').val();
+        let url = 'settings-penztar/delete/' + atvezetesi + '/' + penztari + '/' + $(this).data('button-id');
+
+        $('.btn').attr('disabled', true);
+        $(this).prepend('<span class="fa fa-spinner fa-pulse fa-fw"></span> ');
+        $.post(url)
+            .then(() => {
+                refreshPenztarAtvezetes()
+            })
+            .fail((result) => console.error('Hiba történt', result))
+    });
+
+</script>
+</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group"><button type="submit" id="konyvelt_ceg_settings_submit1" name="konyvelt_ceg_settings[submit1]" class="btn-sm btn-success btn">mentés</button></div>
+
+                <p class="lead">
+                    <b>Innentől lefelé csak haladó beállítások vannak.</b><br>
+                    Javasoljuk, hogy eleinte a lentieket hagyja az alapértelmezett értékeken.
+                </p>
+
+                <div class="panel panel-primary gyujtok-section hide">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Könyvelőprogram - haladó beállítások</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_gyujtokSzama">Hány gyűjtőt szeretne használni a számla, számla tételek, és tranzakciók könyveléséhez?</label> <select id="konyvelt_ceg_settings_gyujtokSzama" name="konyvelt_ceg_settings[gyujtokSzama]" class="form-control"><option value="0">egy munkaszám</option><option value="1">+1 gyűjtő</option><option value="2">+2 gyűjtő</option><option value="3">+3 gyűjtő</option><option value="4">+4 gyűjtő</option></select>  </div> 
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Vevő számlák könyvelése - haladó beállítások</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group"><div class="checkbox"><label for="konyvelt_ceg_settings_szamlaKelteHelyettTeljesites"><input type="checkbox" id="konyvelt_ceg_settings_szamlaKelteHelyettTeljesites" name="konyvelt_ceg_settings[szamlaKelteHelyettTeljesites]" value="1"> A számla kelte helyére a teljesítés dátumát írja be [itt még NEM működik: IMA]</label></div></div>
+                        <div class="form-group"><div class="checkbox"><label for="konyvelt_ceg_settings_kontirozastOsszevonni"><input type="checkbox" id="konyvelt_ceg_settings_kontirozastOsszevonni" name="konyvelt_ceg_settings[kontirozastOsszevonni]" value="1"> Vevő számla tételek összevonása (azonos főkönyvi szám, áfa kulcs, áfa gyűjtő kód és előjel esetén) [itt még NEM működik: IMA]</label></div></div>
+                        <div class="form-group"><div class="checkbox"><label for="konyvelt_ceg_settings_negativOsszegTkCsere"><input type="checkbox" id="konyvelt_ceg_settings_negativOsszegTkCsere" name="konyvelt_ceg_settings[negativOsszegTkCsere]" value="1"> Negatív összegek helyett a T/K oldalt cserélje fel [itt még NEM működik: IMA, WUJEGYKE]</label></div></div>
+                        <div class="form-group"><label class="control-label" for="konyvelt_ceg_settings_afanevEut">ÁFA név 0%-os áfakulcs esetén [csak itt működik: Kontír.NET, Kontír FB]</label> <input type="text" id="konyvelt_ceg_settings_afanevEut" name="konyvelt_ceg_settings[afanevEut]" size="40" class="form-control" value="Közösségen belüli termékértékesítés">  </div> 
+                        <div class="form-group"><div class="checkbox"><label for="konyvelt_ceg_settings_ujVevoSzamlaEredetiPartnerNevBetoltese"><input type="checkbox" id="konyvelt_ceg_settings_ujVevoSzamlaEredetiPartnerNevBetoltese" name="konyvelt_ceg_settings[ujVevoSzamlaEredetiPartnerNevBetoltese]" value="1" checked="checked"> Az új vevő számlák betöltésekor a könyvelőprogramba, mindig a számlán szereplő eredeti vevő nevet töltse be, és NE próbálja meg ráfésülni a meglévő partnertörzs hasonló nevű partnerére [itt még NEM működik: IMA, WUJEGYKE]</label></div></div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary deviza-section hide">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Bank könyvelése - haladó beállítások</h2>
+                    </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title">Deviza</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_devizaArfolyamKezeles">Deviza árfolyam kezelés módja [csak itt működik: Kontír.NET, Kontír FB]</label> <select id="konyvelt_ceg_settings_devizaArfolyamKezeles" name="konyvelt_ceg_settings[devizaArfolyamKezeles]" class="form-control"><option value="atlag">átlag</option><option value="fifo" selected="selected">FIFO</option></select>  </div> 
+                        <div class="form-group"><label class="control-label" for="konyvelt_ceg_settings_bankKod">A bankszámlákhoz használt árfolyam bankjának kódja [csak itt működik: Kontír.NET, Kontír FB]</label> <input type="text" id="konyvelt_ceg_settings_bankKod" name="konyvelt_ceg_settings[bankKod]" size="20" class="form-control" value="MNB">  </div> 
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Többlet, részkiegyenlítés és kerekítés kezelése - haladó beállítások</h2>
+                    </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title">Határ összeg</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            A [többlet] és a [részkiegyenlítéskor a teljes kiegyenlítésig hiányzó összeg] beállításait két részre bontjuk:
+                        </p>
+                        <ol>
+                            <li>
+                                A [többlet] vagy a [részkiegyenlítéskor a teljes kiegyenlítésig hiányzó összeg] az Ön által beállított <b>határ összegnél kisebb vagy egyenlő</b>.<br>
+                                Ezeket Biztos egyezésre engedjük, ha a többi egyezési feltételek is teljesülnek.
+                            </li>
+                            <li>
+                                A [többlet] vagy a [részkiegyenlítéskor a teljes kiegyenlítésig hiányzó összeg] az Ön által beállított <b>határ összegnél nagyobb</b>.<br>
+                                Ezeket semmiképpen nem engedjük Biztos egyezésre, akkor sem, ha a többi egyezési feltételek teljesülnek.
+                            </li>
+                        </ol>
+                        <p>
+                            Mindkét esetben külön-külön meg tudja adni, hogy melyik főkönyvi számot alkalmazzuk.<br>
+                            Így szét tudja választani a kis összegű eltéréseket és a nagy összegű eltéréseket.<br>
+                            A teljes [többlet] vagy a teljes [részkiegyenlítéskor a teljes kiegyenlítésig hiányzó összeg] egyben kerül fel a határ alatti vagy a határ feletti főkönyvi számra.
+                        </p>
+                        <p>
+                            <strong>FONTOS! Ez a határ összeg dönti el azt is, hogy mit tekintsünk
+                                biztosan egyező összegnek, amikor a számlákat és a banki tranzakciókat párosítjuk.</strong>
+                        </p>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_szamlaTobbletHatarOsszegHUF">HUF bankszámla</label> <input type="text" id="konyvelt_ceg_settings_szamlaTobbletHatarOsszegHUF" name="konyvelt_ceg_settings[szamlaTobbletHatarOsszegHUF]" required="required" size="10" class="form-control" value="2">  </div> 
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_szamlaTobbletHatarOsszegEUR">EUR bankszámla</label> <input type="text" id="konyvelt_ceg_settings_szamlaTobbletHatarOsszegEUR" name="konyvelt_ceg_settings[szamlaTobbletHatarOsszegEUR]" required="required" size="10" class="form-control" value="0.01">  </div> 
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_szamlaTobbletHatarOsszegUSD">USD bankszámla</label> <input type="text" id="konyvelt_ceg_settings_szamlaTobbletHatarOsszegUSD" name="konyvelt_ceg_settings[szamlaTobbletHatarOsszegUSD]" required="required" size="10" class="form-control" value="0.01">  </div> 
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_szamlaTobbletHatarOsszegGBP">GBP bankszámla</label> <input type="text" id="konyvelt_ceg_settings_szamlaTobbletHatarOsszegGBP" name="konyvelt_ceg_settings[szamlaTobbletHatarOsszegGBP]" required="required" size="10" class="form-control" value="0.01">  </div> 
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_szamlaTobbletHatarOsszegOther">egyéb bankszámla</label> <input type="text" id="konyvelt_ceg_settings_szamlaTobbletHatarOsszegOther" name="konyvelt_ceg_settings[szamlaTobbletHatarOsszegOther]" required="required" size="10" class="form-control" value="0.01">  </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title">Többlet</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Itt tudja beállítani, hogy mi történjen akkor,
+                            ha a bankban az egyik számla kiegyenlítése után
+                            többlet összeg marad a banki utalásban.
+                        </p>
+
+                        <h4 class="margin-top">Határ összeg feletti többlet</h4>
+                        <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_szamlaTobbletOsszegHatarFelettFokonyv">A határ összegnél nagyobb többlet összeg melyik főkönyvre kerüljön?</label> <select id="konyvelt_ceg_settings_szamlaTobbletOsszegHatarFelettFokonyv" name="konyvelt_ceg_settings[szamlaTobbletOsszegHatarFelettFokonyv]" class="form-control"><option value="elozoSzamlaFokonyvre">előző számla főkönyvre</option><option value="fuggoFokonyvre" selected="selected">függő főkönyvre</option></select>  </div> 
+                        <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_szamlaTobbletOsszegHatarFelettPartner">A határ összegnél nagyobb többlet esetén a partner nevet hova írja?</label> <select id="konyvelt_ceg_settings_szamlaTobbletOsszegHatarFelettPartner" name="konyvelt_ceg_settings[szamlaTobbletOsszegHatarFelettPartner]" class="form-control"><option value="partnerMezobe">partner mezőbe</option><option value="megjegyzesMezoElejere" selected="selected">megjegyzés mező elejére</option></select>  </div> 
+
+                        <h4 class="margin-top">Határ összeg alatti többlet</h4>
+                        <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_szamlaTobbletOsszegHatarAlattFokonyv">A határ összegnél kisebb többlet összeg melyik főkönyvre kerüljön?</label> <select id="konyvelt_ceg_settings_szamlaTobbletOsszegHatarAlattFokonyv" name="konyvelt_ceg_settings[szamlaTobbletOsszegHatarAlattFokonyv]" class="form-control"><option value="elozoSzamlaFokonyvre">előző számla főkönyvre</option><option value="fuggoFokonyvre">függő főkönyvre</option><option value="arfolyamKulonbozetFokonyvre">árfolyam különbözet főkönyvre</option><option value="kerekitesiKulonbozetFokonyvre" selected="selected">kerekítési különbözet főkönyvre</option></select>  </div> 
+                        <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_szamlaTobbletOsszegHatarAlattPartner">A határ összegnél kisebb többlet esetén a partner nevet hova írja?</label> <select id="konyvelt_ceg_settings_szamlaTobbletOsszegHatarAlattPartner" name="konyvelt_ceg_settings[szamlaTobbletOsszegHatarAlattPartner]" class="form-control"><option value="partnerMezobe">partner mezőbe</option><option value="megjegyzesMezoElejere" selected="selected">megjegyzés mező elejére</option></select>  </div> 
+
+                        <h4 class="margin-top">Határ összeg alatti és feletti többlet közös beállításai</h4>
+                        <div class="form-group"><label class="control-label" for="konyvelt_ceg_settings_szamlaTobbletOsszegHivatkozas">Többlet esetén milyen fix szöveg kerüljön a hivatkozási szám mezőbe? (lehet üres is)</label> <input type="text" id="konyvelt_ceg_settings_szamlaTobbletOsszegHivatkozas" name="konyvelt_ceg_settings[szamlaTobbletOsszegHivatkozas]" class="form-control">  </div> 
+                    </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title">Részkiegyenlítéskor - a teljes kiegyenlítésig hiányzó összeg</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Itt tudja beállítani, hogy mi történjen akkor,
+                            ha a bankban az egyik számla csak részben van kiegyenlítve,
+                            és már csak egy kis összeg hiányzik a teljes kiegyenlítéshez.
+                        </p>
+
+                        <h4 class="margin-top">Határ összeg feletti teljes kiegyenlítésig hiányzó összeg</h4>
+                        <p>
+                            Ha a számla teljes kiegyenlítéséhez szükséges összeg nagyobb,
+                            mint a beállított határ összeg, akkor a számla csak részben lesz kiegyenlítve.<br>
+                            Itt beállítási lehetőség nincs. Ilyenkor midenképpen részkiegyenlítés lesz.
+                        </p>
+
+                        <h4 class="margin-top">Határ összeg alatti teljes kiegyenlítésig hiányzó összeg</h4>
+                        <p>
+                            Ha a számla teljes kiegyenlítéséhez szükséges összeg kisebb, vagy egyenlő,
+                            mint a beállított határ összeg, akkor lehetőség van a számla teljes kiegyenlítésére.<br>
+                            Ilyenkor a [határ összeg alatti többlet]-nél beállított főkönyvi számra kerül a különbözet.<br>
+                            Ennek a működéséhez az is szükséges, hogy a [határ összeg alatti többlet] beállítás
+                            [árfolyam különbözet]-re vagy [kerekítési különbözet]-re legyen állítva.
+                        </p>
+                        <div class="form-group"><div class="checkbox"><label for="konyvelt_ceg_settings_szamlaReszkiegyenlitesFelhuzasaHatarAlattVevo"><input type="checkbox" id="konyvelt_ceg_settings_szamlaReszkiegyenlitesFelhuzasaHatarAlattVevo" name="konyvelt_ceg_settings[szamlaReszkiegyenlitesFelhuzasaHatarAlattVevo]" value="1" checked="checked"> részkiegyenlítés felhúzása vevő számlák esetén [itt még NEM működik: IMA, WUJEGYKE, Kontír FB]</label></div></div>
+                        <div class="form-group"><div class="checkbox"><label for="konyvelt_ceg_settings_szamlaReszkiegyenlitesFelhuzasaHatarAlattSzallito"><input type="checkbox" id="konyvelt_ceg_settings_szamlaReszkiegyenlitesFelhuzasaHatarAlattSzallito" name="konyvelt_ceg_settings[szamlaReszkiegyenlitesFelhuzasaHatarAlattSzallito]" value="1" checked="checked"> részkiegyenlítés felhúzása szállító számlák esetén [itt még NEM működik: IMA, WUJEGYKE, Kontír FB]</label></div></div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Kontírozás és szabályok - haladó beállítások</h2>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Ezek a beállítások módosítják a kontírozás és a szabályok működését.
+                        </p>
+                    </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title">Részletes szabály szűrések</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Ha az alap szűrési feltételekkel nem tudja elég pontosan leszűrni
+                            az egyes tranzakciókat vagy számlákat, akkor bekapcsolható
+                            a részletes szabály szűrés.<br>
+                            Az alábbi új szűrési lehetőségek nyílnak meg ennek hatására:
+                        </p>
+                        <ul>
+                            <li>Tranzakciók esetén:</li>
+                            <li>
+                                <ul>
+                                    <li>partner bankszámlaszámban szerepel</li>
+                                    <li>tranzakció összege (kisebb vagy egyenő, nagyobb vagy egyenlő mint egy megadott összeg)</li>
+                                </ul>
+                            </li>
+                            <li>Számlák esetén:</li>
+                            <li>
+                                <ul>
+                                    <li>számla sorszámában szerepel</li>
+                                    <li>fizetés módjában szerepel</li>
+                                    <li>számla nettó összege (kisebb vagy egyenő, nagyobb vagy egyenlő mint egy megadott összeg)</li>
+                                    <li>számla számlázzhu típusa (SZ, ES, HS, SS, VS) egyenlő</li>
+                                    <li>számla tételeinek áfa kulcs típusa alapján számla fejben szűrés</li>
+                                </ul>
+                            </li>
+                            <li>Számla tételek esetén:</li>
+                            <li>
+                                <ul>
+                                    <li>számla tétel megjegyzésben szerepel</li>
+                                    <li>számla tétel nettó egységár egyenlő</li>
+                                    <li>számla tétel nettó összege (kisebb vagy egyenő, nagyobb vagy egyenlő mint egy megadott összeg)</li>
+                                    <li>számla számlázzhu típusa (SZ, ES, HS, SS, VS) alapján számla tételben szűrés</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="form-group"><div class="checkbox"><label for="konyvelt_ceg_settings_reszletesSzabalySzuresek"><input type="checkbox" id="konyvelt_ceg_settings_reszletesSzabalySzuresek" name="konyvelt_ceg_settings[reszletesSzabalySzuresek]" value="1"> részletes szabály szűrések</label></div></div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary" id="parositasHalado">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Párosítás - haladó beállítások</h2>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Ezek a beállítások nagyban módosítják a párosítás működését,
+                            ezért csak a konzulensek tudják bekapcsolni vagy módosítani őket az Ön kérésére.
+                        </p>
+                    </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title">Azonos partner számlái</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Egyező partner név és összeg esetén, akkor is csináljunk Biztos egyezést,
+                            ha nincs dátum vagy sorszám egyezés.
+                            Ez a partner összes számlája között keres, és egy banki tranzakcióval
+                            több számlát is kiegyenlíthetünk egyszerre
+                            (ha a számlák valamilyen kombinációja pont kiadja a banki tranzakció összegét).
+                            Csak akkor tesszük Biztos egyezésre, ha az összeg teljesen pontosan egyezik,
+                            itt <u>nem érvényesül</u> a fentebb a beállított [Határ összeg].
+                        </p>
+                        <p>
+                            Kikapcsolni úgy lehet, ha 0-t ír be.
+                        </p>
+                        <p>
+                            <strong>VIGYÁZAT! Ezzel a beállítással Biztos egyezésre kapcsolhatunk olyat is,
+                                ahol a banki közleményben teljesen más sorszámú számla van behivatkozva.</strong>
+                        </p>
+                                                    <p>
+                                <strong>ÓVATOSAN! Ha ide 10-et ír be, akkor 2 a 10-diken (1.024) permutáció a maximum.
+                                    Ha 20-at ír be, akkor 2 a 20-dikon, azaz 1.048.576 permutáció a maximum,
+                                    ami nagyon-nagyon sok memóriát fogyaszt, és lehet, hogy nem tud végigfutni!</strong>
+                            </p>
+                                                <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_azonosPartnerSzamlaiBiztosraSzamlaLimit">permutáció számla limit</label> <input type="number" id="konyvelt_ceg_settings_azonosPartnerSzamlaiBiztosraSzamlaLimit" name="konyvelt_ceg_settings[azonosPartnerSzamlaiBiztosraSzamlaLimit]" required="required" size="20" class="form-control" value="0">  </div> 
+                                            </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title">Számla sorszám (vagy rendelésszám) és összeg egyezés</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Ha legalább ennyi darab karakter hosszú a számla sorszáma (vagy rendelésszáma),
+                            ÉS a számla sorszám (vagy rendelésszám) teljes egészében benne van a közleményben,
+                            ÉS az összeg egyzik a fentebb beállított [Határ összegen] belül,
+                            akkor Biztos egyezést csináljunk belőle
+                            (ilyenkor nem szükséges sem a név, sem a dátum egyezése).
+                        </p>
+                        <p>
+                            Kikapcsolni úgy lehet, ha 0-t ír be.
+                        </p>
+                                                    <p>
+                                <strong>ÓVATOSAN! Legalább 6-ot írjon be, de lehetőleg minél nagyobb számot.
+                                    Ha csak 4-et ír be, akkor az évszámokat is elkaphatja, ami minden számlában egyezik.
+                                    Ha csak 5-öt ír be, az is veszélyes még, csinálhat rossz egyezést.</strong>
+                            </p>
+                                                <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_teljesSorszamEsOsszegBiztosraKarakterLimit">számla sorszám minimum karakter limit</label> <input type="number" id="konyvelt_ceg_settings_teljesSorszamEsOsszegBiztosraKarakterLimit" name="konyvelt_ceg_settings[teljesSorszamEsOsszegBiztosraKarakterLimit]" required="required" size="20" class="form-control" value="0">  </div> 
+                        <p>
+                            Ha az alábbi beállítást is bepipálja, akkor
+                            semmilyen más egyezést nem fogunk biztos egyezésbe rakni,
+                            csak azokat, ahol legalább a fent beállított karakter egyezik
+                            a sorszámból (vagy rendelésszámból) és egyezik az összeg is.
+                            Minden más egyezés, ami amúgy biztos egyezés lenne,
+                            ehelyett valószínű egyezésként fog megjelenni a párosítás oldalon.
+                        </p>
+                        <div class="form-group"><div class="checkbox"><label for="konyvelt_ceg_settings_csakTeljesSorszamEsOsszegEgyezesMehetBiztosra"><input type="checkbox" id="konyvelt_ceg_settings_csakTeljesSorszamEsOsszegEgyezesMehetBiztosra" name="konyvelt_ceg_settings[csakTeljesSorszamEsOsszegEgyezesMehetBiztosra]" value="1"> csak teljes sorszám és összeg egyezés mehet biztos egyezésbe</label></div></div>
+                                            </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title">POS terminálokon név nélküli egyezés</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Ha POS terminálos banki tranzakcióról van szó,
+                            ÉS pontosan egyezik az összeg (itt <u>nem érvényesül</u> a fentebb a beállított [Határ összeg])
+                            ÉS a banki tranzakció értéknapjával egyezik a számla mindhárom dátuma (kiállítás, teljesítés, határidő/esedékesség)
+                            akkor Biztos egyezést csináljunk belőle (anélkül, hogy a név vagy a számla sorszám egyezne).
+                        </p>
+                        <p>
+                            Ezeket az importereket tekintjük POS terminálos importernek (ahol nincs név adat):
+                            CIB Bank PPK xls,
+                            K&amp;H Bank bankkártya txt,
+                            OTP POS terminál csv,
+                            Six Payment csv,
+                            UniCredit Bank POS csv,
+                            GoPay xls
+                        </p>
+                        <div class="form-group"><div class="checkbox"><label for="konyvelt_ceg_settings_posTerminalokonNevNelkulEgyezes"><input type="checkbox" id="konyvelt_ceg_settings_posTerminalokonNevNelkulEgyezes" name="konyvelt_ceg_settings[posTerminalokonNevNelkulEgyezes]" value="1"> POS terminálokon név nélküli egyezés</label></div></div>
+                                            </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title">Fizetés azonosító egyezésből legyen biztos egyezés</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Ha egy tranzakcióhoz nem volt a többi beállítás szerinti biztos egyezés,
+                            ÉS fizetési azonosító egyezés van egy vagy több számlával,
+                            ÉS a partner név is egyezik,
+                            akkor Biztos egyezést csináljunk belőle (anélkül, hogy az összeg egyezne).
+                        </p>
+                        <div class="form-group"><div class="checkbox"><label for="konyvelt_ceg_settings_createBiztosEgyezesFromFizetesAzonosito"><input type="checkbox" id="konyvelt_ceg_settings_createBiztosEgyezesFromFizetesAzonosito" name="konyvelt_ceg_settings[createBiztosEgyezesFromFizetesAzonosito]" value="1"> fizetés azonosító egyezésből legyen biztos egyezés</label></div></div>
+                                            </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title">Nyitott számlák fizetési határidejének meghosszabbítása</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Ennyi nappal növeljük meg az összes nyitott számla fizetési határidejét.
+                            Ez csak a párosításra lesz hatással, a lekönyvelt számlákon semmilyen változtatás nem történik.
+                            Azt ajánljuk, hogy maximum 8 napot állítson be, amely közvetlen hatással van a párosítás eredményére,
+                            ezért a Biztos egyezések fokozott ellenőrzése javasolt.
+                        </p>
+                        <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_szamlaFizetesiHataridoOffset">nyitott számlák fizetési határidejének meghosszabbítása (nap)</label> <input type="number" id="konyvelt_ceg_settings_szamlaFizetesiHataridoOffset" name="konyvelt_ceg_settings[szamlaFizetesiHataridoOffset]" required="required" size="20" class="form-control" value="0">  </div> 
+                                            </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title">Nyitott számlák kiállítási dátumának korábbra hozása</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Ennyi nappal hozzuk előbbre az összes nyitott számla kiállítási dátumát.
+                            Ez csak a párosításra lesz hatással, a lekönyvelt számlákon semmilyen változtatás nem történik.
+                            Azt ajánljuk, hogy maximum 8 napot állítson be, amely közvetlen hatással van a párosítás eredményére,
+                            ezért a Biztos egyezések fokozott ellenőrzése javasolt.
+                        </p>
+                        <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_szamlaKiallitasDatumaOffset">nyitott számlák kiállítási dátumának korábbra hozása (nap)</label> <input type="number" id="konyvelt_ceg_settings_szamlaKiallitasDatumaOffset" name="konyvelt_ceg_settings[szamlaKiallitasDatumaOffset]" required="required" size="20" class="form-control" value="0">  </div> 
+                                            </div>
+                    <div class="panel-separator">
+                        <h3 class="panel-title">Partner törzs törlése a feldolgozási időszak végén</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group"><label class="control-label required" for="konyvelt_ceg_settings_deletePartnerOption">Partnerek automata törlése a feldolgozási időszak lezárása után</label> <select id="konyvelt_ceg_settings_deletePartnerOption" name="konyvelt_ceg_settings[deletePartnerOption]" class="form-control"><option value="nothing" selected="selected">Nincs törlés, megtartunk minden partnert</option><option value="delete_no_alias_and_account_number">Töröljük azokat a partnereket, akiknek nincs
+                 alias neve és bankszámla száma sem (de címe, adószáma lehet)</option><option value="delete_no_alias">Töröljük azokat a partnereket, akiknek nincs alias neve (de címe, adószáma, bankszámla száma lehet)</option><option value="delete_full">Töröljük az összes partnert, kivétel nélkül</option></select>  </div> 
+                    </div>
+                </div>
+
+                <div class="form-group"><button type="submit" id="konyvelt_ceg_settings_submit2" name="konyvelt_ceg_settings[submit2]" class="btn-sm btn-success btn">mentés</button></div>
+                <input type="hidden" id="konyvelt_ceg_settings__token" name="konyvelt_ceg_settings[_token]" value="9f666620.J-CLUlyJvSMMSg14b8m21SatrJw4mSJ91gSIXuJ2sbc.YZblIgTM6nU1JVkPOPHbtEjDm_lN9kootHW6O88Y0_BTtr88Je_iaHQvRA"></form>
+            </div>
+        </div>
+    </div>
+    <div class="szamlazz-hu-szamla-agent-api-kulcs-container" style="visibility: hidden; display: none; padding: 10px 0 10px 0;">
+        <label for="szamlazz-hu-szamla-agent-api-kulcs-input">Számlázz.hu Számla Agent kulcs</label>
+        <div class="input-group" style="width: 205px;">
+            <input type="text" id="szamlazz-hu-szamla-agent-api-kulcs-input" name="szamlazz-hu-szamla-agent-api-kulcs" class="form-control readonly-field" value="" readonly="readonly">
+            <span class="input-group-btn" style="float: right;">
+            <button id="szamlazz-hu-szamla-agent-api-kulcs-enable-edit-button" class="btn btn-default" type="button" title="Szerkesztés engedélyezése vagy tiltása">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+        </span>
+        </div>
+    </div>
+    <style>
+        .readonly-field[readonly] {
+            background-color: #eee;
+            cursor: not-allowed;
+        }
+
+        .readonly-field {
+            transition: background-color 0.2s ease;
+        }
+
+        #szamlazz-hu-szamla-agent-api-kulcs-enable-edit-button {
+            padding: 6px 10px;
+        }
+    </style>
+
+            <!-- footer begin -->
+        <div class="container-outer footer margin-top hidden-print">
+            <div class="container">
+
+                <div class="row text-center margin-top">
+                    <br>
+                    <div class="col-sm-12 margin-bottom">
+                        E-mail cím: <a href="mailto:ugyfelszolgalat@automatik.hu">ugyfelszolgalat@automatik.hu</a>
+                    </div>
+                    <div class="col-sm-12 margin-bottom">
+                        Telefonszám: +36 1/850-6006 (hétfő-csütörtök: 9:00-16:00, péntek: 9:00-13:00 óráig)
+                    </div>
+                    <br>
+                    <div class="col-sm-12 margin-bottom">
+                                                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fadriana.accounting%2F&amp;width=122&amp;layout=button&amp;action=like&amp;size=large&amp;show_faces=true&amp;share=true&amp;height=65&amp;appId=2000137966893861" width="167" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+                                                                                                    </div>
+                </div>
+
+                <div class="row text-center margin-bottom">
+                    <div class="col-xs-12">
+                        Az Adriana Accounting és az automatik.hu szolgáltatója a Petne 7 Kft és az Adriana Automatik
+                        Kft.<br>
+                        2016. január óta a könyvelők szolgálatában
+                    </div>
+                </div>
+
+                <div class="row text-center margin-bottom">
+                    <div class="col-xs-12">
+                        Adatvédelmi nyilvántartásba vételi határozat száma: NAIH-135936
+                    </div>
+                </div>
+
+                <div class="row text-center margin-bottom">
+                    <div class="col-xs-12">
+                        <a href="https://adriana.hu/adatkezelesi-tajekoztato" target="_blank">Adatkezelési tájékoztató</a>
+                    </div>
+                    <div class="col-xs-12">
+                        © 2026, Minden jog fenntartva: Adriana Automatik Kft.<br>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- footer end -->
+    </div>
+        <div class="page-overlay-bottom-left bg-warning">
+            </div>
+
+            
+                    <div id="help-box-container" class="help-box-container">
+    <div class="help_box_close_button_div">
+        <a href="#" onclick="return false;" id="help_all" class="help_all">Összes tartalom megjelenítése</a>
+        <button id="help_box_close_button" type="button" class="close" aria-label="Close">
+            bezár <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="help-box">
+
+        <div class="border-bottom">
+            <h1>Használati segédlet</h1>
+            <p>
+            <strong>A [használati segédlet] tartalmának sorrendje megegyezik az Adriana-ban való
+            könyvelési folyamat egyes lépéseinek sorrendjével.</strong>
+            </p>
+            <p>
+            A bal oldali [kezelő felületen] lévő
+            <b><span class="glyphicon glyphicon-info-sign"></span> ikonokra kattintva</b>
+            ennek a [használati segédletnek] az oda kapcsolódó,
+            <b>részletesebb leírása</b> nyílik meg.
+            </p>
+            <p>
+            Itt a [használati segédletben], a
+            <span class="glyphicon glyphicon-triangle-top"></span>
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
+            ikonok melletti címekre kattintva az alatta lévő rész kinyílik/összecsukódik.
+            </p>
+            <p>
+            Ezt a [használati segédletet] <b>bezárni</b> a jobb felső sarokban lévő
+            bezár gombra kattintva tudja.
+            </p>
+            <h3><span class="glyphicon glyphicon-education"></span> Először használom a rendszert</h3>
+            <p>
+            Ha most használja először ezt a rendszert,
+            akkor a [kezelő felületen] kövesse a
+            <span class="bg-danger">
+            <span class="glyphicon glyphicon-education"></span>
+            piros hátterű szövegek</span> utasításait.
+            A [használati segédletben] pedig kövesse az
+            <span class="avoidwrap">[<span class="glyphicon glyphicon-education">
+            </span> Először használom a rendszert]</span>
+            címek utasításait.<br>
+            A többi leírás a rendszer mélyebb megértésére szolgál,
+            azokat akkor érdemes megnéznie, amikor elakad valamivel,
+            vagy amikor szeretné tudni, hogy mi történik a háttérben.
+            </p>
+            <p>
+            <strong>
+            A [kezelő felület] egyes oldalain felülről lefelé haladjon végig,
+            majd ha végzett az adott lépéssel, az oldal alján a 'Következő lépés' cím alatt
+            található gombbal tud továbblépni.<br>
+            A főcím melletti <span class="glyphicon glyphicon-info-sign"></span>
+            ikonra kattintva kaphat bővebb információt az adott oldalon elvégzendő feladatról.
+            </strong>
+            </p>
+        </div>
+
+        <div id="help_box_konyvelt_cegek_listaja" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_konyvelt_cegek_listaja_description">
+                Könyvelt cégek listája
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_konyvelt_cegek_listaja_description">
+            </div>
+        </div>
+
+        <div id="help_box_feldolgozasi_idoszakok" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_feldolgozasi_idoszakok_description">
+                Feldolgozási időszakok
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_feldolgozasi_idoszakok_description">
+            </div>
+        </div>
+
+        <div id="help_box_beallitasok" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_beallitasok_description">
+                Beállítások
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_beallitasok_description">
+            </div>
+        </div>
+
+        <div id="help_box_feltoltes" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_feltoltes_description">
+                Fájlok feltöltése
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_feltoltes_description">
+            </div>
+        </div>
+
+        <div id="help_box_feltoltes_konyveloprogram" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_feltoltes_konyveloprogram_description">
+                Könyvelőprogramokból beolvasható adatok
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_feltoltes_konyveloprogram_description">
+            </div>
+        </div>
+
+        <div id="help_box_vevo_szallito" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_vevo_szallito_description">
+                Előválogatás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_vevo_szallito_description">
+            </div>
+        </div>
+
+        <div id="help_box_kontirozas_egyesevel" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_kontirozas_egyesevel_description">
+                Kontírozás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_kontirozas_egyesevel_description">
+            </div>
+        </div>
+
+        <div id="help_box_szabaly_beallitas" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_szabaly_beallitas_description">
+                Szabály beállítás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_szabaly_beallitas_description">
+            </div>
+        </div>
+
+        <div id="help_box_szabaly_elonezet" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_szabaly_elonezet_description">
+                Szabály előnézet
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_szabaly_elonezet_description">
+            </div>
+        </div>
+
+        <div id="help_box_szabalyok_menu" class="border-bottom collapse-detail-container">
+          <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_szabalyok_menu_description">
+              Szabályok menü
+              <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+          </h3>
+          <div class="collapse collapse-detail" id="help_box_szabalyok_menu_description">
+          </div>
+        </div>
+
+        <div id="help_box_parositas" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_parositas_description">
+                Párosítás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_parositas_description">
+            </div>
+        </div>
+
+        <div id="help_box_betoltes_partner" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_betoltes_partner_description">
+                Partner adószámok és címek listája
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_betoltes_partner_description">
+            </div>
+        </div>
+
+        <div id="help_box_betoltes" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_betoltes_description">
+                Betöltés a könyvelőprogramba
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_betoltes_description">
+            </div>
+        </div>
+
+        <div id="help_box_torles" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_torles_description">
+                Adatok törlése a szerverről
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_torles_description">
+            </div>
+        </div>
+
+        <div id="help_box_kesz" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_kesz_description">
+                Kész
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_kesz_description">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <div class="modal" id="generic_modal" tabindex="-1" role="dialog">
+        <div id="modal_dialog" class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button id="generic_modal_dialog_close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 id="generic_modal_title" class="modal-title"></h4>
+                </div>
+                <div id="generic_modal_body" class="modal-body">
+                </div>
+                <div id="generic_modal_footer" class="modal-footer">
+                    <button id="generic_modal_footer_cancel" type="button" class="btn hidden" data-dismiss="modal">
+                        Mégsem
+                    </button>
+                    <button id="generic_modal_footer_ok" type="button" class="btn btn-danger hidden" data-dismiss="modal">OK
+                    </button>
+                    <button id="generic_modal_footer_close" type="button" class="btn btn-primary" data-dismiss="modal">
+                        Bezár
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="button-page-cover">
+        <div class="button-page-cover-outer">
+            <div class="button-page-cover-middle">
+                <div class="button-page-cover-inner text-center">
+                    <div class="loading-robot-gif"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script type="text/javascript">
+        zESettings = {
+            webWidget: {
+                launcher: {
+                    label: {
+                        '*': 'Kérdésed van?',
+                    }
+                },
+                contactForm: {
+                    ticketForms: [
+                        {id: 360003686777,
+                            title:false,
+                            subject: false,
+                            fields: [
+                                { id: 'description', hint: { '*' : 'Kérjük, hogy minél több részletet írjon le, és fájl probléma esetén csatolja a fájlt is! Emailben fogunk válaszolni.' }},
+                            ]
+                        }
+                    ],
+                    fields: [
+                        { id: 'name', prefill: { '*': 'Törös Zoltán' }},
+                        { id: 'email', prefill: { '*': 'zoltan.toros@automatik.hu' }},
+                    ]
+                }
+            }
+        };
+    </script>
+    <script>
+        window?.clarity("identify", '1884-2360')
+    </script>
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=4b03f2cf-8b1a-4190-902a-8143fee9d687"> </script>
+        <script src="/build/runtime.ced75ccf.js"></script><script src="/build/232.4ef9dc40.js"></script><script src="/build/app.83a71656.js"></script>
+    <script src="/js/base.js"></script>
+    <script async="" src="/js/zendesk.js"></script>
+    <script src="bundles/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        const assets = '/img';
+        const windowContext = this;
+    </script>
+    <script type="text/javascript">
+
+        const urlGenerator = {
+            parositas_csoport_show: function(parositasCsoportId, tipus) {
+                if ('kontirozas-egyesevel' === tipus) {
+                    return urlGenerator.parositas_csoport_show_for_kontirozas_egyesevel(parositasCsoportId);
+                }
+
+                return `/parositas/get-parositas-csoport/${tipus}`;
+            },
+            parositas_csoport_show_for_kontirozas_egyesevel: function(parositasCsoportId) {
+                return `/parositas/get-parositas-csoport-for-kontirozas-egyesevel/${parositasCsoportId}`;
+            },
+        };
+
+        const apiFormats = [
+            'TEN-SOFT egyszeres xml',
+            'TEN-SOFT kettős xml',
+            'RLB Pénztárkönyv API',
+            'RLB Naplófőkönyv API',
+            'DimSQL API',
+            'RLB Hálózatos API'
+        ]
+
+        $(function () {
+            locationHashChanged();
+            window.onhashchange = locationHashChanged;
+
+            $('.submit-button').on('click', function (event) {
+                submitButton(event, $(this));
+            });
+
+	        $(document).on('click', '.ajax-button', function (event) {
+		        ajaxButton(event, $(this));
+	        });
+
+            $('#teaching_video_show').on('click', function () {
+                $('#teaching_video_icons').addClass('hidden');
+            $('#teaching_video_container').removeClass('hidden').show();
+            });
+
+            $('#teaching_video_container .close').on('click', function () {
+            $('#teaching_video_container').addClass('hidden');
+                $('#teaching_video_icons').removeClass('hidden');
+            });
+
+            $('#navbar_help_icon').on('click', showHelpBox)
+            $('#help_box_close_button').on('click', function () {
+                hideHelpBox();
+                history.replaceState(null, null, ' ');
+            });
+
+            // forgatom a lenyitást jelző ikont
+            $('.help-box-container .collapse-detail')
+                .on('show.bs.collapse', function () {
+                    $(this).closest('.collapse-detail-container')
+                        .find('.glyphicon-triangle-bottom')
+                        .removeClass('glyphicon-triangle-bottom')
+                        .addClass('glyphicon-triangle-top');
+
+                    if ($.trim($(this).html()) === '') {
+                        loadSegedletContent($(this), $(this).attr('id').substring(9, $(this).attr('id').length - 12));
+                    }
+                })
+                .on('hide.bs.collapse', function () {
+                    $(this).closest('.collapse-detail-container')
+                        .find('.glyphicon-triangle-top')
+                        .removeClass('glyphicon-triangle-top')
+                        .addClass('glyphicon-triangle-bottom');
+                });
+
+            // Modal-on focus az OK-gomra és a Bezárás-gombra
+            $('#generic_modal').on('shown.bs.modal', function () {
+                let closeButton = $('#generic_modal_footer_close');
+                let okButton = $('#generic_modal_footer_ok');
+
+                if (okButton.is(':visible')) {
+                    okButton.focus();
+                } else if (closeButton.is(':visible')) {
+                    closeButton.focus();
+                }
+            });
+
+                        $('#register_link').on('click', () => gtag('event', 'register'));
+                    });
+    </script>
+
+                        
+    <script src="/js/settings.js"></script>
+    <script src="/js/penztar.js"></script>
+    <script>
+        const ORIGINAL_LEDGER_NUMBER = 3899
+    </script>
+    <script>
+        KonyveltCegSettings.initialize(
+            'RLB Kettős API',
+            '{"gyujtokSzama":0,"szamlaKelteHelyettTeljesites":false,"kontirozastOsszevonni":false,"negativOsszegTkCsere":false,"afanevEut":"K\u00f6z\u00f6ss\u00e9gen bel\u00fcli term\u00e9k\u00e9rt\u00e9kes\u00edt\u00e9s","ujVevoSzamlaEredetiPartnerNevBetoltese":true,"fuggoFokonyviSzam":"3899","kiadasiFuggoFokonyviSzam":"389","fuggoPartner":"adrianaFuggoPartner","devizaArfolyamKezeles":"fifo","bankKod":"MNB","szamlaTobbletHatarOsszegHUF":2,"szamlaTobbletHatarOsszegEUR":0.01,"szamlaTobbletHatarOsszegUSD":0.01,"szamlaTobbletHatarOsszegGBP":0.01,"szamlaTobbletHatarOsszegOther":0.01,"szamlaTobbletOsszegHatarFelettFokonyv":"fuggoFokonyvre","szamlaTobbletOsszegHatarFelettPartner":"megjegyzesMezoElejere","szamlaTobbletOsszegHatarAlattFokonyv":"kerekitesiKulonbozetFokonyvre","szamlaTobbletOsszegHatarAlattPartner":"megjegyzesMezoElejere","szamlaTobbletOsszegHivatkozas":null,"szamlaReszkiegyenlitesFelhuzasaHatarAlattVevo":true,"szamlaReszkiegyenlitesFelhuzasaHatarAlattSzallito":true,"arfolyamKulonbozetBevetelFokonyviSzam":"969","arfolyamKulonbozetRaforditasFokonyviSzam":"869","kerekitesiKulonbozetBevetelFokonyviSzam":"9696","kerekitesiKulonbozetRaforditasFokonyviSzam":"8696","azonosPartnerSzamlaiBiztosraSzamlaLimit":0,"teljesSorszamEsOsszegBiztosraKarakterLimit":0,"csakTeljesSorszamEsOsszegEgyezesMehetBiztosra":false,"posTerminalokonNevNelkulEgyezes":false,"createBiztosEgyezesFromFizetesAzonosito":false,"reszletesSzabalySzuresek":false,"szamlaFizetesiHataridoOffset":0,"szamlaKiallitasDatumaOffset":0,"deletePartnerOption":"nothing","penztarBankAtvezetes":null,"partnerreValoKonyveles":false}',
+            null
+        )
+    </script>
+    <script>
+        $.post('konyvelt-ceg-settings-penztar')
+            .then((data) => {
+                $('.bank-penztar-rlb').append(data)
+            })
+            .fail((result) => console.error('Hiba történt', result))
+    </script>
+    
+
+
+<iframe data-product="web_widget" title="No content" role="presentation" tabindex="-1" allow="microphone *" aria-hidden="true" src="about:blank" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe><div><iframe title="Opens a widget where you can find more information" id="launcher" tabindex="0" style="color-scheme: light; width: 181px; height: 50px; padding: 0px; margin: 10px 20px; position: fixed; bottom: 0px; overflow: visible; opacity: 1; border: 0px; z-index: 999998; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; right: 0px;"></iframe></div></body></html>

@@ -1,0 +1,2959 @@
+<html lang="hu"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>adriana.automatik.hu</title>
+
+    <link href="/bundles/bootstrap/css/bootstrap.min.css?v=8412" rel="stylesheet">
+    <link href="/bundles/font-awesome/css/font-awesome.min.css?v=8412" rel="stylesheet">
+    <link href="/css/common.css?v=8412" rel="stylesheet">
+    <link href="/css/main.css?v=8412" rel="stylesheet">
+    <link href="/css/bifrost.css?v=8412" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="60x60" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="72x72" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="114x114" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="144x144" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="/A-favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="/A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="/A-favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/A-favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/A-favicon.svg">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+        <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 52px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 17px;
+            width: 17px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #4BBF73;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #4BBF73;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        /* cover */
+        #cover-spin {
+            position:fixed;
+            width:100%;
+            left:0;right:0;top:0;bottom:0;
+            background-color: rgba(255,255,255,0.7);
+            z-index:9999;
+            display:none;
+        }
+
+        @-webkit-keyframes spin {
+            from {-webkit-transform:rotate(0deg);}
+            to {-webkit-transform:rotate(360deg);}
+        }
+
+        @keyframes spin {
+            from {transform:rotate(0deg);}
+            to {transform:rotate(360deg);}
+        }
+
+        #cover-spin::after {
+            content:'';
+            display:block;
+            position:absolute;
+            left:48%;top:40%;
+            width:40px;height:40px;
+            border-style:solid;
+            border-color:black;
+            border-top-color:transparent;
+            border-width: 4px;
+            border-radius:50%;
+            -webkit-animation: spin .8s linear infinite;
+            animation: spin .8s linear infinite;
+        }
+    </style>
+    <script async="" src="https://scripts.clarity.ms/0.8.57/clarity.js"></script><script async="" src="https://www.clarity.ms/tag/kgmpgsfe0i"></script><script src="/bundles/fosjsrouting/js/router.min.js"></script>
+    <script src="/js/routing?callback=fos.Router.setData"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "kgmpgsfe0i");
+    </script>
+</head>
+<body cz-shortcut-listen="true">
+<div class="page-container">
+                
+            <nav class="navbar navbar-default  hidden-print">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                            <a class="navbar-brand navbar-logo" href="/" style="padding: 4px; margin: 0 15px 0 0">
+                    <img src="/img/logo.svg" alt="Adriana logo" style="width: 110px">
+                </a>
+                                        <a href="/" class="navbar-brand" style="font-size: 14px">Cégek</a>
+                                    <a href="/ceg/show" class="navbar-brand accounted-company">Törös Zoltán</a>
+                                    </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                                                                                    <li class=""><a href="/szabaly/list">Szabályok</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Listák <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ceg/partner-ceg/list">
+                                        <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                                        partner lista
+                                    </a></li>
+                                <li><a href="/ceg/partner-ceg/adoszam-list">
+                                        <i class="fa fa-address-card-o" aria-hidden="true"></i>
+                                        partnerek adószámai
+                                    </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/ceg/tranzakcio/list/filter">
+                                        <i class="fa fa-bank" aria-hidden="true"></i>
+                                        banki tranzakciók
+                                    </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/ceg/szamla/list">
+                                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        számlák
+                                    </a></li>
+                                <li><a href="/kontirozas/ures/show">
+                                        <i class="fa fa-file-o" aria-hidden="true"></i>
+                                        hiányos kontírozású számlák mutatása
+                                    </a></li>
+                                <li><a href="/kontirozas/check/extract">
+                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                        hiányos kontírozású vevő számla tételek letöltése
+                                    </a></li>
+                            </ul>
+                        </li>
+                                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Beállítások <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                                                            <li><a href="/ceg/bankszamla/list">
+                                        <i class="fa fa-bank" aria-hidden="true"></i>
+                                        bankszámlák
+                                    </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/ceg/konyvelt-ceg-settings">
+                                        <i class="fa fa-cog" aria-hidden="true"></i>
+                                        könyvelt cég beállítások
+                                    </a></li>
+                                                        <li><a href="/iroda/konyvelt-ceg-default-settings">
+                                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                                    alapértelmezett beállítások
+                                </a></li>
+                        </ul>
+                    </li>
+                            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                                                                            <li><a href="/ujdonsagok">
+                            <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+                            Új
+                        </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                            Segítség
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a id="zendesk_sso" href="/zendesk/sso" data-path="/zendesk/sso" target="_blank">
+                                    <i class="fa fa-desktop" aria-hidden="true"></i>
+                                    Adriana Tudásbázis
+                                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://automatik.zendesk.com/hc/hu/categories/8058344942993-Sz%C3%A1mlat%C3%B6rt%C3%A9net-lek%C3%A9rdez%C3%A9si-seg%C3%A9dlet" target="_blank">
+                                    <i class="fa fa-bank" aria-hidden="true"></i>
+                                    Számlatörténet lekérdezési segédlet
+                                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="/teaching-videos-start">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    Online oktató anyag
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" id="navbar_help_icon" onclick="return false;">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    Használati segédlet
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="https://adriana.hu/kompatibilitas" target="_blank">
+                                    <i class="glyphicon glyphicon-list" aria-hidden="true"></i>
+                                    Feltölthető fájl formátumok listája
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/profile#badges" id="navbar_diamond_count">
+                            <i class="fa fa-diamond" aria-hidden="true"></i>
+                            56
+                        </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            Zoltán                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/dashboard">
+                                    <i class="fa fa-dashboard" aria-hidden="true"></i>
+                                    Előfizetésem
+                                </a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/profile">
+                                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                    Profilom
+                                </a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/task/filter">
+                                    <i class="fa fa-tasks" aria-hidden="true"></i>
+                                    Műveletek
+                                </a></li>
+                                                            <li role="separator" class="divider"></li>
+                                                                    <li><a href="/admin/konyvelo-iroda-valtas">
+                                            <i class="fa fa-building" aria-hidden="true"></i>
+                                            Iroda váltás
+                                        </a></li>
+                                                                                                    <li><a href="/admin/office/list">
+                                            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                                            Irodák listája
+                                        </a>
+                                    </li><li><a href="/consultant/user/list">
+                                    <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                                    Userek listája
+                                </a>
+                                                                                                    </li><li><a href="/admin/modules/">
+                                    <span class="fa fa-th" aria-hidden="true"></span>
+                                    Modulok
+                                </a>
+                                                                                                    </li><li><a href="/admin/office/stats">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    Irodák statisztikája
+                                </a>
+                                    </li><li><a href="/admin/office/currency">
+                                    <i class="fa fa-usd" aria-hidden="true"></i>
+                                    Devizás statisztika
+                                </a>
+                                                                                                                                    </li><li><a href="/admin/permissions/list">
+                                            <i class="fa fa-ban" aria-hidden="true"></i>
+                                            Jogosultságok
+                                        </a>
+                                    </li><li><a href="/reszletes-statisztika/2026-03">
+                                            <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                            Statisztika
+                                        </a></li>
+                                                                                                    <li><a href="/admin/kiserleti-modulok">
+                                            <i class="fa fa-flask" aria-hidden="true"></i>
+                                            Kísérleti modulok
+                                        </a></li>
+                                                                                                    <li><a href="/admin/importer-statistics">
+                                            <i class="fa fa-gear" aria-hidden="true"></i>
+                                            Importer felhasználás statisztika
+                                        </a></li>
+                                    <li><a href="/admin/technikai">
+                                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                                            Technikai
+                                        </a></li>
+                                                                                                    <li><a href="/consultant/servers">
+                                            <i class="fa fa-server" aria-hidden="true"></i>
+                                            Konzulens szerverek
+                                        </a></li>
+                                                                                                    <li>
+                                        <a href="/upload-file-group-list">
+                                            <i class="fa fa-file" aria-hidden="true"></i>
+                                            Ügyfelek feldolgozási időszakai
+                                        </a>
+                                    </li>
+                                                                                                                                                                                <li role="separator" class="divider"></li>
+                                        <li><a href="/admin/download-serialized-export">
+                                                <i class="fa fa-download" aria-hidden="true"></i>
+                                                ExporterInput letöltés
+                                            </a></li>
+                                                                                                                            <li role="separator" class="divider"></li>
+                            <li><a href="/logout">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    Kijelentkezés
+                                </a></li>
+                        </ul>
+                    </li>
+                            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+    
+                                    
+    
+    
+            <div class="container margin-top hidden-print session-flash-container">
+            <div class="row">
+                <div class="col-xs-12" id="flash-message">
+                                    </div>
+            </div>
+        </div>
+    
+                        <div class="container-fluid above-page-title">
+    <div class="row">
+        <div id="teaching_video_container" class="col-xs-12 col-sm-10 col-md-8 col-lg-6 pull-right hidden">
+            <div class="teaching-video-header margin-top text-right text-danger">
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h3><i class="fa fa-youtube-play" aria-hidden="true"></i> oktató videó&nbsp;</h3>
+            </div>
+            <div class="teaching-video-body text-right">
+                            <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RBiIudF2ws0?rel=0&amp;modestbranding=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+                    </iframe>
+                </div>
+                        </div>
+                    <div class="col-xs-12 margin-top">
+                            <div class="text-center inline padding pull-right">
+                    <a href="https://automatik.zendesk.com/hc/hu/sections/8878616203025-Feldolgozási-időszak" target="_blank">
+                        <span class="glyphicon glyphicon-question-sign fa-3x"></span><br>
+                        GYIK
+                    </a>                    
+                </div>
+                                        <div class="text-center inline padding pull-right">
+                    <a href="https://automatik.zendesk.com/hc/hu/articles/9407669558417-Egyszer%C5%B1s%C3%ADtett-k%C3%A9zik%C3%B6nyv-Adriana-folyamatok" target="_blank">
+                        <span class="glyphicon glyphicon-book fa-3x"></span><br>
+                        kézikönyv
+                    </a>
+                </div>
+                        </div>
+                </div>
+    </div>
+</div>
+<div class="container-fluid above-page-title relative">
+    <div id="teaching_video_row" class="row">
+        <div id="teaching_video_icons" class="col-xs-12">
+                    <div id="teaching_video_show" class="text-center inline padding text-danger">
+                <i class="fa fa-youtube-play fa-3x" aria-hidden="true"></i><br>
+                oktató videó
+            </div>
+                            <div class="text-center inline padding">
+                <a href="https://automatik.zendesk.com/hc/hu/articles/9407669558417-Egyszer%C5%B1s%C3%ADtett-k%C3%A9zik%C3%B6nyv-Adriana-folyamatok" target="_blank">
+                    <span class="glyphicon glyphicon-book fa-3x"></span><br>
+                    kézikönyv
+                </a>
+            </div>
+                            <div class="text-center inline padding">
+                <a href="https://automatik.zendesk.com/hc/hu/sections/8878616203025-Feldolgozási-időszak" target="_blank">
+                    <span class="glyphicon glyphicon-question-sign fa-3x"></span><br>
+                    GYIK
+                </a>                    
+            </div>
+                </div>
+    </div>
+</div>
+
+            
+    <div class="container" data-fp-store-id="84911879">
+    <div class="row">
+
+        <div class="col-xs-12">
+            <h1>
+                Új feldolgozási időszak
+                <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_uj_feldolgozasi_idoszak_altalanos"></span></small>
+            </h1>
+            <p class="lead">
+                <span class="bg-danger">
+                    <span class="glyphicon glyphicon-education"></span>
+                    Azt az időszakot adja meg, amelyik időszakra most könyvelni szeretné ennek a cégnek a banki tételeit.
+                </span>
+            </p>
+
+            
+
+            <form name="new_uploaded_file_group" method="post" class="bizonylat-form form-inline">
+                            <div class="panel" style="background-color: #fff;border: 1px solid #e0e0e0;padding: 20px;border-radius: 6px;margin-top: 30px;">
+                    <h4 style="font-weight: bold; color: #D35400; margin-bottom: 10px;">🚀 Mire vársz? Itt az <a href="https://adriana.hu/turbo" target="_blank"><span style="color: #C0392B;">Adriana Turbó</span></a>, a rakétasebességű feldolgozás!</h4>
+
+                    <ul style="list-style: none; padding-left: 0; margin-bottom: 15px;">
+                        <li>✅ Gyorsabb</li>
+                        <li>✅ Stabilabb</li>
+                        <li>✅ Ideális nagy tételszámnál</li>
+                    </ul>
+
+                    <p style="font-size: 16px; margin-bottom: 15px;">
+                        Ne csak dolgozz – <strong>turbózd fel a feldolgozást</strong>!
+                    </p>
+
+                    <div class="checkbox-switch" style="display: flex; flex-wrap: nowrap; align-items: center;">
+                        <span style="font-size: 16px; font-weight: bold; padding-right: 10px;">
+                            👉 Kapcsold be az Adriana Turbót most!
+                        </span>
+                        <label class="switch">
+                            <input name="new_uploaded_file_group[enabledBifrost]" value="1" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                        <div style="padding-left: 20px; margin-bottom: 40px">
+                <h4>Formátum</h4>
+                <p>Kérjük a dátumokat éééé-hh-nn formátumban adja meg. Például: 2017-02-28</p>
+
+                <div class="form-group"><label class="control-label required" for="new_uploaded_file_group_periodStartAt">Feldolgozási időszak első napja</label> <input type="text" id="new_uploaded_file_group_periodStartAt" name="new_uploaded_file_group[periodStartAt]" required="required" maxlength="10" size="10" class="date-field form-control" value="2026-03-12">  </div> 
+                <i class="fa fa-check" aria-hidden="true" title="A dátum megfelelő."></i>                 <div class="form-group"><label class="control-label required" for="new_uploaded_file_group_periodEndAt">utolsó napja</label> <input type="text" id="new_uploaded_file_group_periodEndAt" name="new_uploaded_file_group[periodEndAt]" required="required" maxlength="10" size="10" class="date-field form-control" value="2026-03-11">  </div> 
+                <i class="fa fa-check" aria-hidden="true" title="A dátum megfelelő."></i>
+                <div class="form-group"><button type="submit" id="new_uploaded_file_group_submit" name="new_uploaded_file_group[submit]" class="btn-sm btn-success btn" data-fp-store-clear="true">mentés</button></div>
+            </div>
+
+
+            <input type="hidden" id="new_uploaded_file_group__token" name="new_uploaded_file_group[_token]" value="ed349d0f3.SMTQN91HzItZkNmTwfWZ-vwiZO037Yi6_HXgzS4gk34.K_C4eLQjmsIY15-m9a_1laoUPoNm37_5lgCknh5k4wgws7gHj3OK6i7erg"></form>
+
+            <h4>
+                Miért vannak már kitöltve ezek a dátumok?
+                <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_uj_feldolgozasi_idoszak_automatikus_datum_kitoltes"></span></small>
+            </h4>
+            <h4>
+                Milyen hosszú feldolgozási időszakot válasszak?
+                <small><span class="glyphicon glyphicon-info-sign scroll-to-help-id" data-target="#help_box_uj_feldolgozasi_idoszak_hossza"></span></small>
+            </h4>
+        </div>
+    </div>
+</div>
+
+            <!-- footer begin -->
+        <div class="container-outer footer margin-top hidden-print">
+            <div class="container">
+
+                <div class="row text-center margin-top">
+                    <br>
+                    <div class="col-sm-12 margin-bottom">
+                        E-mail cím: <a href="mailto:ugyfelszolgalat@automatik.hu">ugyfelszolgalat@automatik.hu</a>
+                    </div>
+                    <div class="col-sm-12 margin-bottom">
+                        Telefonszám: +36 1/850-6006 (hétfő-csütörtök: 9:00-16:00, péntek: 9:00-13:00 óráig)
+                    </div>
+                    <br>
+                    <div class="col-sm-12 margin-bottom">
+                                                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fadriana.accounting%2F&amp;width=122&amp;layout=button&amp;action=like&amp;size=large&amp;show_faces=true&amp;share=true&amp;height=65&amp;appId=2000137966893861" width="167" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+                                                                                                    </div>
+                </div>
+
+                <div class="row text-center margin-bottom">
+                    <div class="col-xs-12">
+                        Az Adriana Accounting és az automatik.hu szolgáltatója a Petne 7 Kft és az Adriana Automatik
+                        Kft.<br>
+                        2016. január óta a könyvelők szolgálatában
+                    </div>
+                </div>
+
+                <div class="row text-center margin-bottom">
+                    <div class="col-xs-12">
+                        Adatvédelmi nyilvántartásba vételi határozat száma: NAIH-135936
+                    </div>
+                </div>
+
+                <div class="row text-center margin-bottom">
+                    <div class="col-xs-12">
+                        <a href="https://adriana.hu/adatkezelesi-tajekoztato" target="_blank">Adatkezelési tájékoztató</a>
+                    </div>
+                    <div class="col-xs-12">
+                        © 2026, Minden jog fenntartva: Adriana Automatik Kft.<br>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- footer end -->
+    </div>
+        <div class="page-overlay-bottom-left bg-warning">
+            </div>
+
+            
+                    <div id="help-box-container" class="help-box-container">
+    <div class="help_box_close_button_div">
+        <a href="#" onclick="return false;" id="help_all" class="help_all">Összes tartalom megjelenítése</a>
+        <button id="help_box_close_button" type="button" class="close" aria-label="Close">
+            bezár <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="help-box">
+
+        <div class="border-bottom">
+            <h1>Használati segédlet</h1>
+            <p>
+            <strong>A [használati segédlet] tartalmának sorrendje megegyezik az Adriana-ban való
+            könyvelési folyamat egyes lépéseinek sorrendjével.</strong>
+            </p>
+            <p>
+            A bal oldali [kezelő felületen] lévő
+            <b><span class="glyphicon glyphicon-info-sign"></span> ikonokra kattintva</b>
+            ennek a [használati segédletnek] az oda kapcsolódó,
+            <b>részletesebb leírása</b> nyílik meg.
+            </p>
+            <p>
+            Itt a [használati segédletben], a
+            <span class="glyphicon glyphicon-triangle-top"></span>
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
+            ikonok melletti címekre kattintva az alatta lévő rész kinyílik/összecsukódik.
+            </p>
+            <p>
+            Ezt a [használati segédletet] <b>bezárni</b> a jobb felső sarokban lévő
+            bezár gombra kattintva tudja.
+            </p>
+            <h3><span class="glyphicon glyphicon-education"></span> Először használom a rendszert</h3>
+            <p>
+            Ha most használja először ezt a rendszert,
+            akkor a [kezelő felületen] kövesse a
+            <span class="bg-danger">
+            <span class="glyphicon glyphicon-education"></span>
+            piros hátterű szövegek</span> utasításait.
+            A [használati segédletben] pedig kövesse az
+            <span class="avoidwrap">[<span class="glyphicon glyphicon-education">
+            </span> Először használom a rendszert]</span>
+            címek utasításait.<br>
+            A többi leírás a rendszer mélyebb megértésére szolgál,
+            azokat akkor érdemes megnéznie, amikor elakad valamivel,
+            vagy amikor szeretné tudni, hogy mi történik a háttérben.
+            </p>
+            <p>
+            <strong>
+            A [kezelő felület] egyes oldalain felülről lefelé haladjon végig,
+            majd ha végzett az adott lépéssel, az oldal alján a 'Következő lépés' cím alatt
+            található gombbal tud továbblépni.<br>
+            A főcím melletti <span class="glyphicon glyphicon-info-sign"></span>
+            ikonra kattintva kaphat bővebb információt az adott oldalon elvégzendő feladatról.
+            </strong>
+            </p>
+        </div>
+
+        <div id="help_box_konyvelt_cegek_listaja" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_konyvelt_cegek_listaja_description">
+                Könyvelt cégek listája
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_konyvelt_cegek_listaja_description">
+            </div>
+        </div>
+
+        <div id="help_box_feldolgozasi_idoszakok" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_feldolgozasi_idoszakok_description">
+                Feldolgozási időszakok
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_feldolgozasi_idoszakok_description">
+            </div>
+        </div>
+
+        <div id="help_box_beallitasok" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_beallitasok_description">
+                Beállítások
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_beallitasok_description">
+            </div>
+        </div>
+
+        <div id="help_box_feltoltes" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_feltoltes_description">
+                Fájlok feltöltése
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_feltoltes_description">
+            </div>
+        </div>
+
+        <div id="help_box_feltoltes_konyveloprogram" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_feltoltes_konyveloprogram_description">
+                Könyvelőprogramokból beolvasható adatok
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_feltoltes_konyveloprogram_description">
+            </div>
+        </div>
+
+        <div id="help_box_vevo_szallito" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_vevo_szallito_description">
+                Előválogatás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_vevo_szallito_description">
+            </div>
+        </div>
+
+        <div id="help_box_kontirozas_egyesevel" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_kontirozas_egyesevel_description">
+                Kontírozás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_kontirozas_egyesevel_description">
+            </div>
+        </div>
+
+        <div id="help_box_szabaly_beallitas" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_szabaly_beallitas_description">
+                Szabály beállítás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_szabaly_beallitas_description">
+            </div>
+        </div>
+
+        <div id="help_box_szabaly_elonezet" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_szabaly_elonezet_description">
+                Szabály előnézet
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_szabaly_elonezet_description">
+            </div>
+        </div>
+
+        <div id="help_box_szabalyok_menu" class="border-bottom collapse-detail-container">
+          <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_szabalyok_menu_description">
+              Szabályok menü
+              <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+          </h3>
+          <div class="collapse collapse-detail" id="help_box_szabalyok_menu_description">
+          </div>
+        </div>
+
+        <div id="help_box_parositas" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_parositas_description">
+                Párosítás
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_parositas_description">
+            </div>
+        </div>
+
+        <div id="help_box_betoltes_partner" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_betoltes_partner_description">
+                Partner adószámok és címek listája
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_betoltes_partner_description">
+            </div>
+        </div>
+
+        <div id="help_box_betoltes" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_betoltes_description">
+                Betöltés a könyvelőprogramba
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_betoltes_description">
+            </div>
+        </div>
+
+        <div id="help_box_torles" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_torles_description">
+                Adatok törlése a szerverről
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_torles_description">
+            </div>
+        </div>
+
+        <div id="help_box_kesz" class="border-bottom collapse-detail-container">
+            <h3 class="cursor-pointer" data-toggle="collapse" href="#help_box_kesz_description">
+                Kész
+                <small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+            </h3>
+            <div class="collapse collapse-detail" id="help_box_kesz_description">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <div class="modal" id="generic_modal" tabindex="-1" role="dialog">
+        <div id="modal_dialog" class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button id="generic_modal_dialog_close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 id="generic_modal_title" class="modal-title"></h4>
+                </div>
+                <div id="generic_modal_body" class="modal-body">
+                </div>
+                <div id="generic_modal_footer" class="modal-footer">
+                    <button id="generic_modal_footer_cancel" type="button" class="btn hidden" data-dismiss="modal">
+                        Mégsem
+                    </button>
+                    <button id="generic_modal_footer_ok" type="button" class="btn btn-danger hidden" data-dismiss="modal">OK
+                    </button>
+                    <button id="generic_modal_footer_close" type="button" class="btn btn-primary" data-dismiss="modal">
+                        Bezár
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="button-page-cover">
+        <div class="button-page-cover-outer">
+            <div class="button-page-cover-middle">
+                <div class="button-page-cover-inner text-center">
+                    <div class="loading-robot-gif"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script type="text/javascript">
+        zESettings = {
+            webWidget: {
+                launcher: {
+                    label: {
+                        '*': 'Kérdésed van?',
+                    }
+                },
+                contactForm: {
+                    ticketForms: [
+                        {id: 360003686777,
+                            title:false,
+                            subject: false,
+                            fields: [
+                                { id: 'description', hint: { '*' : 'Kérjük, hogy minél több részletet írjon le, és fájl probléma esetén csatolja a fájlt is! Emailben fogunk válaszolni.' }},
+                            ]
+                        }
+                    ],
+                    fields: [
+                        { id: 'name', prefill: { '*': 'Törös Zoltán' }},
+                        { id: 'email', prefill: { '*': 'zoltan.toros@automatik.hu' }},
+                    ]
+                }
+            }
+        };
+    </script>
+    <script>
+        window?.clarity("identify", '1884-2360')
+    </script>
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=4b03f2cf-8b1a-4190-902a-8143fee9d687"> </script>
+        <script src="/build/runtime.ced75ccf.js"></script><script src="/build/232.4ef9dc40.js"></script><script src="/build/app.83a71656.js"></script>
+    <script src="/js/base.js?v=8412"></script>
+    <script async="" src="/js/zendesk.js?v=8412"></script>
+    <script src="/bundles/bootstrap/js/bootstrap.min.js?v=8412"></script>
+    <script>
+        const assets = '/img';
+        const windowContext = this;
+    </script>
+    <script type="text/javascript">
+
+        const urlGenerator = {
+            parositas_csoport_show: function(parositasCsoportId, tipus) {
+                if ('kontirozas-egyesevel' === tipus) {
+                    return urlGenerator.parositas_csoport_show_for_kontirozas_egyesevel(parositasCsoportId);
+                }
+
+                return `/parositas/get-parositas-csoport/${tipus}`;
+            },
+            parositas_csoport_show_for_kontirozas_egyesevel: function(parositasCsoportId) {
+                return `/parositas/get-parositas-csoport-for-kontirozas-egyesevel/${parositasCsoportId}`;
+            },
+        };
+
+        const apiFormats = [
+            'TEN-SOFT egyszeres xml',
+            'TEN-SOFT kettős xml',
+            'RLB Pénztárkönyv API',
+            'RLB Naplófőkönyv API',
+            'DimSQL API',
+            'RLB Hálózatos API'
+        ]
+
+        $(function () {
+            locationHashChanged();
+            window.onhashchange = locationHashChanged;
+
+            $('.submit-button').on('click', function (event) {
+                submitButton(event, $(this));
+            });
+
+	        $(document).on('click', '.ajax-button', function (event) {
+		        ajaxButton(event, $(this));
+	        });
+
+            $('#teaching_video_show').on('click', function () {
+                $('#teaching_video_icons').addClass('hidden');
+            $('#teaching_video_container').removeClass('hidden').show();
+            });
+
+            $('#teaching_video_container .close').on('click', function () {
+            $('#teaching_video_container').addClass('hidden');
+                $('#teaching_video_icons').removeClass('hidden');
+            });
+
+            $('#navbar_help_icon').on('click', showHelpBox)
+            $('#help_box_close_button').on('click', function () {
+                hideHelpBox();
+                history.replaceState(null, null, ' ');
+            });
+
+            // forgatom a lenyitást jelző ikont
+            $('.help-box-container .collapse-detail')
+                .on('show.bs.collapse', function () {
+                    $(this).closest('.collapse-detail-container')
+                        .find('.glyphicon-triangle-bottom')
+                        .removeClass('glyphicon-triangle-bottom')
+                        .addClass('glyphicon-triangle-top');
+
+                    if ($.trim($(this).html()) === '') {
+                        loadSegedletContent($(this), $(this).attr('id').substring(9, $(this).attr('id').length - 12));
+                    }
+                })
+                .on('hide.bs.collapse', function () {
+                    $(this).closest('.collapse-detail-container')
+                        .find('.glyphicon-triangle-top')
+                        .removeClass('glyphicon-triangle-top')
+                        .addClass('glyphicon-triangle-bottom');
+                });
+
+            // Modal-on focus az OK-gomra és a Bezárás-gombra
+            $('#generic_modal').on('shown.bs.modal', function () {
+                let closeButton = $('#generic_modal_footer_close');
+                let okButton = $('#generic_modal_footer_ok');
+
+                if (okButton.is(':visible')) {
+                    okButton.focus();
+                } else if (closeButton.is(':visible')) {
+                    closeButton.focus();
+                }
+            });
+
+                        $('#register_link').on('click', () => gtag('event', 'register'));
+                    });
+    </script>
+
+                        
+
+    <script src="/js/dateinterval-validator.js?v=8412"></script>
+    <script src="/js/bifrost/enabling.js?v=8412"></script>
+    <script src="/js/bifrost/fp-store.js?v=8412"></script>
+
+
+
+<iframe data-product="web_widget" title="No content" role="presentation" tabindex="-1" allow="microphone *" aria-hidden="true" src="about:blank" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe><div><iframe title="Opens a widget where you can find more information" id="launcher" tabindex="0" style="color-scheme: light; width: 181px; height: 50px; padding: 0px; margin: 10px 20px; position: fixed; bottom: 0px; overflow: visible; opacity: 1; border: 0px; z-index: 999998; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; right: 0px;"></iframe></div></body><style class="stylus">/* ==UserStyle==
+@name           <Stylus>
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+/*
+ * fluent.css — Bootstrap default style override with Fluent Design System
+ * Applied on top of bootstrap.min.css
+ *
+ * Struktúra:
+ *  1. VARIABLES
+ *  2. GLOBAL — base, typography, navbar, buttons, forms, table, dropdown, modal, badge, scrollbar
+ *  3. PAGE: index.html (cégek lista)
+ *  4. PAGE: show.html (új feldolgozási időszak)
+ *  5. PAGE: show-2.html (aktuális időszak + workflow)
+ */
+
+/* ─── VARIABLES (custom properties) ─────────────────────────────────────── */
+:root {
+    --fluent-font:          "Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Adriana brand — matches adriana[130] from themes.ts */
+    --fluent-accent:        #FF8C00;
+    --fluent-accent-dark:   #EA8000;
+    --fluent-accent-pressed:#D57400;
+    --fluent-accent-light:  #FFF4E6;
+
+    /* Status colors */
+    --fluent-success:       #107c10;
+    --fluent-success-hover: #0b5a0b;
+    --fluent-danger:        #a4262c;
+    --fluent-danger-hover:  #8e1f24;
+    --fluent-warning:       #797673;
+
+    /* Button variant colors (subtle filled) */
+    --fluent-btn-success:         #278927;
+    --fluent-btn-success-hover:   #217421;
+    --fluent-btn-success-border:  #1a5e1a;
+    --fluent-btn-info:            #1985d8;
+    --fluent-btn-info-hover:      #1571b8;
+    --fluent-btn-info-border:     #1162a0;
+    --fluent-btn-danger:          #dc6460;
+    --fluent-btn-danger-hover:    #bb5552;
+    --fluent-btn-danger-border:   #a3413e;
+
+    /* Neutral surface — matches colorNeutralBackground1 (light) */
+    --fluent-bg:            #faf9f8;
+    --fluent-surface:       #ffffff;
+    --fluent-white:         #ffffff;  /* explicit white — szöveg/szín kontextushoz */
+    --fluent-bg-hover:      #f3f2f1;  /* colorNeutralBackground1Hover */
+    --fluent-bg-pressed:    #edebe9;  /* colorNeutralBackground1Pressed */
+    --fluent-bg-stripe:     #f8f7f6;  /* table odd row */
+    --fluent-border:        #edebe9;
+    --fluent-border-strong: #c8c6c4;
+    --fluent-stroke1:       #d1d1d1;  /* colorNeutralStroke1 */
+    --fluent-stroke1-hover: #adadad;  /* colorNeutralStroke1Hover */
+    --fluent-text:          #323130;
+    --fluent-text-muted:    #605e5c;
+
+    /* Info / infobar */
+    --fluent-info:          #0078d4;
+    --fluent-info-bg:       #f0f6ff;
+    --fluent-info-border:   #c7e0f4;
+
+    /* "nincs" neutral badge */
+    --fluent-badge-neutral-bg:     #f5f5f5;
+    --fluent-badge-neutral-text:   #616161;
+    --fluent-badge-neutral-border: #d1d1d1;
+
+    /* New-period button hover (green tint) */
+    --fluent-new-period-hover-bg:     #edf9eb;
+    --fluent-new-period-hover-border: #b8e0b3;
+    --fluent-new-period-pressed-bg:   #d8f3d5;
+
+    /* Workflow orange scale — step 1 (lightest) → step 6 (accent) */
+    --fluent-wf-1-bg:      #fff4e5;
+    --fluent-wf-1-border:  #ffd09a;
+    --fluent-wf-1-text:    #9a4200;
+    --fluent-wf-2-bg:      #ffe0b2;
+    --fluent-wf-2-border:  #ffb74d;
+    --fluent-wf-2-text:    #7a3200;
+    --fluent-wf-3-bg:      #ffcc80;
+    --fluent-wf-3-border:  #ffa726;
+    --fluent-wf-3-text:    #5a2500;
+    --fluent-wf-4-bg:      #ffb74d;
+    --fluent-wf-4-border:  #ffa726;
+    --fluent-wf-4-text:    #5a2500;
+    --fluent-wf-5-bg:      #ffa726;
+    --fluent-wf-5-border:  #ff8c00;
+    --fluent-wf-5-text:    #ffffff;
+    --fluent-wf-6-bg:      #FF8C00;
+    --fluent-wf-6-border:  #e67e00;
+    --fluent-wf-6-text:    #ffffff;
+    --fluent-wf-last-badge-bg:   #ffd09a;
+    --fluent-wf-last-badge-text: #7a3200;
+
+    /* Icon specific */
+    --fluent-icon-youtube: #FF0000;
+    --fluent-icon-book:    #0078d4;
+
+    --fluent-radius:        2px;
+    --fluent-radius-lg:     4px;
+
+    /* tokens.shadow4 / shadow8 from Fluent v9 */
+    --fluent-shadow-4:      0 1.6px 3.6px rgba(0,0,0,.132), 0 0.3px 0.9px rgba(0,0,0,.108);
+    --fluent-shadow-8:      0 3.2px 7.2px rgba(0,0,0,.132), 0 0.6px 1.8px rgba(0,0,0,.108);
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   GLOBAL STYLES
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── BASE ──────────────────────────────────────────────────────────────── */
+body {
+    font-family: var(--fluent-font);
+    font-size: 14px;
+    color: var(--fluent-text);
+    background-color: var(--fluent-bg);
+}
+
+a {
+    color: var(--fluent-accent);
+}
+a:hover {
+    color: var(--fluent-accent-dark);
+    text-decoration: none;
+}
+
+/* ─── TYPOGRAPHY ────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fluent-font);
+    font-weight: 600;
+    color: var(--fluent-text);
+}
+
+/* ─── TEACHING VIDEO ROW — index.html ───────────────────────────────────── */
+
+#teaching_video_row {
+    margin-left: 0;
+    margin-right: 0;
+    right: 15px;
+    top: 22px; /* h1 vertikális középre igazítás: (20 + 36*1.1/2) - (76/2) ≈ 2px */
+}
+@media (min-width: 768px) {
+    #teaching_video_row { right: calc((100% - 750px) / 2 + 24px); }
+}
+@media (min-width: 992px) {
+    #teaching_video_row { right: calc((100% - 970px) / 2 + 24px); }
+}
+@media (min-width: 1200px) {
+    #teaching_video_row { right: calc((100% - 1170px) / 2 + 24px); }
+}
+
+/* Minden ikon div: egyforma kis kártya */
+#teaching_video_icons > div {
+    width: 90px;
+    height: 76px;
+    padding: 8px 4px !important;
+    border-radius: var(--fluent-radius-lg);
+    background: var(--fluent-surface);
+    border: 1px solid var(--fluent-border);
+    box-shadow: none;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    vertical-align: middle;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    cursor: pointer;
+}
+#teaching_video_icons > div:hover {
+    background: var(--fluent-bg-hover);
+    border-color: var(--fluent-border-strong);
+    box-shadow: none;
+}
+
+/* br elrejtve — flex gap rendezi az ikon/szöveg távolságot */
+#teaching_video_icons br {
+    display: none;
+}
+
+/* Link wrapper a kézikönyv/GYIK kártyákban ugyanolyan flex legyen */
+#teaching_video_icons > div a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px !important;
+    font-weight: 600;
+    color: var(--fluent-text-muted) !important;
+    text-decoration: none !important;
+    line-height: 1.2;
+    text-transform: capitalize;
+    letter-spacing: normal;
+}
+
+/* Szöveg méret az YouTube divben (nincs <a> wrapper) */
+#teaching_video_icons > div {
+    font-size: 11px !important;
+    font-weight: 600;
+    color: var(--fluent-text-muted) !important;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+/* Ikonok: block + egyforma méret */
+#teaching_video_icons i.fa,
+#teaching_video_icons .glyphicon {
+    display: block;
+    font-size: 42px !important;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* Ikonok saját/illő színei */
+#teaching_video_show i.fa-youtube-play {
+    color: var(--fluent-icon-youtube) !important;
+}
+#teaching_video_icons .glyphicon-book {
+    color: var(--fluent-icon-book) !important;
+}
+#teaching_video_icons .glyphicon-question-sign {
+    color: var(--fluent-success) !important;
+}
+
+/* ─── TEACHING VIDEO PANEL — modal-szerű megjelenítés ───────────────────── */
+
+/* Backdrop — body::before amikor a panel látható (hidden osztály el van távolítva) */
+body:has(#teaching_video_container:not(.hidden))::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+}
+
+/* Panel — fixed, középre pozícionálva, Bootstrap col-* pull-right felülírva */
+#teaching_video_container:not(.hidden) {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 1050;
+    width: 90% !important;
+    max-width: 840px;
+    max-height: 90vh;
+    overflow-y: auto;
+    float: none !important;
+    margin: 0 !important;
+    padding: 20px 24px !important;
+    background-color: var(--fluent-surface);
+    border: 1px solid var(--fluent-border);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: var(--fluent-shadow-8);
+}
+
+/* Fejléc */
+.teaching-video-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--fluent-accent) !important;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--fluent-border);
+}
+.teaching-video-header h3 .fa-youtube-play {
+    color: var(--fluent-icon-youtube);
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+/* Bezárás gomb */
+.teaching-video-header .close {
+    color: var(--fluent-text-muted);
+    opacity: 0.7;
+}
+.teaching-video-header .close:hover,
+.teaching-video-header .close:focus {
+    color: var(--fluent-text);
+    opacity: 1;
+}
+
+/* iframe — lekerekített sarok */
+.teaching-video-body .embed-responsive {
+    border-radius: var(--fluent-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--fluent-shadow-4);
+}
+
+/* GYIK / kézikönyv linkek — elrejtve a panelből (az ikonsorban már elérhetők) */
+#teaching_video_container .col-xs-12.margin-top {
+    display: none;
+}
+
+
+
+
+/* Matches NavbarConnect: colorNeutralBackground1 bg + shadow4 */
+.navbar-default {
+    background-color: var(--fluent-surface);
+    border: none;
+    border-bottom: 1px solid var(--fluent-border);
+    box-shadow: var(--fluent-shadow-4);
+    min-height: 64px;
+}
+
+/* Navbar container padding — matches NavbarConnect py-5 px-6 */
+.navbar-default .container-fluid {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+/* Logo / brand */
+.navbar-default .navbar-brand {
+    color: var(--fluent-text);
+    font-weight: 600;
+    height: 64px;
+    line-height: 20px;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: var(--fluent-text);
+    background-color: var(--fluent-accent-light);
+}
+
+/* Logo image brand — centers 28px image: (64 - 28) / 2 = 18px */
+.navbar-default .navbar-brand.navbar-logo {
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+}
+.navbar-default .navbar-brand.navbar-logo img {
+    display: block;
+    height: 28px;
+    width: auto !important;
+}
+
+/* Text brand ("Cégek") — centers 20px line: (64 - 20) / 2 = 22px */
+.navbar-default .navbar-brand:not(.navbar-logo) {
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+    font-size: 14px;
+}
+
+/* Accounted company ("000-Turbó teszt") */
+.navbar-default .navbar-brand.accounted-company {
+    padding-left: 16px !important;
+    margin-left: 4px;
+}
+
+/* Nav links — matches NavbarConnect link style */
+.navbar-default .navbar-nav > li > a {
+    color: var(--fluent-text-muted);
+    font-weight: 400;
+    font-size: 14px;
+    padding: 22px 14px 20px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.1s, background-color 0.1s, border-color 0.1s;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: var(--fluent-text);
+    background-color: var(--fluent-accent-light);
+    border-bottom-color: transparent;
+}
+
+/* Active: 2px bottom accent line — matches Fluent NavbarConnect active tab pattern */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: var(--fluent-accent);
+    background-color: transparent;
+    border-bottom: 2px solid var(--fluent-accent);
+    font-weight: 600;
+}
+
+/* Open dropdown active link */
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: var(--fluent-accent);
+    background-color: var(--fluent-accent-light);
+    border-bottom-color: var(--fluent-accent);
+}
+
+/* Accounted company text in navbar header — colorNeutralForeground2 */
+.navbar-default .navbar-header .accounted-company,
+.navbar-bifrost .accounted-company {
+    color: var(--fluent-text-muted);
+    font-weight: 600;
+}
+
+/* Mobile toggle */
+.navbar-default .navbar-toggle {
+    border-color: var(--fluent-border-strong);
+    border-radius: var(--fluent-radius);
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: var(--fluent-accent-light);
+    border-color: var(--fluent-accent);
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: var(--fluent-text);
+}
+
+/* ─── BUTTONS ───────────────────────────────────────────────────────────── */
+.btn {
+    font-family: var(--fluent-font);
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: var(--fluent-radius);
+    border: 1px solid transparent;
+    transition: background-color 0.1s, border-color 0.1s, box-shadow 0.1s;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+.btn-default {
+    background-color: var(--fluent-surface);
+    border-color: var(--fluent-border-strong);
+    color: var(--fluent-text);
+}
+.btn-default:hover,
+.btn-default:focus {
+    background-color: var(--fluent-bg-hover);
+    border-color: var(--fluent-border-strong);
+    color: var(--fluent-text);
+}
+.btn-default:active,
+.btn-default.active {
+    background-color: var(--fluent-bg-pressed);
+    border-color: var(--fluent-border-strong);
+}
+
+.btn-primary {
+    background-color: var(--fluent-accent);
+    border-color: var(--fluent-accent);
+    color: var(--fluent-white);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--fluent-accent-dark);
+    border-color: var(--fluent-accent-dark);
+    color: var(--fluent-white);
+}
+.btn-primary:active,
+.btn-primary.active {
+    background-color: var(--fluent-accent-pressed);
+    border-color: var(--fluent-accent-pressed);
+}
+
+.btn-success {
+    background-color: var(--fluent-success);
+    border-color: var(--fluent-success);
+    color: var(--fluent-white);
+}
+.btn-success:hover,
+.btn-success:focus {
+    background-color: var(--fluent-success-hover);
+    border-color: var(--fluent-success-hover);
+    color: var(--fluent-white);
+}
+
+/* Statistics card-link button — only targets btn inside a colspan cell */
+td[colspan] > .btn-xs.btn-success {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    max-width: 300px;
+    min-height: 64px;
+    padding: 14px 18px;
+
+    border-radius: var(--fluent-radius-lg); /* .25rem = 4px, Fluent default */
+    background: var(--fluent-surface);
+    border: 1px solid var(--fluent-border-strong);
+    box-shadow: var(--fluent-shadow-4);
+
+    color: var(--fluent-text) !important;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+
+    justify-content: center;
+    position: relative;
+
+    transition: box-shadow 0.15s, border-color 0.15s;
+}
+td[colspan] > .btn-xs.btn-success:hover,
+td[colspan] > .btn-xs.btn-success:focus {
+    background: var(--fluent-bg-hover);
+    box-shadow: var(--fluent-shadow-4);
+    border-color: var(--fluent-border-strong);
+    color: var(--fluent-text) !important;
+    text-decoration: none !important;
+}
+td[colspan] > .btn-xs.btn-success:active {
+    background: var(--fluent-bg-pressed);
+    box-shadow: var(--fluent-shadow-4);
+}
+td[colspan] > .btn-xs.btn-success .fa-area-chart {
+    position: absolute;
+    left: 18px;
+    font-size: 20px;
+    color: var(--fluent-success);
+}
+td[colspan] > .btn-xs.btn-success .fa-external-link {
+    position: absolute;
+    right: 18px;
+    font-size: 13px;
+    color: var(--fluent-text-muted);
+}
+
+/* Row containing the stats button */
+tr:has(td[colspan] > .btn-xs.btn-success) > td {
+    border-top: 1px solid var(--fluent-border) !important;
+    background-color: var(--fluent-surface) !important;
+}
+tr:has(td[colspan] > .btn-xs.btn-success) > td[colspan] {
+    text-align: center;
+    padding: 12px 20px 14px !important;
+}
+
+.btn-danger {
+    background-color: var(--fluent-danger);
+    border-color: var(--fluent-danger);
+    color: var(--fluent-white);
+}
+.btn-danger:hover,
+.btn-danger:focus {
+    background-color: var(--fluent-danger-hover);
+    border-color: var(--fluent-danger-hover);
+    color: var(--fluent-white);
+}
+
+/* ─── FORM CONTROLS ─────────────────────────────────────────────────────── */
+.form-control {
+    font-family: var(--fluent-font);
+    font-size: 14px;
+    color: var(--fluent-text);
+    background-color: var(--fluent-surface);
+    border: 1px solid var(--fluent-stroke1);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: none;
+    height: 32px;
+    padding: 4px 8px;
+    transition: border-color 0.1s;
+    /* Fluent: bottom border jelzi a fókuszt, nem box-shadow */
+    border-bottom-width: 1px;
+}
+.form-control:hover {
+    border-color: var(--fluent-stroke1-hover);
+    box-shadow: none;
+}
+.form-control:focus {
+    border-color: var(--fluent-stroke1);
+    border-bottom: 2px solid var(--fluent-accent);  /* Fluent focus: vastag accent aljvonal */
+    box-shadow: none;
+    outline: none;
+    padding-bottom: 3px;                 /* kompenzálja a +1px border-bottom-t */
+}
+.form-control::placeholder {
+    color: var(--fluent-text-muted);
+    opacity: 1;
+}
+
+/* ─── TABLE — card wrapper (col-xs-12 szint, mint az 'Új könyvelt cég' szekció) ── */
+/* Shared: index.html cégek lista */
+.col-xs-12:has(.table-striped) {
+    background-color: var(--fluent-surface);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: var(--fluent-shadow-4);
+    padding: 20px 24px 24px;
+    margin-top: 16px;
+}
+.col-xs-12:has(.table-striped) > h1 {
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+/* ─── TABLE ─────────────────────────────────────────────────────────────── */
+.table {
+    color: var(--fluent-text);
+    font-size: 13px; /* Segoe UI slightly wider than Helvetica Neue — 13px keeps layout stable */
+    background-color: var(--fluent-surface);
+    margin-bottom: 0;
+}
+.table > thead > tr > th {
+    background-color: var(--fluent-bg-hover);
+    border-bottom: 2px solid var(--fluent-border-strong);
+    font-weight: 600;
+    color: var(--fluent-text);
+    padding: 8px 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+.table > tbody > tr > td {
+    border-top: 1px solid var(--fluent-border);
+    padding: 7px 10px;
+    vertical-align: middle;
+}
+
+/* First column: company name left, action buttons right */
+.konyvelt-ceg-row > td:first-child {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+/* Only the company name link (not .btn) should grow */
+.konyvelt-ceg-row > td:first-child > a:first-child:not(.btn) {
+    flex: 1;
+    min-width: 0;
+}
+/* Prevent action buttons from stretching in flex container */
+.konyvelt-ceg-row > td:first-child > .btn,
+.konyvelt-ceg-row > td:first-child > button {
+    flex: 0 0 auto;
+    width: auto !important;
+    min-height: unset;
+}
+
+/* Inaktív cégek szekció — white card */
+.show-box-container {
+    background-color: var(--fluent-surface);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: var(--fluent-shadow-4);
+    padding: 20px 24px 24px;
+    margin-top: 16px;
+    /* nincs .row wrapper → kézzel kompenzáljuk a .container 15px paddingját */
+    margin-left: -15px;
+    margin-right: -15px;
+}
+/* Belső .container és .row nullázása — show-box-container már ad paddinget */
+.show-box-container .container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    max-width: none;
+}
+.show-box-container .container > .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.show-box-container .col-xs-12:has(.table-striped) {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 8px;
+}
+
+/* "Új könyvelt cég" section — white card wrapper */
+.col-xs-12:has(.btn-success.modosit) {
+    background-color: var(--fluent-surface);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: var(--fluent-shadow-4);
+    padding: 20px 24px 24px;
+    margin-top: 16px;
+}
+
+/* "Új könyvelt cég" button — card style */
+.btn-success.modosit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 48px;
+    padding: 14px 18px;
+    border-radius: var(--fluent-radius-lg);
+    background: var(--fluent-surface);
+    border: 1px solid var(--fluent-border-strong);
+    box-shadow: var(--fluent-shadow-4);
+    color: var(--fluent-text) !important;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-decoration: none !important;
+    transition: box-shadow 0.15s, border-color 0.15s;
+}
+.btn-success.modosit:hover,
+.btn-success.modosit:focus {
+    background: var(--fluent-bg-hover);
+    border-color: var(--fluent-border-strong);
+    box-shadow: var(--fluent-shadow-4);
+    color: var(--fluent-text) !important;
+    text-decoration: none !important;
+}
+.btn-success.modosit:active {
+    background: var(--fluent-bg-pressed);
+    box-shadow: var(--fluent-shadow-4);
+}
+.btn-success.modosit .glyphicon-plus {
+    font-size: 16px;
+    color: var(--fluent-success);
+}
+
+/* Numeric / date / action columns — prevent wrapping */
+.table > tbody > tr > td.text-right,
+.table > thead > tr > th.text-right {
+    white-space: nowrap;
+}
+.table > tbody > tr > td:last-child {
+    white-space: nowrap;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: var(--fluent-bg-stripe);
+}
+.table-hover > tbody > tr:hover {
+    background-color: var(--fluent-accent-light);
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   PAGE: show.html — Feldolgozási időszakok (nincs aktuális)
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── SHOW.HTML — FELDOLGOZÁSI IDŐSZAKOK OLDAL ──────────────────────────── */
+
+/* Show.html + show-2.html fő row: flex column + gap az egységes elválasztásért */
+.container > .row:has([data-target="#help_box_feldolgozasi_idoszakok_uj"]),
+.container > .row:has([data-target="#help_box_feldolgozasi_idoszakok_aktualis"]) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* gap kezeli az elválasztást — egyedi margin-top-ok nullázása */
+.container > .row:has([data-target="#help_box_feldolgozasi_idoszakok_uj"]) > .col-xs-12,
+.container > .row:has([data-target="#help_box_feldolgozasi_idoszakok_aktualis"]) > .col-xs-12 {
+    margin-top: 0 !important;
+}
+
+/* Mindkét oldalon: fehér kártya wrapper */
+.col-xs-12:has(.fa-square-o) {
+    background-color: var(--fluent-surface);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: var(--fluent-shadow-4);
+    padding: 20px 24px 24px;
+    margin-top: 16px;
+}
+
+/* show.html col-xs-12 belső flex layout — mint a workflow konténer show-2-n */
+.col-xs-12:has([data-target="#help_box_feldolgozasi_idoszakok_uj"]) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+.col-xs-12:has([data-target="#help_box_feldolgozasi_idoszakok_uj"]) > h1,
+.col-xs-12:has([data-target="#help_box_feldolgozasi_idoszakok_uj"]) > h3,
+.col-xs-12:has([data-target="#help_box_feldolgozasi_idoszakok_uj"]) > p {
+    flex: 0 0 100%;
+    margin: 0;
+}
+.col-xs-12:has(.fa-square-o) > h1 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* h3 "Aktuális időszak: nincs" — érték kiemelése badge-ként */
+.col-xs-12:has(.fa-square-o) h3:has([data-target="#help_box_feldolgozasi_idoszakok_uj"]) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0;               /* text node elrejtése */
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.col-xs-12:has(.fa-square-o) h3:has([data-target="#help_box_feldolgozasi_idoszakok_uj"]) .fa-square-o {
+    font-size: 18px;
+    color: var(--fluent-text);
+    order: 1;
+}
+.col-xs-12:has(.fa-square-o) h3:has([data-target="#help_box_feldolgozasi_idoszakok_uj"])::before {
+    content: "Aktuális feldolgozási időszak:";
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--fluent-text);
+    order: 2;
+}
+.col-xs-12:has(.fa-square-o) h3:has([data-target="#help_box_feldolgozasi_idoszakok_uj"])::after {
+    content: "nincs";
+    order: 3;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--fluent-badge-neutral-bg);
+    color: var(--fluent-badge-neutral-text);
+    border: 1px solid var(--fluent-badge-neutral-border);
+    line-height: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.col-xs-12:has(.fa-square-o) h3:has([data-target="#help_box_feldolgozasi_idoszakok_uj"]) small {
+    font-size: 12px;
+    order: 4;
+}
+
+/* bg-danger → Fluent info sáv */
+.col-xs-12:has(.fa-square-o) .bg-danger {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--fluent-info-bg) !important;
+    border: 1px solid var(--fluent-info-border);
+    border-left: 3px solid var(--fluent-info);
+    border-radius: var(--fluent-radius-lg);
+    padding: 12px 16px;
+    color: var(--fluent-info) !important;
+    font-size: 13px;
+    font-weight: 500;
+}
+.col-xs-12:has(.fa-square-o) .lead {
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+.col-xs-12:has(.fa-square-o) .bg-danger .glyphicon-education {
+    font-size: 16px;
+    color: var(--fluent-info);
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* "Új feldolgozási időszak" gomb */
+.col-xs-12:has(.fa-square-o) p:has(.btn-primary) {
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.col-xs-12:has(.fa-square-o) p .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+    min-height: 48px;
+    padding: 14px 32px;
+    border-radius: var(--fluent-radius-lg);
+    background: var(--fluent-surface);
+    border: 1px solid var(--fluent-border-strong);
+    box-shadow: var(--fluent-shadow-4);
+    color: var(--fluent-text) !important;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-decoration: none !important;
+    transition: background 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s;
+}
+.col-xs-12:has(.fa-square-o) p .btn-primary::before {
+    font-family: 'FontAwesome';
+    content: "\f067"; /* fa-plus */
+    font-size: 14px;
+    color: var(--fluent-success);
+    font-weight: normal;
+    display: inline-block;
+}
+.col-xs-12:has(.fa-square-o) p .btn-primary::after {
+    font-family: 'FontAwesome';
+    content: "\f073"; /* fa-calendar */
+    font-size: 16px;
+    color: var(--fluent-text-muted);
+    font-weight: normal;
+    display: inline-block;
+    animation: btn-bell 3s ease-in-out infinite;
+    transform-origin: top center;
+}
+.col-xs-12:has(.fa-square-o) p .btn-primary:hover,
+.col-xs-12:has(.fa-square-o) p .btn-primary:focus {
+    background: var(--fluent-new-period-hover-bg);
+    border-color: var(--fluent-new-period-hover-border);
+    color: var(--fluent-text) !important;
+    box-shadow: var(--fluent-shadow-4);
+}
+.col-xs-12:has(.fa-square-o) p .btn-primary:hover::after,
+.col-xs-12:has(.fa-square-o) p .btn-primary:focus::after {
+    animation: none;
+}
+.col-xs-12:has(.fa-square-o) p .btn-primary:active {
+    background: var(--fluent-new-period-pressed-bg);
+}
+.col-xs-12:has(.fa-square-o) p .btn-primary:active::after {
+    animation: none;
+}
+
+@keyframes btn-bell {
+    0%   { transform: rotate(0deg); }
+    88%  { transform: rotate(0deg); }
+    90%  { transform: rotate(4deg); }
+    92%  { transform: rotate(-4deg); }
+    94%  { transform: rotate(2.5deg); }
+    96%  { transform: rotate(-2deg); }
+    98%  { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+/* ════════════════════════════════════════════════════════════════════════════
+   PAGE: show-2.html — Aktuális időszak + workflow gombok
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── SHOW-2.HTML — AKTUÁLIS IDŐSZAK H3 + LEAD ──────────────────────────── */
+.col-xs-12:has([data-target="#help_box_feldolgozasi_idoszakok_aktualis"]) h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.col-xs-12:has([data-target="#help_box_feldolgozasi_idoszakok_aktualis"]) h3 .fa-square-o {
+    font-size: 18px;
+    color: var(--fluent-text);
+}
+.col-xs-12:has([data-target="#help_box_feldolgozasi_idoszakok_aktualis"]) h3 small {
+    font-size: 12px;
+}
+/* csak a plain p.lead-re (nem a bg-danger-es infobar-ra) */
+.col-xs-12:has([data-target="#help_box_feldolgozasi_idoszakok_aktualis"]) p.lead:not(:has(.bg-danger)) {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    text-align: left;
+    margin: 0 0 20px 0;
+    padding: 16px 20px;
+    border-radius: var(--fluent-radius-lg);
+    background: var(--fluent-surface);
+    border: 1px solid var(--fluent-border);
+    border-left: 3px solid var(--fluent-accent);
+    box-shadow: var(--fluent-shadow-4);
+    color: var(--fluent-text);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 2.2;
+    font-family: var(--fluent-font);
+}
+.col-xs-12:has([data-target="#help_box_feldolgozasi_idoszakok_aktualis"]) p.lead:not(:has(.bg-danger))::before {
+    font-family: 'FontAwesome';
+    content: "\f073";
+    flex-shrink: 0;
+    font-size: 40px;
+    color: var(--fluent-accent);
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0;
+    text-transform: none;
+}
+.col-xs-12:has([data-target="#help_box_feldolgozasi_idoszakok_aktualis"]) p.lead:not(:has(.bg-danger))::first-line {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--fluent-text);
+    letter-spacing: 0.01em;
+}
+
+/* infobar (bg-danger) p.lead után nagyobb térköz a workflow gombok előtt */
+.col-xs-12:has([data-target="#help_box_feldolgozasi_idoszakok_aktualis"]) p.lead:has(.bg-danger) {
+    margin-bottom: 24px;
+}
+
+/* ─── WORKFLOW GOMBOK — CSS counter alapú lépésszámok ───────────────────── */
+.col-xs-12:has(.btn-arrow-right-first) {
+    counter-reset: workflow-step;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+/* blokk elemek teljes sort foglaljanak */
+.col-xs-12:has(.btn-arrow-right-first) > h1,
+.col-xs-12:has(.btn-arrow-right-first) > h2,
+.col-xs-12:has(.btn-arrow-right-first) > h3,
+.col-xs-12:has(.btn-arrow-right-first) > h4,
+.col-xs-12:has(.btn-arrow-right-first) > p {
+    flex: 0 0 100%;
+}
+/* workflow gombok egyenlően töltik ki a sort */
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-last {
+    counter-increment: workflow-step;
+    flex: 1 1 0;
+    text-align: center;
+    justify-content: center;
+}
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first .fa:not(.fa-spinner)::before,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right .fa:not(.fa-spinner)::before,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-last .fa:not(.fa-spinner)::before {
+    content: counter(workflow-step);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--fluent-accent);
+    color: var(--fluent-white);
+    font-size: 12px;
+    font-weight: 700;
+    font-family: var(--fluent-font);
+    font-style: normal;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 22px;
+    margin: 0 auto;
+}
+/* workflow gombok — fokozatos narancs, 1→6, sibling szelektorral */
+
+/* btn-default = még nem elvégzett → fehér */
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first.btn-default,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right.btn-default,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-last.btn-default {
+    background-color: var(--fluent-surface) !important;
+    border-color: var(--fluent-stroke1) !important;
+    color: var(--fluent-text) !important;
+}
+
+/* Step 1 — nagyon halvány */
+/* btn IS success/info, VAGY utána van success/info (már elvégzett korábbi lépés) */
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first.btn-success,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first.btn-info,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first:has(~ .btn-success),
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first:has(~ .btn-info) {
+    background-color: var(--fluent-wf-1-bg) !important;
+    border-color: var(--fluent-wf-1-border) !important;
+    color: var(--fluent-wf-1-text) !important;
+}
+/* Step 2 */
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right.btn-success,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right.btn-info,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right:has(~ .btn-success),
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right:has(~ .btn-info) {
+    background-color: var(--fluent-wf-2-bg) !important;
+    border-color: var(--fluent-wf-2-border) !important;
+    color: var(--fluent-wf-2-text) !important;
+}
+/* Step 3 */
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right + .btn-arrow-right.btn-success,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right + .btn-arrow-right.btn-info,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right + .btn-arrow-right:has(~ .btn-success),
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right + .btn-arrow-right:has(~ .btn-info) {
+    background-color: var(--fluent-wf-3-bg) !important;
+    border-color: var(--fluent-wf-3-border) !important;
+    color: var(--fluent-wf-3-text) !important;
+}
+/* Step 4 */
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right + .btn-arrow-right + .btn-arrow-right.btn-success,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right + .btn-arrow-right + .btn-arrow-right.btn-info,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right + .btn-arrow-right + .btn-arrow-right:has(~ .btn-success),
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right + .btn-arrow-right + .btn-arrow-right:has(~ .btn-info) {
+    background-color: var(--fluent-wf-4-bg) !important;
+    border-color: var(--fluent-wf-4-border) !important;
+    color: var(--fluent-wf-4-text) !important;
+}
+/* Step 5 */
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right + .btn-arrow-right + .btn-arrow-right + .btn-arrow-right.btn-success,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right + .btn-arrow-right + .btn-arrow-right + .btn-arrow-right.btn-info,
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right + .btn-arrow-right + .btn-arrow-right + .btn-arrow-right:has(~ .btn-success),
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-first + .btn-arrow-right + .btn-arrow-right + .btn-arrow-right + .btn-arrow-right:has(~ .btn-info) {
+    background-color: var(--fluent-wf-5-bg) !important;
+    border-color: var(--fluent-wf-5-border) !important;
+    color: var(--fluent-wf-5-text) !important;
+}
+/* Step 6 — fluent accent max */
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-last.btn-success {
+    background-color: var(--fluent-wf-6-bg) !important;
+    border-color: var(--fluent-wf-6-border) !important;
+    color: var(--fluent-wf-6-text) !important;
+}
+.col-xs-12:has(.btn-arrow-right-first) .btn-arrow-right-last .fa::before {
+    background: var(--fluent-wf-last-badge-bg);
+    color: var(--fluent-wf-last-badge-text);
+}
+
+.col-xs-12:has(> h2) {
+    background-color: var(--fluent-surface);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: var(--fluent-shadow-4);
+    padding: 20px 24px 24px;
+    margin-top: 16px;
+}
+
+/* Lezárt feldolgozási időszakok blokk (h3 + fa-check-square-o + .table) */
+.col-xs-12:has(.fa-check-square-o) {
+    background-color: var(--fluent-surface);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: var(--fluent-shadow-4);
+    padding: 20px 24px 24px;
+    margin-top: 36px;
+}
+.col-xs-12:has(.fa-check-square-o) h3 {
+    font-size: 20px;
+    margin-bottom: 32px;
+}
+.col-xs-12:has(.fa-check-square-o) h3 .fa-check-square-o {
+    color: var(--fluent-success);
+}
+/* Tábla alap hover — show.html táblán is érvényesül */
+.col-xs-12:has(.fa-check-square-o) .table > tbody > tr:hover {
+    background-color: var(--fluent-accent-light);
+}
+
+
+/* ─── SUBTLE BUTTON VARIANTS ────────────────────────────────────────────── */
+
+/* btn-danger + submit-button-to-confirm */
+.btn-danger.button-page-cover,
+.btn-danger.submit-button-to-confirm {
+    background-color: var(--fluent-btn-danger) !important;
+    border-color: var(--fluent-btn-danger-border) !important;
+    color: var(--fluent-white) !important;
+}
+.btn-danger.button-page-cover:hover,
+.btn-danger.button-page-cover:focus,
+.btn-danger.submit-button-to-confirm:hover,
+.btn-danger.submit-button-to-confirm:focus {
+    background-color: var(--fluent-btn-danger-hover) !important;
+    border-color: var(--fluent-btn-danger-border) !important;
+    color: var(--fluent-white) !important;
+}
+
+/* btn-info + details-toggle-button — pasztell kék */
+.btn-info.details-toggle-button {
+    background-color: var(--fluent-surface) !important;
+    border: 1px solid var(--fluent-border-strong) !important;
+    border-left: 4px solid var(--fluent-btn-info) !important;
+    color: var(--fluent-text) !important;
+    box-shadow: none !important;
+}
+.btn-info.details-toggle-button:hover,
+.btn-info.details-toggle-button:focus {
+    background-color: #dbeafe !important;
+    color: var(--fluent-btn-info) !important;
+}
+
+/* btn-success + details-toggle-button — pasztell zöld */
+.btn-success.details-toggle-button {
+    background-color: var(--fluent-surface) !important;
+    border: 1px solid var(--fluent-border-strong) !important;
+    border-left: 4px solid var(--fluent-btn-success) !important;
+    color: var(--fluent-text) !important;
+    box-shadow: none !important;
+}
+.btn-success.details-toggle-button:hover,
+.btn-success.details-toggle-button:focus {
+    background-color: #dcf0dc !important;
+    color: var(--fluent-btn-success) !important;
+}
+
+/* btn-warning + details-toggle-button — pasztell narancs */
+.btn-warning.details-toggle-button {
+    background-color: var(--fluent-surface) !important;
+    border: 1px solid var(--fluent-border-strong) !important;
+    border-left: 4px solid #d97706 !important;
+    color: var(--fluent-text) !important;
+    box-shadow: none !important;
+}
+.btn-warning.details-toggle-button:hover,
+.btn-warning.details-toggle-button:focus {
+    background-color: #fef3c7 !important;
+    color: #92400e !important;
+}
+
+/* btn-danger + details-toggle-button — pasztell piros */
+.btn-danger.details-toggle-button {
+    background-color: var(--fluent-surface) !important;
+    border: 1px solid var(--fluent-border-strong) !important;
+    border-left: 4px solid var(--fluent-danger) !important;
+    color: var(--fluent-text) !important;
+    box-shadow: none !important;
+}
+.btn-danger.details-toggle-button:hover,
+.btn-danger.details-toggle-button:focus {
+    background-color: #fadde0 !important;
+    color: var(--fluent-danger) !important;
+}
+
+/* ─── DROPDOWN ──────────────────────────────────────────────────────────── */
+.dropdown-menu {
+    font-family: var(--fluent-font);
+    font-size: 14px;
+    color: var(--fluent-text);
+    background-color: var(--fluent-surface);
+    border: 1px solid var(--fluent-border);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: var(--fluent-shadow-8);
+    padding: 4px 0;
+}
+.dropdown-menu > li > a {
+    color: var(--fluent-text);
+    padding: 8px 16px;
+    font-weight: 400;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background-color: var(--fluent-accent-light);
+    color: var(--fluent-accent);
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover {
+    background-color: var(--fluent-accent);
+    color: var(--fluent-white);
+}
+.dropdown-menu .divider {
+    background-color: var(--fluent-border);
+}
+
+/* ─── MODAL ─────────────────────────────────────────────────────────────── */
+.modal-content {
+    font-family: var(--fluent-font);
+    border: none;
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: var(--fluent-shadow-8);
+}
+.modal-header {
+    background-color: var(--fluent-surface);
+    border-bottom: 1px solid var(--fluent-border);
+    padding: 16px 20px;
+    border-radius: var(--fluent-radius-lg) var(--fluent-radius-lg) 0 0;
+}
+.modal-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--fluent-text);
+}
+.modal-body {
+    padding: 20px;
+    color: var(--fluent-text);
+}
+.modal-footer {
+    border-top: 1px solid var(--fluent-border);
+    padding: 12px 20px;
+    background-color: var(--fluent-bg);
+    border-radius: 0 0 var(--fluent-radius-lg) var(--fluent-radius-lg);
+}
+.modal-backdrop.in {
+    opacity: 0.4;
+}
+
+/* ─── BADGE / LABEL ─────────────────────────────────────────────────────── */
+.badge {
+    background-color: var(--fluent-accent);
+    border-radius: 10px;
+    font-family: var(--fluent-font);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 7px;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   PAGE: index.html — cégek lista
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── KERESŐMEZŐ ─────────────────────────────────────────────────────────── */
+#konyvelt_ceg_search {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 20 20' fill='none'%3E%3Ccircle cx='8.5' cy='8.5' r='5.75' stroke='%23605e5c' stroke-width='1.5'/%3E%3Cpath d='M13 13L17 17' stroke='%23605e5c' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    padding-left: 30px;
+}
+
+/* ─── E-MAIL INTEGRÁCIÓ ELREJTÉSE ───────────────────────────────────────── */
+/* index.html-ben megjelenő connect-state panel */
+.connect-state p.connect-tooltip[data-original-title*="E-mail"] {
+    display: none;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   PAGE: upload.html — Fájlok feltöltése
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── OLDAL FEJLÉC ──────────────────────────────────────────────────────── */
+.col-sm-12:has(#idoszak-korai-lezarasa) {
+    background-color: var(--fluent-surface);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: var(--fluent-shadow-4);
+    padding: 20px 24px;
+    margin-top: 16px;
+}
+/* h1: flex — szöveg + időszak info + gomb egy sorban */
+.col-sm-12:has(#idoszak-korai-lezarasa) h1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 8px;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+.col-sm-12:has(#idoszak-korai-lezarasa) h1 br {
+    display: none;
+}
+.col-sm-12:has(#idoszak-korai-lezarasa) h1 .pull-left {
+    float: none;
+    display: inline-flex;
+    align-items: center;
+    align-self: center;
+    margin: 0;
+}
+.col-sm-12:has(#idoszak-korai-lezarasa) h1 small {
+    font-size: 15px;
+    color: var(--fluent-text);
+    font-weight: 600;
+    background-color: #f0f7ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 5px 14px 5px 34px;
+    position: relative;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+.col-sm-12:has(#idoszak-korai-lezarasa) h1 small::before {
+    font-family: 'FontAwesome';
+    content: "\f073";   /* fa-calendar */
+    position: absolute;
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--fluent-btn-info);
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/* Időszak lezárása gomb */
+#idoszak-korai-lezarasa {
+    background-color: #fffbeb !important;
+    border: 1px solid #fde68a !important;
+    color: #92400e !important;
+    box-shadow: none !important;
+    display: inline-flex !important;
+    align-items: center;
+    align-self: center;
+    margin: 0 !important;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    vertical-align: middle;
+    gap: 6px;
+    font-weight: 500;
+    font-size: 12px !important;
+    padding: 5px 12px !important;
+    line-height: 1.5;
+}
+#idoszak-korai-lezarasa:hover,
+#idoszak-korai-lezarasa:focus {
+    background-color: #fef3c7 !important;
+    color: #78350f !important;
+    border-color: #fcd34d !important;
+}
+#idoszak-korai-lezarasa::before {
+    font-family: 'FontAwesome';
+    content: "\f021";   /* fa-refresh */
+    font-weight: normal;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+/* Info sáv (drag & drop utasítás) — Fluent info bar */
+.col-sm-12:has(#idoszak-korai-lezarasa) .bg-danger {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--fluent-info-bg) !important;
+    border: 1px solid var(--fluent-info-border);
+    border-left: 3px solid var(--fluent-info);
+    border-radius: var(--fluent-radius-lg);
+    padding: 12px 16px;
+    color: var(--fluent-info) !important;
+    font-size: 13px;
+    font-weight: 500;
+}
+.col-sm-12:has(#idoszak-korai-lezarasa) .bg-danger .glyphicon-education {
+    font-size: 16px;
+    color: var(--fluent-info);
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* ─── FELTÖLTÖTT FÁJLOK SZEKCIÓ ─────────────────────────────────────────── */
+/* A col-xs-12:has(.table-striped) global rule már ad card stílust,
+   de a files wrapper nincs benne az eredeti card paddinggal */
+.col-xs-12:has(#files) {
+    background-color: var(--fluent-surface);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: var(--fluent-shadow-4);
+    padding: 20px 24px 24px;
+    margin-top: 16px;
+}
+#files > div:first-child h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--fluent-border);
+}
+
+/* ─── FÁJL PANEL KÁRTYÁK ─────────────────────────────────────────────────── */
+.panel-for-file {
+    border: 1px solid var(--fluent-border-strong) !important;
+    border-left: 3px solid var(--fluent-success) !important;
+    border-radius: var(--fluent-radius-lg) !important;
+    box-shadow: none !important;
+    margin-bottom: 12px;
+    background-color: var(--fluent-surface);
+    overflow: hidden;
+}
+/* panel-success heading: fehér háttér, zöld border + szöveg */
+.panel-for-file.panel-success {
+    border: 1px solid #c8e6c9 !important;
+    border-left: 3px solid var(--fluent-btn-success) !important;
+    box-shadow: 0 2px 8px rgba(16, 124, 16, 0.15) !important;
+}
+/* panel-success heading: erős zöld */
+.panel-for-file.panel-success .panel-heading {
+    background-color: #9fd89f !important;
+    border-bottom: none !important;
+    padding: 10px 16px;
+    border-radius: 0 !important;
+}
+/* panel-danger: piros keret + bal jelző sáv */
+.panel-for-file.panel-danger {
+    border: 1px solid #f5c6cb !important;
+    border-left: 4px solid var(--fluent-danger) !important;
+    box-shadow: 0 2px 8px rgba(164, 38, 44, 0.15) !important;
+}
+/* panel-danger heading */
+.panel-for-file.panel-danger .panel-heading {
+    background-color: #eeacb2 !important;
+    border-bottom: none !important;
+    padding: 10px 16px;
+    border-radius: 0 !important;
+}
+/* Hibaüzenet blokk — nagy ikon bal oldalon, szöveg mellette */
+.processing-error-text {
+    display: block;
+    position: relative;
+    margin-top: 12px;
+    padding: 4px 0 4px 56px !important;
+    background: transparent;
+    border: none;
+    color: var(--fluent-text) !important;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 48px;
+}
+.processing-error-text::before {
+    font-family: 'FontAwesome';
+    content: "\f06a";   /* fa-exclamation-circle */
+    position: absolute;
+    top: 4px;
+    left: 0;
+    font-size: 40px;
+    line-height: 1;
+    color: var(--fluent-danger);
+    opacity: 0.85;
+}
+.processing-error-text a {
+    color: var(--fluent-danger) !important;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.processing-error-text a:hover {
+    color: var(--fluent-danger-hover) !important;
+}
+.processing-error-text ul {
+    padding-left: 18px;
+    margin: 8px 0 4px;
+}
+.processing-error-text li {
+    margin-bottom: 4px;
+}
+/* Az első li — a legfontosabb üzenet — kiemelve */
+.processing-error-text ul:first-of-type > li:first-child {
+    background-color: #fff3cd;
+    border-left: 3px solid #f59e0b;
+    border-radius: var(--fluent-radius);
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    list-style: none;
+    margin-left: -18px;
+    font-weight: 500;
+    color: var(--fluent-text);
+}
+.processing-error-text ul:first-of-type > li:first-child a {
+    color: #92400e !important;
+}
+.processing-error-text strong,
+.processing-error-text b {
+    font-weight: 700;
+}
+/* Info szöveg — kisebb, szürkébb */
+.processing-error-text .error-contact-info {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--fluent-text-muted);
+    line-height: 1.5;
+}
+.processing-error-text .error-contact-info a {
+    color: var(--fluent-text-muted) !important;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.processing-error-text .error-contact-info a:hover {
+    color: var(--fluent-text) !important;
+}
+.panel-for-file .panel-heading {
+    background-color: var(--fluent-bg-hover) !important;
+    border-bottom: 1px solid var(--fluent-border) !important;
+    padding: 10px 16px;
+    border-radius: 0 !important;
+}
+/* Panel heading: fekete cím szöveg a pasztell háttéren */
+.panel-for-file.panel-success .panel-heading .panel-title,
+.panel-for-file.panel-success .panel-heading .panel-title::before,
+.panel-for-file.panel-danger .panel-heading .panel-title,
+.panel-for-file.panel-danger .panel-heading .panel-title::before {
+    color: #1a1a1a !important;
+}
+/* Gombok a színes headingben — badge/pill stílus */
+.panel-for-file.panel-success .panel-heading .download-file-button,
+.panel-for-file.panel-danger .panel-heading .download-file-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0,0,0,0.18) !important;
+    color: #1a1a1a !important;
+    gap: 6px !important;
+    padding: 4px 10px !important;
+    border-radius: 12px !important;
+    width: auto !important;
+    min-width: unset !important;
+    height: auto !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+}
+.panel-for-file.panel-success .panel-heading .download-file-button .fa,
+.panel-for-file.panel-danger .panel-heading .download-file-button .fa {
+    font-size: 12px !important;
+    color: #1a1a1a !important;
+}
+.panel-for-file.panel-success .panel-heading .download-file-button:hover,
+.panel-for-file.panel-danger .panel-heading .download-file-button:hover {
+    background-color: #f0f0f0 !important;
+    border-color: rgba(0,0,0,0.28) !important;
+}
+.panel-for-file.panel-success .panel-heading .download-file-button:hover .fa,
+.panel-for-file.panel-danger .panel-heading .download-file-button:hover .fa {
+    color: #1a1a1a !important;
+}
+/* Törlés gombok a headingben — badge/pill stílus */
+.panel-for-file.panel-success .panel-heading .delete-file-button,
+.panel-for-file.panel-danger .panel-heading .delete-file-button {
+    display: inline-flex !important;
+}
+.panel-for-file.panel-success .panel-heading .delete-file-button,
+.panel-for-file.panel-success .panel-heading .remove-panel-button,
+.panel-for-file.panel-success .panel-heading .delete-connect-file-button,
+.panel-for-file.panel-danger .panel-heading .delete-file-button,
+.panel-for-file.panel-danger .panel-heading .remove-panel-button,
+.panel-for-file.panel-danger .panel-heading .delete-connect-file-button {
+    background-color: #B2464B !important;
+    border: 1px solid #9a3a3f !important;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    gap: 6px !important;
+    padding: 4px 10px !important;
+    border-radius: 12px !important;
+    width: auto !important;
+    min-width: unset !important;
+    height: auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.panel-for-file.panel-success .panel-heading .delete-file-button::before,
+.panel-for-file.panel-success .panel-heading .remove-panel-button::before,
+.panel-for-file.panel-success .panel-heading .delete-connect-file-button::before,
+.panel-for-file.panel-danger .panel-heading .delete-file-button::before,
+.panel-for-file.panel-danger .panel-heading .remove-panel-button::before,
+.panel-for-file.panel-danger .panel-heading .delete-connect-file-button::before {
+    font-size: 12px !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    margin-right: 4px !important;
+    line-height: 1 !important;
+}
+.panel-for-file.panel-success .panel-heading .delete-file-button:hover,
+.panel-for-file.panel-success .panel-heading .remove-panel-button:hover,
+.panel-for-file.panel-success .panel-heading .delete-connect-file-button:hover,
+.panel-for-file.panel-danger .panel-heading .delete-file-button:hover,
+.panel-for-file.panel-danger .panel-heading .remove-panel-button:hover,
+.panel-for-file.panel-danger .panel-heading .delete-connect-file-button:hover {
+    background-color: #cc4f55 !important;
+    border-color: #9a3a3f !important;
+    color: #ffffff !important;
+}
+.panel-for-file.panel-success .panel-heading .delete-file-button:hover::before,
+.panel-for-file.panel-success .panel-heading .remove-panel-button:hover::before,
+.panel-for-file.panel-success .panel-heading .delete-connect-file-button:hover::before,
+.panel-for-file.panel-danger .panel-heading .delete-file-button:hover::before,
+.panel-for-file.panel-danger .panel-heading .remove-panel-button:hover::before,
+.panel-for-file.panel-danger .panel-heading .delete-connect-file-button:hover::before {
+    color: #ffffff !important;
+}
+/* Panel title: flex + fájlnév + gombok jobbra */
+.panel-for-file .panel-title {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: var(--fluent-text);
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.panel-for-file .panel-title::before {
+    font-family: 'FontAwesome';
+    content: "\f15b";   /* fa-file */
+    color: var(--fluent-text-muted);
+    font-size: 13px;
+    font-weight: normal;
+    flex-shrink: 0;
+}
+.panel-for-file .panel-title .buttons-container {
+    float: none !important;
+    margin-left: auto;
+    display: inline-flex;
+    align-items: stretch;
+    gap: 4px;
+}
+/* Letöltés gomb */
+.panel-for-file .download-file-button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 6px 10px !important;
+    line-height: 1.4;
+    background-color: var(--fluent-surface) !important;
+    border: 1px solid var(--fluent-border-strong) !important;
+    color: var(--fluent-text-muted) !important;
+    border-radius: var(--fluent-radius) !important;
+    font-size: 12px;
+    transition: background-color 0.1s, color 0.1s;
+}
+.panel-for-file .download-file-button:hover {
+    background-color: var(--fluent-bg-hover) !important;
+    color: var(--fluent-accent) !important;
+    border-color: var(--fluent-accent) !important;
+    text-decoration: none !important;
+}
+/* Törlés gombok */
+.panel-for-file .delete-file-button,
+.panel-for-file .remove-panel-button,
+.panel-for-file .delete-connect-file-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 10px !important;
+    line-height: 1.4;
+    font-size: 12px !important;
+    border-radius: var(--fluent-radius) !important;
+    background-color: #B2464B !important;
+    border: 1px solid #9a3a3f !important;
+    color: #ffffff !important;
+    font-weight: 500;
+}
+.panel-for-file .delete-file-button:hover,
+.panel-for-file .remove-panel-button:hover,
+.panel-for-file .delete-connect-file-button:hover {
+    background-color: #cc4f55 !important;
+    border-color: #b03a40 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+.panel-for-file .delete-file-button::before,
+.panel-for-file .remove-panel-button::before,
+.panel-for-file .delete-connect-file-button::before {
+    font-family: 'FontAwesome';
+    content: "\f1f8";   /* fa-trash */
+    font-weight: normal;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+.panel-for-file .panel-body {
+    padding: 12px 16px;
+}
+.panel-for-file .panel-body-feldolgozas {
+    font-size: 13px;
+    color: var(--fluent-text-muted);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* ─── FELDOLGOZÁS STÁTUSZ BADGE-EK ──────────────────────────────────────── */
+.label.processing-status {
+    font-family: var(--fluent-font);
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 2px 8px;
+    display: inline-block;
+}
+.label-success.processing-status {
+    background-color: var(--fluent-success);
+    color: var(--fluent-white);
+}
+.label-warning.processing-status {
+    background-color: #a87800;
+    color: var(--fluent-white);
+}
+.label-danger.processing-status {
+    background-color: var(--fluent-danger);
+    color: var(--fluent-white);
+}
+/* "újra feldolgozás" span-gomb */
+.label-warning.reprocessing-button {
+    font-family: var(--fluent-font);
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 2px 8px;
+    background-color: transparent;
+    color: var(--fluent-warning);
+    border: 1px solid var(--fluent-warning);
+    cursor: pointer;
+    display: inline-block;
+}
+.label-warning.reprocessing-button:hover {
+    background-color: var(--fluent-bg-hover);
+}
+
+/* ─── COLLAPSE DETAIL GOMBOK ─────────────────────────────────────────────── */
+/* Egyforma szélesség + ikon a gombokban */
+.collapse-detail-container {
+    margin-bottom: 8px;
+}
+/* Az összes details-toggle-button egyforma szélesség */
+.panel-for-file .details-toggle-button {
+    width: 450px !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    text-align: left;
+    justify-content: flex-start !important;
+    height: 32px !important;
+    box-sizing: border-box;
+}
+/* Legördülő jelzés jobbra igazítva */
+.panel-for-file .details-toggle-button .glyphicon {
+    margin-left: auto;
+    flex-shrink: 0;
+    font-size: 11px;
+    opacity: 0.7;
+}
+/* Letöltés gomb — egymagas a toggle gombbal */
+.panel-for-file .details-download-button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    height: 32px !important;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    transition: background-color 0.1s, color 0.1s;
+}
+.panel-for-file .details-download-button:hover {
+    background-color: var(--fluent-bg-hover) !important;
+    color: var(--fluent-accent) !important;
+    border-color: var(--fluent-accent) !important;
+    text-decoration: none !important;
+}
+/* btn-info (fájlban lévő — feltöltött): upload ikon */
+.panel-for-file .btn-info.details-toggle-button::before {
+    font-family: 'FontAwesome';
+    content: "\f093";   /* fa-upload */
+    font-weight: normal;
+    font-size: 13px;
+    flex-shrink: 0;
+    color: var(--fluent-btn-info);
+}
+/* btn-success (most importált — feldolgozva): pipa ikon */
+.panel-for-file .btn-success.details-toggle-button::before {
+    font-family: 'FontAwesome';
+    content: "\f00c";   /* fa-check */
+    font-weight: normal;
+    font-size: 13px;
+    flex-shrink: 0;
+    color: var(--fluent-btn-success);
+}
+/* btn-warning (kihagyott): figyelmeztető ikon */
+.panel-for-file .btn-warning.details-toggle-button::before {
+    font-family: 'FontAwesome';
+    content: "\f071";   /* fa-exclamation-triangle */
+    font-weight: normal;
+    font-size: 13px;
+    flex-shrink: 0;
+    color: #d97706;
+}
+/* btn-danger (már importált / kihagyott): tiltás ikon */
+.panel-for-file .btn-danger.details-toggle-button::before {
+    font-family: 'FontAwesome';
+    content: "\f05e";   /* fa-ban */
+    font-weight: normal;
+    font-size: 13px;
+    flex-shrink: 0;
+    color: var(--fluent-danger);
+}
+
+/* ─── COLLAPSE DETAIL / WELL ─────────────────────────────────────────────── */
+.panel-for-file .well {
+    background-color: var(--fluent-bg);
+    border: 1px solid var(--fluent-border);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: none;
+    padding: 10px 12px;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+/* Condensed table belsejében a sorok tömörítése */
+.panel-for-file .table-condensed > tbody > tr > td,
+.panel-for-file .table-condensed > thead > tr > th {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* ─── FÁJL FELTÖLTÉS — DRAG & DROP ZÓNA ─────────────────────────────────── */
+.col-xs-12:has(.fileinput-button) {
+    background-color: var(--fluent-surface);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: var(--fluent-shadow-4);
+    padding: 20px 24px 24px;
+    margin-top: 16px;
+}
+.col-xs-12:has(.fileinput-button)::before {
+    content: "Fájlok feltöltése";
+    display: block;
+    font-family: var(--fluent-font);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--fluent-text-muted);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--fluent-border);
+}
+.fileinput-button {
+    position: relative;
+    display: block !important;
+    width: 100%;
+    min-height: 180px;
+    padding: 32px 24px !important;
+    background-color: var(--fluent-surface) !important;
+    border: 2px dashed var(--fluent-border-strong) !important;
+    border-radius: var(--fluent-radius-lg) !important;
+    color: var(--fluent-text) !important;
+    text-align: center;
+    box-shadow: var(--fluent-shadow-4);
+    transition: border-color 0.15s, background-color 0.15s, box-shadow 0.15s, transform 0.15s;
+    cursor: pointer;
+    overflow: hidden;
+}
+.fileinput-button:hover,
+.fileinput-button:focus {
+    border-color: var(--fluent-accent) !important;
+    background-color: var(--fluent-accent-light) !important;
+    box-shadow: var(--fluent-shadow-8);
+    transform: translateY(-1px);
+    text-decoration: none;
+    color: var(--fluent-text) !important;
+}
+
+/* Ikon */
+.fileinput-button .glyphicon-plus {
+    display: block;
+    font-size: 34px;
+    margin-bottom: 14px;
+    color: var(--fluent-accent);
+}
+
+/* "fájlok feltöltése" span */
+.fileinput-button > span:not(:has(input)) {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--fluent-text);
+    line-height: 1.4;
+}
+
+/* Fő szöveg: "Húzd ide a fájlokat" */
+.fileinput-button::before {
+    content: "Húzd ide a fájlokat";
+    display: block;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--fluent-text);
+    font-family: var(--fluent-font);
+}
+
+/* Alcím */
+.fileinput-button::after {
+    content: "vagy kattints a tallózáshoz";
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--fluent-text-muted);
+    font-family: var(--fluent-font);
+}
+
+/* File input mező — teljes területet lefedi, láthatatlanul */
+.fileinput-button input[type="file"] {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Progress bar */
+#progress.progress {
+    margin-top: 14px;
+    height: 6px;
+    border-radius: var(--fluent-radius-lg);
+    background-color: var(--fluent-border);
+    overflow: hidden;
+    box-shadow: none;
+}
+#progress .progress-bar {
+    border-radius: var(--fluent-radius-lg);
+    min-width: 0;
+}
+.progress-bar-success {
+    background-color: var(--fluent-success);
+}
+
+/* ─── NAV TABS — MIT SZERETNE KÖNYVELNI ─────────────────────────────────── */
+.col-xs-12:has(.nav-tabs) {
+    display: none;
+}
+
+/* ─── KÖVETKEZŐ LÉPÉS SZEKCIÓ ───────────────────────────────────────────── */
+.col-xs-12:has(#btn-elovalogatas-futtatasa) {
+    background-color: var(--fluent-surface);
+    border-radius: var(--fluent-radius-lg);
+    box-shadow: var(--fluent-shadow-4);
+    padding: 32px 24px;
+    margin-top: 16px;
+}
+.col-xs-12:has(#btn-elovalogatas-futtatasa) h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.col-xs-12:has(#btn-elovalogatas-futtatasa) h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--fluent-text-muted);
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+.col-xs-12:has(#btn-elovalogatas-futtatasa) p {
+    font-size: 13px;
+    color: var(--fluent-text-muted);
+    margin-top: 16px;
+    line-height: 1.6;
+}
+/* Fő CTA: nagyobb, accent */
+#btn-elovalogatas-futtatasa {
+    min-height: 52px;
+    min-width: 280px;
+    font-size: 15px;
+    padding: 12px 36px;
+    border-radius: var(--fluent-radius-lg) !important;
+    background-color: var(--fluent-accent) !important;
+    border-color: var(--fluent-accent) !important;
+    color: var(--fluent-white) !important;
+}
+#btn-elovalogatas-futtatasa:hover,
+#btn-elovalogatas-futtatasa:focus {
+    background-color: var(--fluent-accent-dark) !important;
+    border-color: var(--fluent-accent-dark) !important;
+}
+#btn-elovalogatas-futtatasa:active {
+    background-color: var(--fluent-accent-pressed) !important;
+    border-color: var(--fluent-accent-pressed) !important;
+}
+
+/* ─── FELTÖLTHETŐ FÁJL FORMÁTUMOK PANEL ─────────────────────────────────── */
+.panel-info:has(a[href*="kompatibilitas"]) {
+    background-color: var(--fluent-surface);
+    border: 1px solid var(--fluent-info-border) !important;
+    border-left: 3px solid var(--fluent-info) !important;
+    border-radius: var(--fluent-radius-lg) !important;
+    box-shadow: none;
+    margin-top: 16px;
+}
+.panel-info:has(a[href*="kompatibilitas"]) .panel-heading {
+    background: transparent !important;
+    border-bottom: none !important;
+    padding: 14px 20px;
+}
+.panel-info:has(a[href*="kompatibilitas"]) .panel-title {
+    font-size: 14px !important;
+    font-weight: 600;
+}
+.panel-info:has(a[href*="kompatibilitas"]) .panel-title a {
+    color: var(--fluent-info) !important;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.panel-info:has(a[href*="kompatibilitas"]) .panel-title a:hover {
+    color: var(--fluent-accent) !important;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--fluent-border-strong);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--fluent-text-muted);
+}</style></html>
